@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Plan is Ready — The Gastronomy Project</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/TGP-2.png">
+  <link rel="apple-touch-icon" href="images/TGP-2.png">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Gastronomy Project">
+  <meta property="og:title" content="Your Plan is Ready — The Gastronomy Project">
+  <meta property="og:description" content="Doctor-guided gut health formulas. Physician-reviewed. Delivered to your door. Starting at $20.">
+  <meta property="og:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
+  <meta property="og:url" content="https://try.thegastronomyproject.com/results">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your Plan is Ready — The Gastronomy Project">
+  <meta name="twitter:description" content="Doctor-guided gut health formulas. Physician-reviewed. Delivered to your door. Starting at $20.">
+  <meta name="twitter:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
+  <meta name="author" content="Dr. Ryan Natale — @drryannatalemd">
+
+  <!-- 1. Meta Pixel — pixel page -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=26074870975478586&ev=PageView&noscript=1"/></noscript>
+
+  <!-- Lead event -->
+  <script>fbq('track', 'Lead');</script>
+
+  <!-- 2. GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBRMQV74FG"></script>
+  <script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());gtag('config','G-JBRMQV74FG');
+  </script>
+
+  <!-- 3. Microsoft Clarity -->
+  <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "umuegpvdmf");
+  </script>
+
+  <!-- 4. Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── GLOBAL RESET ── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow-x: hidden; max-width: 100vw; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff5e1;
+      color: #4a4a4a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      padding: 16px 0;
+      text-align: center;
+      background: #fff5e1;
+      border-bottom: 1px solid #feeed5;
+    }
+    .header-logo {
+      height: 40px;
+      margin: 0 auto;
+    }
+
+    /* ── MAIN CARD ── */
+    .main {
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* ── DR. TRUST ROW ── */
+    .dr-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 20px 0 16px;
+    }
+    .dr-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 2px solid #feeed5;
+      flex-shrink: 0;
+    }
+    .dr-avatar-fallback {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #feeed5;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #4a4a4a;
+      flex-shrink: 0;
+    }
+    .dr-info {
+      font-size: 10px;
+      color: rgba(74,74,74,0.6);
+      line-height: 1.5;
+    }
+    .dr-info strong {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: #4a4a4a;
+    }
+
+    /* ── HEADLINE ── */
+    .results-label {
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: #FFB82E;
+      margin-bottom: 6px;
+    }
+    .results-headline {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #4a4a4a;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+    .results-sub {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #4a4a4a;
+      line-height: 1.35;
+      margin-bottom: 20px;
+    }
+    .results-sub .plan-name {
+      display: block;
+      font-size: 26px;
+      color: #d88609;
+      margin-top: 4px;
+    }
+
+    /* ── PRICE BOX (capsule image + pricing) ── */
+    .price-box {
+      background: #feeed5;
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      border: 1px solid #feeed5;
+    }
+    .capsule-img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto 16px;
+    }
+    .price-line {
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #4a4a4a;
+      margin-bottom: 6px;
+    }
+    .price-line strong {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #4a4a4a;
+    }
+    .price-details {
+      font-size: 10px;
+      color: rgba(74,74,74,0.55);
+      line-height: 1.6;
+    }
+
+    /* ── MOTIVATIONAL LINE ── */
+    .motivation {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      font-weight: 700;
+      font-style: italic;
+      color: #4a4a4a;
+      text-align: center;
+      line-height: 1.5;
+      padding: 20px 0 16px;
+      border-bottom: 1px solid #feeed5;
+      margin-bottom: 4px;
+    }
+
+    /* ── FEATURE ROWS ── */
+    .features {
+      margin-bottom: 20px;
+    }
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid #feeed5;
+    }
+    .feature:last-child { border-bottom: none; }
+    .feature-icon {
+      width: 32px;
+      height: 32px;
+      background: #feeed5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+    .feature-text {
+      flex: 1;
+    }
+    .feature-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #4a4a4a;
+      margin-bottom: 2px;
+    }
+    .feature-desc {
+      font-size: 10px;
+      color: rgba(74,74,74,0.55);
+      line-height: 1.5;
+    }
+
+    /* ── SOCIAL PROOF BAR ── */
+    .proof-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      background: #feeed5;
+      border: 1px solid #feeed5;
+      margin-bottom: 10px;
+      font-size: 12px;
+      color: #4a4a4a;
+      font-family: 'Poppins', sans-serif;
+    }
+    .proof-icon { font-size: 14px; }
+    .proof-bar strong { color: #FFB82E; font-weight: 700; }
+
+    /* ── CTA ── */
+    .cta-section {
+      margin-bottom: 20px;
+    }
+    .offer-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: #d88609;
+      color: #fff5e1;
+      padding: 8px 16px;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .offer-strip span {
+      font-size: 13px;
+    }
+    .main-cta {
+      display: block;
+      width: 100%;
+      background: #FFB82E;
+      color: #4a4a4a;
+      border: none;
+      padding: 16px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 0;
+      margin-bottom: 8px;
+    }
+    .cta-sub {
+      text-align: center;
+      font-size: 10px;
+      color: rgba(74,74,74,0.45);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    /* trust row removed */
+
+    /* ── TRUST BAR (charcoal) — 2x2 grid on mobile, single row on desktop ── */
+    .trust-bar {
+      background: #4a4a4a;
+      padding: 14px 16px;
+      width: calc(100% + 32px);
+      margin-left: -16px;
+    }
+    .trust-bar-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 12px;
+    }
+    @media (min-width: 480px) {
+      .trust-bar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    }
+    .trust-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    @media (min-width: 480px) {
+      .trust-bar-item {
+        padding: 0 10px;
+        border-right: 1px solid rgba(255,245,225,0.12);
+      }
+      .trust-bar-item:last-child { border-right: none; }
+    }
+    .trust-bar-check {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+    .trust-bar-item span {
+      font-size: 10px;
+      font-weight: 500;
+      color: rgba(255,245,225,0.8);
+      letter-spacing: .01em;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.3;
+    }
+
+    /* ── TRUSTPILOT SECTION ── */
+    .reviews-section {
+      padding: 16px 0 20px;
+    }
+
+    /* ── PLACEHOLDER REVIEWS ── */
+    .placeholder-reviews {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .placeholder-review {
+      background: #feeed5;
+      padding: 14px 16px;
+      border-left: 3px solid #FFB82E;
+    }
+    .review-stars {
+      font-size: 12px;
+      color: #FFB82E;
+      margin-bottom: 6px;
+      letter-spacing: 2px;
+    }
+    .review-text {
+      font-size: 11px;
+      color: rgba(74,74,74,0.75);
+      line-height: 1.65;
+      font-style: italic;
+      margin-bottom: 6px;
+    }
+    .review-author {
+      font-size: 9px;
+      font-weight: 600;
+      color: rgba(74,74,74,0.4);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    /* ── STICKY MOBILE CTA ── */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 16px;
+      background: #fff5e1;
+      border-top: 1px solid #feeed5;
+      z-index: 50;
+      box-shadow: 0 -4px 20px rgba(0,0,0,.08);
+    }
+    @media (max-width: 767px) {
+      .sticky-cta.visible { display: block; }
+    }
+    .sticky-cta-inner {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .sticky-offer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      font-size: 9px;
+      font-weight: 700;
+      color: #d88609;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .sticky-cta button {
+      width: 100%;
+      background: #FFB82E;
+      color: #4a4a4a;
+      border: none;
+      padding: 14px;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 0;
+    }
+
+    /* ── MINIMAL FOOTER ── */
+    .footer-minimal {
+      padding: 16px 20px;
+      border-top: 1px solid #feeed5;
+      background: #fff5e1;
+      margin-top: auto;
+    }
+    @media (max-width: 767px) {
+      .footer-minimal { padding-bottom: 100px; }
+    }
+    .footer-minimal-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .footer-minimal-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .footer-copy { font-size: 9px; color: rgba(74,74,74,.45); }
+    .footer-address { font-size: 9px; color: rgba(74,74,74,.45); }
+    .footer-email {
+      font-size: 9px;
+      color: rgba(74,74,74,.5);
+      text-decoration: none;
+    }
+    .footer-email:hover { color: #FFB82E; }
+    .footer-sep { font-size: 9px; color: #feeed5; }
+    .footer-icon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 9px;
+      font-weight: 600;
+      color: rgba(74,74,74,.5);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      cursor: pointer;
+      transition: color .15s;
+    }
+    .footer-icon-link:hover { color: #FFB82E; }
+    .footer-icon { font-size: 10px; }
+    .footer-logo-wrap { text-align: center; margin-bottom: 14px; }
+    .footer-logo { height: 36px; margin: 0 auto; opacity: 0.5; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER — logo only, centered, no link -->
+  <div class="header">
+    <img src="images/TGP-2.png"
+         class="header-logo"
+         alt="The Gastronomy Project"
+         onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  </div>
+
+  <!-- MAIN CARD -->
+  <div class="main">
+
+    <!-- Dr. Trust Row -->
+    <div class="dr-row">
+      <img src="images/dr-natale-black.jpg"
+           class="dr-avatar"
+           alt="Dr. Ryan Natale"
+           onerror="this.style.display='none'; document.getElementById('dr-fallback').style.display='flex'">
+      <div class="dr-avatar-fallback" id="dr-fallback">RN</div>
+      <div class="dr-info">
+        <strong>Dr. Ryan Natale</strong>
+        ER Physician &middot; Founder, The Gastronomy Project
+      </div>
+    </div>
+
+    <!-- Headline -->
+    <div class="results-label">Your results</div>
+    <h1 class="results-headline">Based on your answers,</h1>
+    <p class="results-sub" id="dynamic-sub">we've matched you with a<span class="plan-name">Short-Term Support Plan</span></p>
+
+    <!-- Price Box with Capsule Image -->
+    <div class="price-box">
+      <img src="images/capsules/short-term.png" class="capsule-img" id="capsule-img" alt="Your formula">
+      <div class="price-line" id="price-line">starting as low as <strong id="price-amount">$33</strong></div>
+      <div class="price-details" id="price-sub">One-time &middot; Doctor-reviewed &middot; Delivered to your door</div>
+    </div>
+
+    <!-- Motivational line -->
+    <div class="motivation">You took the first step. Now let a doctor take it from here.</div>
+
+    <!-- Feature Rows -->
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="9" stroke="#FFB82E" stroke-width="1.5"/>
+            <path d="M6 10l3 3 5-5" stroke="#FFB82E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <div class="feature-title" id="feat1">A Real Doctor Reviews Your Intake</div>
+          <div class="feature-desc" id="feat1-desc">Not an algorithm — a licensed physician personally reviews your case</div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="9" stroke="#FFB82E" stroke-width="1.5"/>
+            <path d="M6 10l3 3 5-5" stroke="#FFB82E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <div class="feature-title" id="feat2">Formula Built for You Specifically</div>
+          <div class="feature-desc" id="feat2-desc">Customized Ginger+ formula based on your intake — not one-size-fits-all</div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="9" stroke="#FFB82E" stroke-width="1.5"/>
+            <path d="M6 10l3 3 5-5" stroke="#FFB82E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="feature-text">
+          <div class="feature-title" id="feat3">Zero Risk — Cancel Anytime</div>
+          <div class="feature-desc" id="feat3-desc">Adjust, pause, or cancel whenever you want — no contracts, no hassle</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Proof -->
+    <div class="proof-bar">
+      <span class="proof-icon">&#128100;</span>
+      <span class="proof-icon">&#127807;</span>
+      <span class="proof-text">We're brand new and would love your support &mdash; join <strong>115+</strong> patients who've already found their plan</span>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <div class="offer-strip" id="offer-strip">
+        <span>&#127881;</span> 15% Off Launch Offer — Applied at Checkout
+      </div>
+      <button class="main-cta" id="main-cta" onclick="handleCTA()">
+        Start My Free Online Visit
+      </button>
+      <div class="cta-sub" id="cta-sub">$20 doctor review fee &middot; collected at end of intake<br>no commitment &middot; you can decide at the end</div>
+    </div>
+
+    <!-- trust row removed -->
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+      <div class="trust-bar-inner">
+        <div class="trust-bar-item">
+          <svg class="trust-bar-check" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="9" stroke="#FFB82E" stroke-width="1.5"/>
+            <path d="M6 10l3 3 5-5" stroke="#FFB82E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Licensed US 503A Pharmacy</span>
+        </div>
+        <div class="trust-bar-item">
+          <svg class="trust-bar-check" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="9" stroke="#FFB82E" stroke-width="1.5"/>
+            <path d="M6 10l3 3 5-5" stroke="#FFB82E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Physician-Supervised in All 50 States</span>
+        </div>
+        <div class="trust-bar-item">
+          <svg class="trust-bar-check" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="9" stroke="#FFB82E" stroke-width="1.5"/>
+            <path d="M6 10l3 3 5-5" stroke="#FFB82E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>HIPAA Compliant &amp; Secure</span>
+        </div>
+        <div class="trust-bar-item">
+          <svg class="trust-bar-check" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="9" stroke="#FFB82E" stroke-width="1.5"/>
+            <path d="M6 10l3 3 5-5" stroke="#FFB82E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>No Insurance Required</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trustpilot Widget -->
+    <div class="reviews-section">
+      <!-- TRUSTPILOT MINI WIDGET — replace TRUSTPILOT_BUSINESS_UNIT_ID when ready -->
+      <div class="trustpilot-widget"
+        data-locale="en-US"
+        data-template-id="53aa8807dec7e10d38f59f32"
+        data-businessunit-id="TRUSTPILOT_BUSINESS_UNIT_ID"
+        data-style-height="120px"
+        data-style-width="100%"
+        data-theme="light">
+        <!-- Fallback shown until Trustpilot is configured -->
+        <div style="text-align:center;padding:10px;font-size:10px;color:#4a4a4a">
+          &#9733;&#9733;&#9733;&#9733;&#9733; &nbsp; Verified patient reviews
+        </div>
+      </div>
+      <script type="text/javascript"
+        src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+        async></script>
+
+      <!-- Placeholder reviews — shown until Trustpilot is live -->
+      <div class="placeholder-reviews">
+        <div class="placeholder-review">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="review-text">"Had my formula in 3 days. The doctor actually read my intake thoroughly and the plan felt completely tailored to me."</div>
+          <div class="review-author">Verified patient</div>
+        </div>
+        <div class="placeholder-review">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="review-text">"I was skeptical about telehealth but this felt more personal than my last in-office visit. Fast shipping."</div>
+          <div class="review-author">Verified patient</div>
+        </div>
+        <div class="placeholder-review">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="review-text">"$20 for a real doctor to build a plan for me specifically. I've spent more on a single OTC product that didn't work."</div>
+          <div class="review-author">Verified patient</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- STICKY MOBILE CTA — appears after scrolling past main CTA -->
+  <div class="sticky-cta" id="sticky-cta">
+    <div class="sticky-cta-inner">
+      <div class="sticky-offer">&#127881; 15% Off Launch Offer</div>
+      <button onclick="handleCTA()">Start My Free Online Visit</button>
+    </div>
+  </div>
+
+  <!-- FOOTER — minimal -->
+  <footer class="footer-minimal">
+    <div class="footer-logo-wrap">
+      <img src="images/TGP-2.png" class="footer-logo" alt="The Gastronomy Project" onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+    </div>
+    <div class="footer-minimal-top">
+      <span class="footer-copy">&copy; The Gastronomy Project</span>
+      <span class="footer-sep">&middot;</span>
+      <span class="footer-address">55 SW 9th St, Suite 3708, Miami, FL 33130</span>
+      <span class="footer-sep">&middot;</span>
+      <a href="mailto:general@thegastronomyproject.com" class="footer-email">general@thegastronomyproject.com</a>
+    </div>
+    <div class="footer-minimal-links">
+      <a onclick="window.open('https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/6969413fb90265c357cedbda_HIPAA%20-%20The%20Gastronomy%20Project.pdf','_blank')" class="footer-icon-link">
+        <span class="footer-icon">&#128274;</span> HIPAA
+      </a>
+      <a onclick="window.location.href='/privacy'" class="footer-icon-link">
+        <span class="footer-icon">&#128196;</span> Privacy Policy
+      </a>
+      <a onclick="window.location.href='/terms'" class="footer-icon-link">
+        <span class="footer-icon">&#128203;</span> Terms of Service
+      </a>
+      <a onclick="window.location.href='/cookie-policy'" class="footer-icon-link">
+        <span class="footer-icon">&#127850;</span> Cookie Policy
+      </a>
+    </div>
+  </footer>
+
+  <script>
+  // ── sessionStorage helpers ──
+  function getPlan() {
+    try { return sessionStorage.getItem('plan') || 'short-term'; }
+    catch(e) { return 'short-term'; }
+  }
+  function setPlan(key) {
+    try { sessionStorage.setItem('plan', key); }
+    catch(e) { /* silent fail */ }
+  }
+
+  // ── Dynamic content based on plan ──
+  var headlines = {
+    'short-term': 'we\'ve matched you with a<span class="plan-name">Short-Term Support Plan</span>',
+    'long-term':  'we\'ve matched you with a<span class="plan-name">Long-Term Daily Support Plan</span>',
+    'GI-comfort': 'we\'ve matched you with a<span class="plan-name">Comfort &amp; Wellness Support Plan</span>',
+    'med-effect': 'we\'ve matched you with a<span class="plan-name">Medication Adjustment Support Plan</span>',
+    'gpack':      'we\'ve matched you with a<span class="plan-name">Recovery &amp; Reset Plan</span>',
+    'mastic':     'we\'ve matched you with a<span class="plan-name">100% Natural Support Plan</span>',
+    'ginger':     'we\'ve matched you with a<span class="plan-name">Ginger+ Support Plan</span>'
+  };
+
+  var plan = getPlan();
+  document.getElementById('dynamic-sub').innerHTML = headlines[plan] || headlines['short-term'];
+
+  // ── Capsule image per plan ──
+  var capsuleImages = {
+    'short-term': 'images/capsules/short-term.png',
+    'long-term':  'images/capsules/long-term.png',
+    'GI-comfort': 'images/capsules/GI-comfort.png',
+    'med-effect': 'images/capsules/med-effect.png',
+    'gpack':      'images/capsules/gpack.png',
+    'mastic':     'images/capsules/mastic.png',
+    'ginger':     'images/capsules/ginger.png'
+  };
+  document.getElementById('capsule-img').src = capsuleImages[plan] || capsuleImages['short-term'];
+
+  // ── Pricing per plan ──
+  var prices = {
+    'short-term': '$33',
+    'long-term':  '$33',
+    'GI-comfort': '$33',
+    'med-effect': '$33',
+    'gpack':      '$30',
+    'mastic':     '$25',
+    'ginger':     '$30'
+  };
+  document.getElementById('price-amount').textContent = prices[plan] || prices['short-term'];
+
+  // ── Mastic exception ──
+  if (plan === 'mastic') {
+    document.getElementById('price-sub').innerHTML = 'One-time purchase &middot; No consultation required &middot; Delivered to your door';
+    document.getElementById('feat1').textContent = '100% Natural Formula';
+    document.getElementById('feat1-desc').textContent = 'Ancient mastic gum combined with pharmaceutical-grade ginger';
+    document.getElementById('feat2').textContent = 'Ginger + Mastic Gum';
+    document.getElementById('feat2-desc').textContent = '3,000 years of gut wisdom in one formula';
+    document.getElementById('feat3').textContent = 'No prescription required';
+    document.getElementById('feat3-desc').textContent = 'Ships directly — no consultation needed';
+    document.getElementById('main-cta').textContent = 'Get Ginger+ Mastic';
+    document.getElementById('cta-sub').textContent = '';
+  }
+
+  // ── Sticky CTA — show after scrolling past main CTA ──
+  window.addEventListener('scroll', function() {
+    var sticky = document.getElementById('sticky-cta');
+    if (window.scrollY > 500) {
+      sticky.classList.add('visible');
+    } else {
+      sticky.classList.remove('visible');
+    }
+  });
+
+  // ── CTA handler — ViewContent + 300ms delay → bridge page ──
+  function handleCTA() {
+    fbq('track', 'ViewContent');
+    setTimeout(function() {
+      window.location.href = '/get-started';
+    }, 300);
+  }
+  </script>
+
+</body>
+</html>
