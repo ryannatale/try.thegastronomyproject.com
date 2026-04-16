@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're All Set — The Gastronomy Project</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/TGP-2.png">
+  <link rel="apple-touch-icon" href="images/TGP-2.png">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Gastronomy Project">
+  <meta property="og:title" content="You're All Set — The Gastronomy Project">
+  <meta property="og:description" content="Doctor-guided gut health formulas. Physician-reviewed. Delivered to your door. Starting at $20.">
+  <meta property="og:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
+  <meta property="og:url" content="https://try.thegastronomyproject.com/thank-you">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="You're All Set — The Gastronomy Project">
+  <meta name="twitter:description" content="Doctor-guided gut health formulas. Physician-reviewed. Delivered to your door. Starting at $20.">
+  <meta name="twitter:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
+  <meta name="author" content="Dr. Ryan Natale — @drryannatalemd">
+
+  <!-- !! NO META PIXEL — ZERO PIXEL PAGE !! -->
+
+  <!-- 1. GA4 only -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBRMQV74FG"></script>
+  <script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());gtag('config','G-JBRMQV74FG');
+  </script>
+
+  <!-- 2. Clarity only -->
+  <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "umuegpvdmf");
+  </script>
+
+  <!-- 3. Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── GLOBAL RESET ── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow-x: hidden; max-width: 100vw; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff5e1;
+      color: #4a4a4a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── DESKTOP NAV ── */
+    .nav {
+      height: 64px;
+      padding: 0 60px;
+      background: rgba(255,245,225,0.96);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #feeed5;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    @media (min-width: 1024px) { .nav { display: flex; } }
+    .nav-logo { height: 24px; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-link {
+      font-size: 12px;
+      font-weight: 500;
+      color: #4a4a4a;
+      text-decoration: none;
+      letter-spacing: .02em;
+      cursor: pointer;
+    }
+    .nav-cta {
+      background: #d88609;
+      color: #fff5e1;
+      border: none;
+      padding: 9px 20px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: .04em;
+      cursor: pointer;
+      border-radius: 0;
+    }
+
+    /* ── MOBILE NAV ── */
+    .nav-mobile {
+      height: 52px;
+      padding: 0 16px;
+      background: #fff5e1;
+      border-bottom: 1px solid #feeed5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    @media (min-width: 1024px) { .nav-mobile { display: none; } }
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      width: 20px;
+      height: 1.5px;
+      background: #4a4a4a;
+      display: block;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #fff5e1;
+      z-index: 200;
+      flex-direction: column;
+      padding: 24px 20px;
+    }
+    .mobile-menu.open { display: flex; }
+    .menu-close {
+      align-self: flex-end;
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: #4a4a4a;
+      cursor: pointer;
+      margin-bottom: 32px;
+    }
+    .menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex: 1;
+    }
+    .menu-link {
+      font-family: 'Lora', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #4a4a4a;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .menu-cta {
+      width: 100%;
+      background: #d88609;
+      color: #fff5e1;
+      border: none;
+      padding: 16px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    /* ── MAIN CARD ── */
+    .main {
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* ── CHECKMARK ── */
+    .check-section {
+      text-align: center;
+      padding: 40px 0 0;
+    }
+    .check-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 20px;
+    }
+
+    /* ── HEADLINE ── */
+    .ty-eyebrow {
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: #FFB82E;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .ty-headline {
+      font-family: 'Lora', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #4a4a4a;
+      line-height: 1.25;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .ty-sub {
+      font-size: 12px;
+      color: rgba(74,74,74,0.6);
+      line-height: 1.65;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: #feeed5;
+      margin-bottom: 28px;
+    }
+
+    /* ── WHAT HAPPENS NEXT ── */
+    .next-section {
+      margin-bottom: 32px;
+    }
+    .next-eyebrow {
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: #FFB82E;
+      margin-bottom: 6px;
+    }
+    .next-rule {
+      width: 32px;
+      height: 2px;
+      background: #FFB82E;
+      margin-bottom: 16px;
+    }
+    .next-title {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #4a4a4a;
+      margin-bottom: 20px;
+    }
+    .next-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .next-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid #feeed5;
+    }
+    .next-step:last-child { border-bottom: none; }
+    .step-num {
+      font-family: 'Lora', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #FFB82E;
+      opacity: .4;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 32px;
+    }
+    .step-content {}
+    .step-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #4a4a4a;
+      margin-bottom: 2px;
+    }
+    .step-desc {
+      font-size: 10px;
+      color: rgba(74,74,74,0.5);
+      line-height: 1.5;
+    }
+
+    /* ── SHIPPING IMAGE ── */
+    .shipping-img-wrap {
+      margin-bottom: 28px;
+      border: 1px solid #feeed5;
+      overflow: hidden;
+    }
+    .shipping-img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* ── QUESTIONS ROW ── */
+    .questions-row {
+      background: #feeed5;
+      padding: 16px 20px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .questions-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(74,74,74,0.5);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 4px;
+    }
+    .questions-email {
+      font-size: 12px;
+      font-weight: 600;
+      color: #d88609;
+      text-decoration: none;
+    }
+    .questions-email:hover { color: #FFB82E; }
+
+    /* ── MINIMAL FOOTER ── */
+    .footer-minimal {
+      padding: 16px 20px;
+      border-top: 1px solid #feeed5;
+      background: #fff5e1;
+      margin-top: auto;
+    }
+    .footer-minimal-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .footer-minimal-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .footer-copy { font-size: 9px; color: rgba(74,74,74,.45); }
+    .footer-address { font-size: 9px; color: rgba(74,74,74,.45); }
+    .footer-email {
+      font-size: 9px;
+      color: rgba(74,74,74,.5);
+      text-decoration: none;
+    }
+    .footer-email:hover { color: #FFB82E; }
+    .footer-sep { font-size: 9px; color: #feeed5; }
+    .footer-icon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 9px;
+      font-weight: 600;
+      color: rgba(74,74,74,.5);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      cursor: pointer;
+      transition: color .15s;
+    }
+    .footer-icon-link:hover { color: #FFB82E; }
+    .footer-icon { font-size: 10px; }
+  </style>
+</head>
+<body>
+
+  <!-- DESKTOP NAV -->
+  <nav class="nav">
+    <a onclick="window.location.href='/'" style="cursor:pointer">
+      <img src="images/TGP-2.png" class="nav-logo" alt="The Gastronomy Project" onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+    </a>
+    <div class="nav-links">
+      <a onclick="window.location.href='/how-it-works'" class="nav-link">How It Works</a>
+      <a onclick="window.location.href='/our-formulas'" class="nav-link">Our Formulas</a>
+      <a onclick="window.location.href='/about'" class="nav-link">About</a>
+      <a onclick="window.location.href='/faq'" class="nav-link">FAQ</a>
+    </div>
+    <button class="nav-cta" onclick="window.location.href='/short-term-support'">Find Your Plan &rarr;</button>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <nav class="nav-mobile">
+    <a onclick="window.location.href='/'" style="cursor:pointer">
+      <img src="images/TGP-2.png" class="nav-logo" alt="The Gastronomy Project" onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+    </a>
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Full-screen mobile menu overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="menu-close" onclick="toggleMenu()">&#10005;</button>
+    <div class="menu-links">
+      <a onclick="toggleMenu(); window.location.href='/how-it-works'" class="menu-link">How It Works</a>
+      <a onclick="toggleMenu(); window.location.href='/our-formulas'" class="menu-link">Our Formulas</a>
+      <a onclick="toggleMenu(); window.location.href='/about'" class="menu-link">About</a>
+      <a onclick="toggleMenu(); window.location.href='/faq'" class="menu-link">FAQ</a>
+    </div>
+    <button class="menu-cta" onclick="window.location.href='/short-term-support'">Find Your Plan &rarr;</button>
+  </div>
+
+  <!-- MAIN CARD -->
+  <div class="main">
+
+    <!-- Checkmark + headline -->
+    <div class="check-section">
+      <svg class="check-icon" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="30" stroke="#FFB82E" stroke-width="3"/>
+        <path d="M20 32l9 9 15-15" stroke="#FFB82E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="ty-eyebrow">Consultation submitted</div>
+      <h1 class="ty-headline">You're all set.</h1>
+      <p class="ty-sub">Your consultation has been submitted. A licensed provider will review within 24 hours. You can now login to your patient portal <a href="https://my.thegastronomyproject.com/login" target="_blank" rel="noopener" style="color:#d88609;font-weight:600;text-decoration:underline">here</a>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- What happens next -->
+    <div class="next-section">
+      <div class="next-eyebrow">What happens next</div>
+      <div class="next-rule"></div>
+      <div class="next-title">Your plan is in motion.</div>
+
+      <div class="next-steps">
+        <div class="next-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <div class="step-title">Provider reviews your intake personally</div>
+            <div class="step-desc">A licensed physician reviews your case — not an algorithm</div>
+          </div>
+        </div>
+        <div class="next-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <div class="step-title">Prescription sent to Curexa pharmacy</div>
+            <div class="step-desc">Licensed US 503A compounding pharmacy in all 50 states</div>
+          </div>
+        </div>
+        <div class="next-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <div class="step-title">Formula shipped directly to your door</div>
+            <div class="step-desc">Typically 1–2 business days after provider approval</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shipping image -->
+    <div class="shipping-img-wrap">
+      <img src="images/Bubblemailerbottles.png"
+           class="shipping-img"
+           alt="Your formula ships to your door"
+           onerror="this.parentElement.style.display='none'">
+    </div>
+
+    <!-- Questions -->
+    <div class="questions-row">
+      <div class="questions-label">Questions?</div>
+      <a href="mailto:general@thegastronomyproject.com" class="questions-email">general@thegastronomyproject.com</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER — minimal -->
+  <footer class="footer-minimal">
+    <div class="footer-minimal-top">
+      <span class="footer-copy">&copy; The Gastronomy Project</span>
+      <span class="footer-sep">&middot;</span>
+      <span class="footer-address">55 SW 9th St, Suite 3708, Miami, FL 33130</span>
+      <span class="footer-sep">&middot;</span>
+      <a href="mailto:general@thegastronomyproject.com" class="footer-email">general@thegastronomyproject.com</a>
+    </div>
+    <div class="footer-minimal-links">
+      <a onclick="window.open('https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/6969413fb90265c357cedbda_HIPAA%20-%20The%20Gastronomy%20Project.pdf','_blank')" class="footer-icon-link">
+        <span class="footer-icon">&#128274;</span> HIPAA
+      </a>
+      <a onclick="window.location.href='/privacy'" class="footer-icon-link">
+        <span class="footer-icon">&#128196;</span> Privacy Policy
+      </a>
+      <a onclick="window.location.href='/terms'" class="footer-icon-link">
+        <span class="footer-icon">&#128203;</span> Terms of Service
+      </a>
+      <a onclick="window.location.href='/cookie-policy'" class="footer-icon-link">
+        <span class="footer-icon">&#127850;</span> Cookie Policy
+      </a>
+    </div>
+  </footer>
+
+  <script>
+  // ── Mobile menu toggle ──
+  function toggleMenu() {
+    var menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('open');
+  }
+
+  // ── sessionStorage helpers ──
+  function getPlan() {
+    try { return sessionStorage.getItem('plan') || 'short-term'; }
+    catch(e) { return 'short-term'; }
+  }
+  function setPlan(key) {
+    try { sessionStorage.setItem('plan', key); }
+    catch(e) { /* silent fail */ }
+  }
+  </script>
+
+</body>
+</html>
