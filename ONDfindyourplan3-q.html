@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Quiz — The Gastronomy Project</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/TGP-2.png">
+  <link rel="apple-touch-icon" href="images/TGP-2.png">
+
+  <!-- !! NO META PIXEL — ZERO PIXEL PAGE !! -->
+
+  <!-- 1. GA4 only -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBRMQV74FG"></script>
+  <script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());gtag('config','G-JBRMQV74FG');
+  </script>
+
+  <!-- 2. Clarity only -->
+  <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "umuegpvdmf");
+  </script>
+
+  <!-- 3. Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── GLOBAL RESET ── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow-x: hidden; max-width: 100vw; }
+    img { max-width: 100%; height: auto; display: block; }
+    button, .opt { min-height: 44px; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff5e1;
+      color: #4a4a4a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── BACK BUTTON — quiz question pages only ── */
+    .back-bar {
+      padding: 16px 20px;
+    }
+    .back-btn {
+      background: none;
+      border: none;
+      font-size: 12px;
+      color: #4a4a4a;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      padding: 4px 0;
+    }
+    .back-btn:hover { color: #FFB82E; }
+
+    /* ── QUIZ CONTAINER ── */
+    .quiz-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px 40px;
+      max-width: 480px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* ── PROGRESS DOTS ── */
+    .prog {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .pd {
+      width: 28px;
+      height: 3px;
+      background: #feeed5;
+      transition: background .3s;
+    }
+    .pd.on { background: #FFB82E; }
+
+    /* ── QUESTION LABEL ── */
+    .lbl {
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: #FFB82E;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    /* ── QUESTION HEADING ── */
+    .ph {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #4a4a4a;
+      line-height: 1.3;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    @media (min-width: 1024px) { .ph { font-size: 26px; } }
+
+    /* ── ANSWER OPTIONS ── */
+    .options {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .opt {
+      width: 100%;
+      padding: 14px 16px;
+      background: #feeed5;
+      border: 1px solid #feeed5;
+      font-size: 13px;
+      font-family: 'Poppins', sans-serif;
+      color: #4a4a4a;
+      text-align: left;
+      cursor: pointer;
+      transition: background .15s, border-color .15s;
+      line-height: 1.5;
+    }
+    .opt:hover { border-color: #FFB82E; }
+    .opt.selected {
+      background: #FFB82E;
+      color: #4a4a4a;
+      border-color: #FFB82E;
+    }
+
+    /* ── RESULT STATE ── */
+    .sub {
+      font-size: 13px;
+      color: rgba(74,74,74,0.65);
+      line-height: 1.65;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .cta {
+      width: 100%;
+      background: #FFB82E;
+      color: #4a4a4a;
+      border: none;
+      padding: 15px;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 0;
+    }
+
+    /* ── MINIMAL FOOTER ── */
+    .footer-minimal {
+      padding: 16px 20px;
+      border-top: 1px solid #feeed5;
+      background: #fff5e1;
+      margin-top: auto;
+    }
+    .footer-minimal-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .footer-copy { font-size: 9px; color: rgba(74,74,74,.45); }
+    .footer-sep { font-size: 9px; color: #feeed5; }
+    .footer-icon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 9px;
+      font-weight: 600;
+      color: rgba(74,74,74,.5);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      cursor: pointer;
+      transition: color .15s;
+      padding: 8px 0;
+    }
+    .footer-icon-link:hover { color: #FFB82E; }
+    .footer-icon { font-size: 10px; }
+    .footer-logo-wrap { text-align: center; margin-bottom: 14px; }
+    .footer-logo { height: 36px; margin: 0 auto; opacity: 0.5; }
+  </style>
+</head>
+<body>
+
+  <!-- BACK BUTTON — no nav, no logo link -->
+  <div class="back-bar">
+    <button class="back-btn" onclick="history.back()">&larr; Back</button>
+  </div>
+
+  <!-- QUIZ CONTAINER — empty on load, injected by JS -->
+  <div class="quiz-wrap">
+    <div id="quiz-container"></div>
+  </div>
+
+  <!-- FOOTER — minimal -->
+  <footer class="footer-minimal">
+    <div class="footer-logo-wrap">
+      <img src="images/TGP-2.png" class="footer-logo" alt="The Gastronomy Project" onclick="window.location.href='/'" style="cursor:pointer" onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+    </div>
+    <div class="footer-minimal-links">
+      <span class="footer-copy">&copy; The Gastronomy Project</span>
+      <span class="footer-sep">&middot;</span>
+      <a onclick="window.location.href='/privacy'" class="footer-icon-link">Privacy</a>
+      <span class="footer-sep">&middot;</span>
+      <a onclick="window.location.href='/terms'" class="footer-icon-link">Terms</a>
+      <span class="footer-sep">&middot;</span>
+      <a onclick="window.open('https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/6969413fb90265c357cedbda_HIPAA%20-%20The%20Gastronomy%20Project.pdf','_blank')" class="footer-icon-link">HIPAA</a>
+    </div>
+  </footer>
+
+  <script>
+  // ── Select + advance with visual feedback ──
+  function selectAndAdvance(el, nextFn) {
+    document.querySelectorAll('.opt').forEach(function(o) {
+      o.classList.remove('selected');
+    });
+    el.classList.add('selected');
+    setTimeout(nextFn, 380);
+  }
+
+  // ── Q1 — injected on page load ──
+  function showQ1() {
+    document.getElementById('quiz-container').innerHTML =
+      '<div class="prog"><div class="pd on"></div><div class="pd"></div><div class="pd"></div></div>' +
+      '<div class="lbl">Question 1 of 3</div>' +
+      '<div class="ph">How would you describe what you\'ve been experiencing?</div>' +
+      '<div class="options">' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">An unsettled feeling that comes and goes</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">Waves that hit without warning</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">Worse in the mornings or after eating</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">Unpredictable &mdash; hard to identify a pattern</div>' +
+      '</div>';
+  }
+
+  // ── Q2 — click-injected ──
+  function showQ2() {
+    document.getElementById('quiz-container').innerHTML =
+      '<div class="prog"><div class="pd on"></div><div class="pd on"></div><div class="pd"></div></div>' +
+      '<div class="lbl">Question 2 of 3</div>' +
+      '<div class="ph">How is it affecting your daily routine?</div>' +
+      '<div class="options">' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Minor &mdash; more of an annoyance</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Moderate &mdash; I plan around it</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Significant &mdash; it stops me from doing things</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Severe &mdash; it\'s affecting my quality of life</div>' +
+      '</div>';
+  }
+
+  // ── Q3 — click-injected ──
+  function showQ3() {
+    document.getElementById('quiz-container').innerHTML =
+      '<div class="prog"><div class="pd on"></div><div class="pd on"></div><div class="pd on"></div></div>' +
+      '<div class="lbl">Question 3 of 3</div>' +
+      '<div class="ph">What kind of support matters most to you?</div>' +
+      '<div class="options">' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Something fast-acting I can use when it hits</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">A daily plan to reduce how often it happens</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">A natural + doctor-guided combination</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">I just want to understand what\'s going on</div>' +
+      '</div>';
+  }
+
+  // ── Result state ──
+  function showResult() {
+    document.getElementById('quiz-container').innerHTML =
+      '<div style="text-align:center;padding:20px 0">' +
+        '<div class="ph">You\'re all set.</div>' +
+        '<div class="sub">Based on your answers, we\'ve matched you with a GI comfort support plan.</div>' +
+        '<button class="cta" onclick="seeResults()">See My Results &rarr;</button>' +
+      '</div>';
+  }
+
+  // ── Navigate to results ──
+  function seeResults() {
+    sessionStorage.setItem('plan', 'GI-comfort');
+    window.location.href = '/results';
+  }
+
+  // ── Initialize Q1 on page load ──
+  window.onload = showQ1;
+  </script>
+
+</body>
+</html>
