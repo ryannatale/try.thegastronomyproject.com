@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eat. Drink. Feel well. — The Gastronomy Project</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/TGP-2.png">
+  <link rel="apple-touch-icon" href="images/TGP-2.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Gastronomy Project">
+  <meta property="og:title" content="Eat. Drink. Feel well. — The Gastronomy Project">
+  <meta property="og:description" content="Science-backed wellness formulas. Personalized for you. Delivered to your door.">
+  <meta property="og:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
+  <meta property="og:url" content="https://thegastronomyproject.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Eat. Drink. Feel well. — The Gastronomy Project">
+  <meta name="twitter:description" content="Science-backed wellness formulas. Personalized for you. Delivered to your door.">
+  <meta name="twitter:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
+
+  <!-- 1. Meta Pixel — PageView -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '');
+  fbq('track', 'PageView');
+  </script>
+
+  <!-- 2. GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBRMQV74FG"></script>
+  <script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());gtag('config','G-JBRMQV74FG');
+  </script>
+
+  <!-- 3. Clarity -->
+  <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "umuegpvdmf");
+  </script>
+
+  <!-- 4. Trustpilot Bootstrap -->
+  <script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+  /* ══════════════════════════════════════════════════════
+     GLOBAL
+     ══════════════════════════════════════════════════════ */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { overflow-x: hidden; max-width: 100vw; }
+  img { max-width: 100%; height: auto; display: block; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff5e1;
+    color: #4a4a4a;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     1. DESKTOP NAV
+     ══════════════════════════════════════════════════════ */
+  .nav {
+    height: 64px;
+    padding: 0 60px;
+    background: #4a4a4a;
+    border-bottom: 1px solid #3a3a3a;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  @media (min-width: 1024px) { .nav { display: flex; } }
+  .nav-logo { height: 36px; }
+  @media (min-width: 1024px) { .nav-logo { height: 42px; } }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-link {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255,245,225,0.8);
+    text-decoration: none;
+    letter-spacing: .02em;
+    cursor: pointer;
+  }
+  .nav-link:hover { color: #FFB82E; }
+  .nav-cta {
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 10px 22px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+  }
+  .nav-cta:hover { background: #d88609; color: #fff5e1; }
+  .nav-login {
+    background: transparent;
+    color: rgba(255,245,225,0.8);
+    border: 1px solid rgba(255,245,225,0.3);
+    padding: 10px 22px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+  }
+  .nav-login:hover { color: #FFB82E; border-color: #FFB82E; }
+  .nav-actions { display: flex; align-items: center; gap: 10px; }
+
+  /* ══════════════════════════════════════════════════════
+     1b. MOBILE NAV
+     ══════════════════════════════════════════════════════ */
+  .nav-mobile {
+    height: 52px;
+    padding: 0 16px;
+    background: #4a4a4a;
+    border-bottom: 1px solid #3a3a3a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  @media (min-width: 1024px) { .nav-mobile { display: none; } }
+  .mobile-nav-right { display: flex; align-items: center; gap: 12px; }
+  .nav-login-mobile {
+    background: transparent;
+    color: rgba(255,245,225,0.8);
+    border: 1px solid rgba(255,245,225,0.3);
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 36px;
+  }
+  .nav-login-mobile:hover { color: #FFB82E; border-color: #FFB82E; }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    width: 20px;
+    height: 1.5px;
+    background: rgba(255,245,225,0.8);
+    display: block;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #fff5e1;
+    z-index: 200;
+    flex-direction: column;
+    padding: 24px 20px;
+  }
+  .mobile-menu.open { display: flex; }
+  .menu-close {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #4a4a4a;
+    cursor: pointer;
+    margin-bottom: 32px;
+  }
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+  }
+  .menu-link {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #4a4a4a;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .menu-cta {
+    width: 100%;
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    min-height: 44px;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     2. HERO
+     ══════════════════════════════════════════════════════ */
+  .hero {
+    position: relative;
+    background: transparent;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 20px;
+  }
+  @media (min-width: 1024px) {
+    .hero {
+      flex-direction: row;
+      align-items: stretch;
+      padding: 0 0 0 60px;
+      min-height: 600px;
+      max-height: 800px;
+      height: calc(100vh - 64px);
+    }
+  }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+  }
+  @media (min-width: 1024px) {
+    .hero-left { flex: 0 0 45%; padding: 60px 40px 60px 0; }
+  }
+  .hero-right {
+    display: none;
+  }
+  @media (min-width: 1024px) {
+    .hero-right {
+      display: block;
+      flex-shrink: 0;
+      width: 480px;
+      align-self: stretch;
+      overflow: hidden;
+    }
+  }
+  .hero-product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  .hero-mobile-bg { display: none; }
+  @media (max-width: 1023px) {
+    .hero-mobile-bg {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.5;
+      z-index: 0;
+    }
+    .hero-left {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  @media (min-width: 1024px) {
+    .hero-mobile-bg { display: none; }
+    .hero-product-img { display: block; }
+  }
+  .hero-eyebrow {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: #FFB82E;
+    margin-bottom: 12px;
+  }
+  @media (min-width: 1024px) { .hero-eyebrow { font-size: 10px; } }
+  .hero-headline {
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #4a4a4a;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  @media (min-width: 768px) { .hero-headline { font-size: 40px; } }
+  @media (min-width: 1024px) { .hero-headline { font-size: 48px; } }
+  .hero-sub {
+    font-size: 14px;
+    color: rgba(74,74,74,0.7);
+    line-height: 1.7;
+    margin-bottom: 36px;
+    max-width: 480px;
+  }
+  @media (min-width: 1024px) { .hero-sub { font-size: 16px; } }
+  .hero-cta {
+    display: inline-block;
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 16px 36px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+    align-self: flex-start;
+  }
+  .hero-cta:hover { background: #d88609; color: #fff5e1; }
+
+  /* ══════════════════════════════════════════════════════
+     3. TRUST BAR
+     ══════════════════════════════════════════════════════ */
+  .trust-bar {
+    background: #4a4a4a;
+    padding: 14px 20px;
+    width: 100%;
+  }
+  .trust-bar-inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    min-width: unset;
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px) {
+    .trust-bar { padding: 14px 60px; }
+    .trust-bar-inner {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      max-width: 1160px;
+      gap: 0;
+    }
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    padding: 0 20px;
+    border-right: none;
+  }
+  @media (min-width: 1024px) {
+    .trust-item {
+      border-right: 1px solid rgba(255,245,225,0.12);
+    }
+    .trust-item:last-child { border-right: none; }
+  }
+  .trust-check { width: 18px; height: 18px; flex-shrink: 0; }
+  .trust-item span {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255,245,225,0.8);
+    white-space: nowrap;
+    letter-spacing: .01em;
+    font-family: 'Poppins', sans-serif;
+  }
+  @media (min-width: 1024px) { .trust-item span { font-size: 12px; } }
+
+  /* (Section 4 Intro merged into Wellness Options section) */
+
+  /* ══════════════════════════════════════════════════════
+     5. WELLNESS OPTIONS
+     ══════════════════════════════════════════════════════ */
+  .wellness-section {
+    background: #ffffff;
+    text-align: center;
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+  .wellness-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 100px;
+    width: auto;
+    opacity: 0.25;
+  }
+  .wellness-intro {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  @media (min-width: 1024px) { .wellness-intro { padding: 0 60px; } }
+  .wellness-intro p {
+    font-size: 13px;
+    color: rgba(74,74,74,0.7);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+  }
+  .wellness-intro p:last-child { margin-bottom: 0; }
+  @media (max-width: 1023px) {
+    .wellness-intro p {
+      white-space: normal;
+      font-size: 12px;
+    }
+  }
+  .wellness-section-headline {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4a4a4a;
+    padding: 0 20px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    line-height: 1.25;
+  }
+  @media (min-width: 1024px) { .wellness-section-headline { font-size: 32px; padding: 0 60px; } }
+  .wellness-wrap {
+    position: relative;
+    padding: 0;
+  }
+  .wellness-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 80px; height: 100%;
+    background: linear-gradient(to right, transparent, #ffffff);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .wellness-row {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 0 60px 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .wellness-row::-webkit-scrollbar { display: none; }
+  .wellness-card {
+    flex-shrink: 0;
+    width: 220px;
+    background: #4a4a4a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .wellness-card:hover { transform: scale(1.03); }
+  .wellness-card-name {
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff5e1;
+    line-height: 1.3;
+    min-height: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 12px;
+  }
+  .card-image-wrap {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    display: block;
+  }
+  .card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  .wellness-card .card-btn {
+    display: block;
+    width: 100%;
+    min-height: 52px;
+    height: 52px;
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    cursor: pointer;
+    border-radius: 0;
+    margin-top: auto;
+  }
+  .wellness-card .card-btn:hover { background: #d88609; color: #fff5e1; }
+  @media (max-width: 1023px) {
+    .wellness-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow-x: unset;
+      padding: 0 20px 20px;
+      gap: 16px;
+    }
+    .wellness-card { width: 100%; }
+    .wellness-wrap::after { display: none; }
+  }
+
+  /* ══════════════════════════════════════════════════════
+     6. DR. NATALE (FOUNDER)
+     ══════════════════════════════════════════════════════ */
+  .founder-section {
+    background: #4a4a4a;
+    padding: 48px 20px;
+  }
+  @media (min-width: 1024px) { .founder-section { padding: 80px 60px; } }
+  .founder-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px) {
+    .founder-inner { flex-direction: row; gap: 64px; align-items: center; }
+  }
+  .founder-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  @media (min-width: 1024px) {
+    .founder-left { align-items: flex-start; text-align: left; width: 220px; }
+  }
+  .founder-photo-wrap {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(255,245,225,0.1);
+    border: 2px solid rgba(255,245,225,0.2);
+    margin-bottom: 16px;
+    position: relative;
+  }
+  @media (min-width: 1024px) { .founder-photo-wrap { width: 160px; height: 160px; } }
+  .founder-photo {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  .founder-initials {
+    display: none;
+    width: 100%; height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff5e1;
+    position: absolute;
+    top: 0;
+  }
+  .founder-name {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff5e1;
+    margin-bottom: 6px;
+  }
+  .founder-title {
+    font-size: 11px;
+    color: rgba(255,245,225,0.5);
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+  }
+  .founder-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #FFB82E;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .02em;
+  }
+  .founder-instagram:hover { color: #d88609; }
+  .founder-ig-icon { width: 16px; height: 16px; color: #FFB82E; flex-shrink: 0; }
+  .founder-right { flex: 1; }
+  .founder-quote-mark {
+    font-family: 'Lora', serif;
+    font-size: 64px;
+    color: #FFB82E;
+    opacity: 0.35;
+    line-height: 0.7;
+    margin-bottom: 12px;
+  }
+  .founder-quote {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: rgba(255,245,225,0.88);
+    line-height: 1.85;
+    font-style: italic;
+    margin-bottom: 18px;
+    border: none;
+    padding: 0;
+  }
+  @media (min-width: 1024px) { .founder-quote { font-size: 18px; } }
+  .founder-sig {
+    font-size: 11px;
+    color: rgba(255,245,225,0.4);
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     7. YOUTUBE PLACEHOLDER
+     ══════════════════════════════════════════════════════ */
+  .video-section {
+    background: #feeed5;
+    padding: 48px 20px;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .video-section { padding: 80px 60px; } }
+  .video-eyebrow {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: #FFB82E;
+    margin-bottom: 8px;
+  }
+  @media (min-width: 1024px) { .video-eyebrow { font-size: 10px; } }
+  .video-rule {
+    width: 32px;
+    height: 2px;
+    background: #FFB82E;
+    margin: 0 auto 16px;
+  }
+  .video-headline {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 32px;
+  }
+  @media (min-width: 1024px) { .video-headline { font-size: 28px; } }
+  .video-placeholder {
+    max-width: 760px;
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+    background: rgba(74,74,74,0.06);
+    border: 1px dashed rgba(74,74,74,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-placeholder-text {
+    font-size: 12px;
+    color: rgba(74,74,74,0.35);
+    letter-spacing: .04em;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     8. HOW IT WORKS
+     ══════════════════════════════════════════════════════ */
+  .how-it-works {
+    padding: 48px 20px;
+    background: #fff5e1;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .how-it-works { padding: 80px 60px; } }
+  .hiw-eyebrow {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: #FFB82E;
+    margin-bottom: 8px;
+  }
+  @media (min-width: 1024px) { .hiw-eyebrow { font-size: 10px; } }
+  .hiw-rule {
+    width: 32px;
+    height: 2px;
+    background: #FFB82E;
+    margin: 0 auto 16px;
+  }
+  .hiw-headline {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 36px;
+    line-height: 1.25;
+  }
+  @media (min-width: 1024px) { .hiw-headline { font-size: 32px; margin-bottom: 48px; } }
+  .hiw-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px) {
+    .hiw-steps {
+      flex-direction: row;
+      gap: 0;
+      max-width: 960px;
+      justify-content: center;
+    }
+  }
+  .hiw-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #feeed5;
+    text-align: left;
+  }
+  .hiw-step:last-child { border-bottom: none; }
+  @media (min-width: 1024px) {
+    .hiw-step {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 40px;
+      border-bottom: none;
+      border-right: 1px solid #feeed5;
+      flex: 1;
+    }
+    .hiw-step:last-child { border-right: none; }
+  }
+  .hiw-num {
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFB82E;
+    opacity: .4;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 44px;
+  }
+  @media (min-width: 1024px) {
+    .hiw-num { font-size: 48px; width: auto; margin-bottom: 12px; }
+  }
+  .hiw-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 4px;
+  }
+  @media (min-width: 1024px) { .hiw-title { font-size: 15px; } }
+  .hiw-sub {
+    font-size: 11px;
+    color: rgba(74,74,74,0.6);
+    line-height: 1.5;
+  }
+  @media (min-width: 1024px) { .hiw-sub { font-size: 12px; } }
+  .hiw-cta {
+    margin-top: 40px;
+    background: #4a4a4a;
+    color: #fff5e1;
+    border: none;
+    padding: 16px 40px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+  }
+  @media (min-width: 1024px) { .hiw-cta { font-size: 13px; } }
+  .hiw-cta:hover { background: #3a3a3a; }
+
+  /* ══════════════════════════════════════════════════════
+     9. TRUSTPILOT
+     ══════════════════════════════════════════════════════ */
+  .trustpilot-section {
+    padding: 48px 20px;
+    background: #feeed5;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .trustpilot-section { padding: 60px 60px; } }
+
+  /* ══════════════════════════════════════════════════════
+     10. BOTTOM CTA BAND
+     ══════════════════════════════════════════════════════ */
+  .bottom-cta {
+    background: #4a4a4a;
+    padding: 48px 20px;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .bottom-cta { padding: 80px 60px; } }
+  .bottom-cta-headline {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff5e1;
+    margin-bottom: 12px;
+    line-height: 1.25;
+  }
+  @media (min-width: 1024px) { .bottom-cta-headline { font-size: 32px; } }
+  .bottom-cta-sub {
+    font-size: 13px;
+    color: rgba(255,245,225,0.6);
+    margin-bottom: 28px;
+    line-height: 1.65;
+  }
+  .bottom-cta-btn {
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 16px 40px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+  }
+  .bottom-cta-btn:hover { background: #d88609; color: #fff5e1; }
+
+  /* ══════════════════════════════════════════════════════
+     11. FULL FOOTER
+     ══════════════════════════════════════════════════════ */
+  .footer-full {
+    background: #3a3a3a;
+    padding: 36px 60px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  @media (max-width: 767px) { .footer-full { padding: 28px 20px 20px; } }
+  .footer-logo { height: 40px; width: auto; display: block; object-fit: contain; margin-bottom: 4px; opacity: 0.5; }
+  .footer-nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .footer-nav .footer-link {
+    font-size: 11px;
+    color: rgba(255,245,225,.45);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .footer-nav .footer-link:hover { color: #FFB82E; }
+  .footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .footer-full .footer-address { font-size: 10px; color: rgba(255,245,225,.35); }
+  .footer-full .footer-sep { color: rgba(255,245,225,.2); font-size: 10px; }
+  .footer-full .footer-email {
+    font-size: 10px;
+    color: rgba(255,245,225,.4);
+    text-decoration: none;
+  }
+  .footer-full .footer-email:hover { color: #FFB82E; }
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,245,225,.08);
+  }
+  .footer-full .footer-copy { font-size: 10px; color: rgba(255,245,225,.2); }
+  .footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .footer-full .footer-icon-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(255,245,225,.35);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    cursor: pointer;
+    transition: color .15s;
+  }
+  .footer-full .footer-icon-link:hover { color: #FFB82E; }
+  .footer-icon { font-size: 10px; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     1. NAVIGATION
+     ═══════════════════════════════════════════════════════ -->
+
+<!-- Desktop Nav -->
+<nav class="nav">
+  <a onclick="window.location.href='/'" style="cursor:pointer">
+    <img src="images/TGP-2.png" class="nav-logo" alt="The Gastronomy Project"
+         onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  </a>
+  <div class="nav-links">
+    <a onclick="window.location.href='/how-it-works'" class="nav-link">How It Works</a>
+    <a onclick="window.location.href='/our-formulas'" class="nav-link">Our Formulas</a>
+    <a onclick="window.location.href='/about'" class="nav-link">About</a>
+    <a onclick="window.location.href='/faq'" class="nav-link">FAQ</a>
+  </div>
+  <div class="nav-actions">
+    <button class="nav-login" onclick="window.location.href='https://my.thegastronomyproject.com/login'">Log In</button>
+    <button class="nav-cta" onclick="window.location.href='/ginger-plus'">Find Your Plan &rarr;</button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<nav class="nav-mobile">
+  <a onclick="window.location.href='/'" style="cursor:pointer">
+    <img src="images/TGP-2.png" class="nav-logo" alt="The Gastronomy Project"
+         onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  </a>
+  <div class="mobile-nav-right">
+    <button class="nav-login-mobile" onclick="window.location.href='https://my.thegastronomyproject.com/login'">Log In</button>
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="menu-close" onclick="toggleMenu()">&times;</button>
+  <div class="menu-links">
+    <a onclick="toggleMenu(); window.location.href='/how-it-works'" class="menu-link">How It Works</a>
+    <a onclick="toggleMenu(); window.location.href='/our-formulas'" class="menu-link">Our Formulas</a>
+    <a onclick="toggleMenu(); window.location.href='/about'" class="menu-link">About</a>
+    <a onclick="toggleMenu(); window.location.href='/faq'" class="menu-link">FAQ</a>
+  </div>
+  <button class="menu-cta" onclick="window.location.href='/ginger-plus'">Find Your Plan &rarr;</button>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     2. HERO
+     ═══════════════════════════════════════════════════════ -->
+<section class="hero">
+  <img src="images/hero6.png" class="hero-mobile-bg" alt="">
+  <div class="hero-left">
+    <div class="hero-eyebrow">The Gastronomy Project</div>
+    <h1 class="hero-headline">Eat. Drink. Feel well.<br>Welcome to The Gastronomy Project.</h1>
+    <p class="hero-sub">Science-backed wellness formulas. Personalized for you. Delivered to your door.</p>
+    <button class="hero-cta" onclick="window.location.href='/ginger-plus'">Find Your Plan</button>
+  </div>
+  <div class="hero-right">
+    <img src="images/hero6.png" class="hero-product-img" alt="Ginger+ Wellness Formula">
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     3. TRUST BAR
+     ═══════════════════════════════════════════════════════ -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <svg class="trust-check" viewBox="0 0 20 20" fill="none">
+        <circle cx="10" cy="10" r="9" stroke="#FFB82E" stroke-width="1.5"/>
+        <path d="M6 10l3 3 5-5" stroke="#FFB82E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>USA Based Fulfillment Partner</span>
+    </div>
+    <div class="trust-item">
+      <svg class="trust-check" viewBox="0 0 20 20" fill="none">
+        <circle cx="10" cy="10" r="9" stroke="#FFB82E" stroke-width="1.5"/>
+        <path d="M6 10l3 3 5-5" stroke="#FFB82E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Ships to All 50 States</span>
+    </div>
+    <div class="trust-item">
+      <svg class="trust-check" viewBox="0 0 20 20" fill="none">
+        <circle cx="10" cy="10" r="9" stroke="#FFB82E" stroke-width="1.5"/>
+        <path d="M6 10l3 3 5-5" stroke="#FFB82E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Privacy Protected</span>
+    </div>
+    <div class="trust-item">
+      <svg class="trust-check" viewBox="0 0 20 20" fill="none">
+        <circle cx="10" cy="10" r="9" stroke="#FFB82E" stroke-width="1.5"/>
+        <path d="M6 10l3 3 5-5" stroke="#FFB82E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>All in One Convenient Capsule</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     5. WELLNESS OPTIONS
+     ═══════════════════════════════════════════════════════ -->
+<section class="wellness-section">
+  <img src="images/TGP-1_F49F1E copy.png" class="wellness-logo" alt="">
+  <div class="wellness-intro">
+    <p>We believe wellness should be personalized, and built around your life.</p>
+    <p>Our formulas combine science-backed ingredients with nature&rsquo;s best, customized for you.</p>
+  </div>
+  <h2 class="wellness-section-headline">Our Wellness Options</h2>
+  <div class="wellness-wrap">
+    <div class="wellness-row">
+
+      <div class="wellness-card">
+        <div class="wellness-card-name">Built for Right Now Plan</div>
+        <!-- TODO: update to real product page URL when built -->
+        <div class="card-image-wrap"><img src="images/capsules/short-term.png" alt="Built for Right Now Plan" onclick="window.location.href='/find-your-plan-1'"></div>
+        <button class="card-btn" onclick="window.location.href='/results-right-now'">Get Started</button>
+      </div>
+
+      <div class="wellness-card">
+        <div class="wellness-card-name">Built for Daily Use Plan</div>
+        <!-- TODO: update to real product page URL when built -->
+        <div class="card-image-wrap"><img src="images/capsules/long-term.png" alt="Built for Daily Use Plan" onclick="window.location.href='/find-your-plan-1'"></div>
+        <button class="card-btn" onclick="window.location.href='/results-daily-use'">Get Started</button>
+      </div>
+
+      <div class="wellness-card">
+        <div class="wellness-card-name">Real Life Moments Plan</div>
+        <!-- TODO: update to real product page URL when built -->
+        <div class="card-image-wrap"><img src="images/capsules/GI-comfort.png" alt="Real Life Moments Plan" onclick="window.location.href='/find-your-plan-1'"></div>
+        <button class="card-btn" onclick="window.location.href='/results-real-life-moments'">Get Started</button>
+      </div>
+
+      <div class="wellness-card">
+        <div class="wellness-card-name">Weekend Formula Plan</div>
+        <!-- TODO: update to real product page URL when built -->
+        <div class="card-image-wrap"><img src="images/capsules/gpack.png" alt="Weekend Formula Plan" onclick="window.location.href='/find-your-plan-1'"></div>
+        <button class="card-btn" onclick="window.location.href='/results-weekend-formula'">Get Started</button>
+      </div>
+
+      <div class="wellness-card">
+        <div class="wellness-card-name">Ginger+ Mastic</div>
+        <!-- TODO: update to real product page URL when built -->
+        <div class="card-image-wrap"><img src="images/capsules/mastic.png" alt="Ginger+ Mastic" onclick="window.location.href='/find-your-plan-1'"></div>
+        <button class="card-btn" onclick="window.location.href='https://go.thegastronomyproject.com/start-online-visit/mastic'">Buy Now</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     6. HOW IT WORKS
+     ═══════════════════════════════════════════════════════ -->
+<section class="how-it-works">
+  <div class="hiw-eyebrow">How it works</div>
+  <div class="hiw-rule"></div>
+  <h2 class="hiw-headline">Three simple steps</h2>
+  <div class="hiw-steps">
+    <div class="hiw-step">
+      <div class="hiw-num">01</div>
+      <div class="hiw-content">
+        <div class="hiw-title">Complete your online visit</div>
+        <div class="hiw-sub">On your phone &middot; 5 minutes</div>
+      </div>
+    </div>
+    <div class="hiw-step">
+      <div class="hiw-num">02</div>
+      <div class="hiw-content">
+        <div class="hiw-title">Get matched with your formula</div>
+        <div class="hiw-sub">Personalized &middot; Within 24 hours</div>
+      </div>
+    </div>
+    <div class="hiw-step">
+      <div class="hiw-num">03</div>
+      <div class="hiw-content">
+        <div class="hiw-title">Your formula ships to your door</div>
+        <div class="hiw-sub">US fulfillment &middot; 1&ndash;2 business days</div>
+      </div>
+    </div>
+  </div>
+  <button class="hiw-cta" onclick="window.location.href='/ginger-plus'">Find Your Plan &rarr;</button>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     7. TRUSTPILOT
+     ═══════════════════════════════════════════════════════ -->
+<section class="trustpilot-section">
+  <div class="trustpilot-widget"
+    data-locale="en-US"
+    data-template-id="53aa8807dec7e10d38f59f32"
+    data-businessunit-id="69e0d6a77b94cf5720e80e06"
+    data-style-height="140px"
+    data-style-width="100%"
+    data-theme="light">
+    <div style="text-align:center;padding:10px;font-size:10px;color:#4a4a4a">
+      &#9733;&#9733;&#9733;&#9733;&#9733; &nbsp; Verified reviews on Trustpilot
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     8. FOUNDER SECTION
+     ═══════════════════════════════════════════════════════ -->
+<section class="founder-section">
+  <div class="founder-inner">
+    <div class="founder-left">
+      <div class="founder-photo-wrap">
+        <img src="images/dr-natale-yellowshirt.jpg"
+             onerror="this.style.display='none'; document.getElementById('founder-initials').style.display='flex'"
+             class="founder-photo" alt="Ryan Natale">
+        <div class="founder-initials" id="founder-initials">RN</div>
+      </div>
+      <div class="founder-name">Ryan Natale</div>
+      <div class="founder-title">Founder, The Gastronomy Project</div>
+      <a href="https://www.instagram.com/drryannatalemd/?hl=en"
+         target="_blank" rel="noopener" class="founder-instagram">
+        <svg class="founder-ig-icon" viewBox="0 0 24 24" fill="none">
+          <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+        </svg>
+        @drryannatalemd
+      </a>
+    </div>
+    <div class="founder-right">
+      <div class="founder-quote-mark">&ldquo;</div>
+      <blockquote class="founder-quote">
+        I built The Gastronomy Project because I believe you deserve better than generic. Better ingredients. Better formulas. A better experience from start to finish.
+        <br><br>
+        I use these products myself. I care deeply about what goes into them. Everything here is something I would recommend to my own family. That&rsquo;s not a marketing line. That&rsquo;s just the truth.
+      </blockquote>
+      <div class="founder-sig">Ryan Natale &nbsp;&middot;&nbsp; Founder</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     9. YOUTUBE VIDEO PLACEHOLDER
+     ═══════════════════════════════════════════════════════ -->
+<section class="video-section">
+  <div class="video-eyebrow">From the founder</div>
+  <div class="video-rule"></div>
+  <h2 class="video-headline">Why I built this.</h2>
+  <div class="video-placeholder">
+    <span class="video-placeholder-text">YouTube video &mdash; coming soon</span>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     10. BOTTOM CTA BAND
+     ═══════════════════════════════════════════════════════ -->
+<section class="bottom-cta">
+  <h2 class="bottom-cta-headline">Ready to find your plan?</h2>
+  <p class="bottom-cta-sub">It takes 3 minutes. Built specifically for you.</p>
+  <button class="bottom-cta-btn" onclick="window.location.href='/ginger-plus'">Get Started &mdash; It&rsquo;s Free</button>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     11. FOOTER
+     ═══════════════════════════════════════════════════════ -->
+<footer class="footer-full">
+  <img src="images/TGP-2.png" class="footer-logo" alt="The Gastronomy Project"
+       onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  <div class="footer-nav">
+    <a onclick="window.location.href='/how-it-works'" class="footer-link">How It Works</a>
+    <a onclick="window.location.href='/our-formulas'" class="footer-link">Our Formulas</a>
+    <a onclick="window.location.href='/about'" class="footer-link">About</a>
+    <a onclick="window.location.href='/faq'" class="footer-link">FAQ</a>
+  </div>
+  <div class="footer-contact">
+    <span class="footer-address">55 SW 9th St, Suite 3708, Miami, FL 33130</span>
+    <span class="footer-sep">&middot;</span>
+    <a href="mailto:general@thegastronomyproject.com" class="footer-email">general@thegastronomyproject.com</a>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; The Gastronomy Project</div>
+    <div class="footer-legal">
+      <a onclick="window.location.href='/hipaa'" class="footer-icon-link">
+        <span class="footer-icon">&#128274;</span> HIPAA
+      </a>
+      <a onclick="window.location.href='/privacy'" class="footer-icon-link">
+        <span class="footer-icon">&#128196;</span> Privacy Policy
+      </a>
+      <a onclick="window.location.href='/terms'" class="footer-icon-link">
+        <span class="footer-icon">&#128203;</span> Terms of Service
+      </a>
+      <a onclick="window.location.href='/cookie-policy'" class="footer-icon-link">
+        <span class="footer-icon">&#127850;</span> Cookie Policy
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
