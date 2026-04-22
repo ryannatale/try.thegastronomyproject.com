@@ -536,9 +536,9 @@
 
     <!-- Price Box with Capsule Image -->
     <div class="price-box">
-      <img src="images/capsules/short-term.png" class="capsule-img" id="capsule-img" alt="Your formula">
+      <img src="images/Capsules/short-term.png" class="capsule-img" id="capsule-img" alt="Your formula">
       <div class="price-line" id="price-line">starting as low as <strong id="price-amount">$33</strong></div>
-      <div class="price-details" id="price-sub">One-time &middot; Doctor-reviewed &middot; Delivered to your door</div>
+      <div class="price-details" id="price-sub">Delivered to your door</div>
     </div>
 
     <!-- Motivational line -->
@@ -576,16 +576,16 @@
     <div class="proof-bar">
       <span class="proof-icon">&#128100;</span>
       <span class="proof-icon">&#127807;</span>
-      <span class="proof-text">We're brand new and would love your support &mdash; join <strong>115+</strong> patients who've already found their plan</span>
+      <span class="proof-text">We're brand new and would love your support &mdash; join <strong>75+</strong> customers who've already found their plan</span>
     </div>
 
     <!-- CTA -->
     <div class="cta-section">
       <div class="offer-strip" id="offer-strip">
-        <span>&#127881;</span> 15% Off Launch Offer — Applied at Checkout
+        <span>&#127881;</span> 15% Off Launch Offer — Unlock on the Next Page
       </div>
       <button class="main-cta" id="main-cta" onclick="handleCTA()">
-        Start My Free Online Visit
+        Get Started
       </button>
       <div class="cta-sub" id="cta-sub">No commitment &mdash; you can decide at the end</div>
     </div>
@@ -649,7 +649,7 @@
   <div class="sticky-cta" id="sticky-cta">
     <div class="sticky-cta-inner">
       <div class="sticky-offer">&#127881; 15% Off Launch Offer</div>
-      <button onclick="handleCTA()">Start My Free Online Visit</button>
+      <button onclick="handleCTA()">Get Started</button>
     </div>
   </div>
 
@@ -694,13 +694,17 @@
 
   // ── Dynamic content based on plan ──
   var headlines = {
-    'short-term': 'Built for right now plan',
-    'long-term':  'Built for daily use plan',
-    'GI-comfort': 'Built for real life moments plan',
-    'med-effect': 'New routine adjustment plan',
-    'gpack':      'Weekend formula plan',
-    'mastic':     'Mastic Gum wellness plan',
-    'ginger':     'Ginger+ plan'
+    'right-now':  'Thanks for choosing our Right Now Plan',
+    'daily-use':  'Thanks for choosing our Daily Use Plan',
+    'real-life':  'Thanks for choosing our Real Life Moments Plan',
+    'weekend':    'Thanks for choosing our Weekend Formula Plan',
+    'short-term': 'Built for Right Now Plan',
+    'long-term':  'Built for Daily Use Plan',
+    'GI-comfort': 'Built for Real Life Moments Plan',
+    'med-effect': 'New Routine Adjustment Plan',
+    'gpack':      'Weekend Formula Plan',
+    'mastic':     'Mastic Gum Wellness Plan',
+    'ginger':     'Ginger+ Plan'
   };
 
   var plan = getPlan();
@@ -708,18 +712,26 @@
 
   // ── Capsule image per plan ──
   var capsuleImages = {
-    'short-term': 'images/capsules/short-term.png',
-    'long-term':  'images/capsules/long-term.png',
-    'GI-comfort': 'images/capsules/GI-comfort.png',
-    'med-effect': 'images/capsules/med-effect.png',
-    'gpack':      'images/capsules/gpack.png',
-    'mastic':     'images/capsules/mastic.png',
-    'ginger':     'images/capsules/ginger.png'
+    'right-now':  'images/Capsules/short-term.png',
+    'daily-use':  'images/Capsules/long-term.png',
+    'real-life':  'images/Capsules/GI-comfort.png',
+    'weekend':    'images/Capsules/gpack.png',
+    'short-term': 'images/Capsules/short-term.png',
+    'long-term':  'images/Capsules/long-term.png',
+    'GI-comfort': 'images/Capsules/GI-comfort.png',
+    'med-effect': 'images/Capsules/med-effect.png',
+    'gpack':      'images/Capsules/gpack.png',
+    'mastic':     'images/Capsules/mastic.png',
+    'ginger':     'images/Capsules/ginger.png'
   };
   document.getElementById('capsule-img').src = capsuleImages[plan] || capsuleImages['short-term'];
 
   // ── Pricing per plan ──
   var prices = {
+    'right-now':  '$33',
+    'daily-use':  '$33',
+    'real-life':  '$33',
+    'weekend':    '$30',
     'short-term': '$33',
     'long-term':  '$33',
     'GI-comfort': '$33',
@@ -730,9 +742,24 @@
   };
   document.getElementById('price-amount').textContent = prices[plan] || prices['short-term'];
 
+  // ── Bask intake routes per plan ──
+  var routes = {
+    'right-now':  'https://go.thegastronomyproject.com/start-online-visit/gingerfamotidine',
+    'daily-use':  'https://go.thegastronomyproject.com/start-online-visit/gingeromeprazole',
+    'real-life':  'https://go.thegastronomyproject.com/start-online-visit/gingerondansetron',
+    'weekend':    'https://go.thegastronomyproject.com/start-online-visit/gpkg-pack',
+    'short-term': 'https://go.thegastronomyproject.com/start-online-visit/gingerfamotidine',
+    'long-term':  'https://go.thegastronomyproject.com/start-online-visit/gingeromeprazole',
+    'GI-comfort': 'https://go.thegastronomyproject.com/start-online-visit/gingerondansetron',
+    'med-effect': 'https://go.thegastronomyproject.com/start-online-visit/gingerondansetron',
+    'gpack':      'https://go.thegastronomyproject.com/start-online-visit/gpkg-pack',
+    'mastic':     'https://go.thegastronomyproject.com/start-online-visit/mastic',
+    'ginger':     'https://go.thegastronomyproject.com/start-online-visit/main'
+  };
+
   // ── Mastic exception ──
   if (plan === 'mastic') {
-    document.getElementById('price-sub').innerHTML = 'One-time purchase &middot; No consultation required &middot; Delivered to your door';
+    document.getElementById('price-sub').innerHTML = 'Delivered to your door';
     document.getElementById('feat1').textContent = '100% Natural Formula';
     document.getElementById('feat1-desc').textContent = 'Ancient mastic gum combined with pharmaceutical-grade ginger';
     document.getElementById('feat2').textContent = 'Ginger + Mastic Gum';
@@ -753,11 +780,12 @@
     }
   });
 
-  // ── CTA handler — ViewContent + 300ms delay → bridge page ──
+  // ── CTA handler — ViewContent + 300ms delay → Bask intake ──
   function handleCTA() {
     fbq('track', 'ViewContent');
+    var dest = routes[plan] || '/join-us';
     setTimeout(function() {
-      window.location.href = '/join-us';
+      window.location.href = dest;
     }, 300);
   }
   </script>
