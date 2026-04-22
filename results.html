@@ -35,8 +35,11 @@
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=26074870975478586&ev=PageView&noscript=1"/></noscript>
 
-  <!-- Lead event -->
-  <script>fbq('track', 'Lead');</script>
+  <!-- Lead + custom event -->
+  <script>
+  fbq('track', 'Lead');
+  fbq('trackCustom', 'LeadFromAd');
+  </script>
 
   <!-- 2. GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBRMQV74FG"></script>

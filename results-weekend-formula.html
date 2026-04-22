@@ -35,8 +35,11 @@
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=26074870975478586&ev=PageView&noscript=1"/></noscript>
 
-  <!-- Lead event -->
-  <script>fbq('track', 'Lead');</script>
+  <!-- Lead + custom event -->
+  <script>
+  fbq('track', 'Lead');
+  fbq('trackCustom', 'LeadFromOrganic');
+  </script>
 
   <!-- 2. GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBRMQV74FG"></script>
@@ -584,7 +587,7 @@
       <div class="offer-strip" id="offer-strip">
         <span>&#127881;</span> 15% Off Launch Offer — Unlock on the Next Page
       </div>
-      <button class="main-cta" id="main-cta" onclick="handleCTA()">
+      <button class="main-cta" id="main-cta" onclick="fbq('track', 'ViewContent'); setTimeout(function(){ window.location.href='/join-us'; }, 300)">
         Get Started
       </button>
       <div class="cta-sub" id="cta-sub">No commitment &mdash; you can decide at the end</div>
@@ -649,7 +652,7 @@
   <div class="sticky-cta" id="sticky-cta">
     <div class="sticky-cta-inner">
       <div class="sticky-offer">&#127881; 15% Off Launch Offer</div>
-      <button onclick="handleCTA()">Get Started</button>
+      <button onclick="fbq('track', 'ViewContent'); setTimeout(function(){ window.location.href='/join-us'; }, 300)">Get Started</button>
     </div>
   </div>
 
@@ -738,7 +741,7 @@
   function handleCTA() {
     fbq('track', 'ViewContent');
     setTimeout(function() {
-      window.location.href = 'https://go.thegastronomyproject.com/start-online-visit/gpkg-pack';
+      window.location.href = '/join-us';
     }, 300);
   }
   </script>
