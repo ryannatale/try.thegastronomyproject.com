@@ -242,12 +242,12 @@
     document.getElementById('quiz-container').innerHTML =
       '<div class="prog"><div class="pd on"></div><div class="pd"></div><div class="pd"></div></div>' +
       '<div class="lbl">Question 1 of 3</div>' +
-      '<div class="ph">What best describes what you\'re dealing with right now?</div>' +
+      '<div class="ph">What matters most to you in a wellness formula?</div>' +
       '<div class="options">' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">Heavy, uncomfortable feeling that won\'t quit</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">Everything seems off &mdash; top and bottom</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">A mix of things hitting at once</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">I just need a full reset</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">Something that works fast</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">A comprehensive approach that covers everything</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">Natural ingredients I can trust</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">A science-backed plan with real support</div>' +
       '</div>';
   }
 
@@ -256,12 +256,12 @@
     document.getElementById('quiz-container').innerHTML =
       '<div class="prog"><div class="pd on"></div><div class="pd on"></div><div class="pd"></div></div>' +
       '<div class="lbl">Question 2 of 3</div>' +
-      '<div class="ph">How often does this tend to happen?</div>' +
+      '<div class="ph">How would you describe your wellness approach?</div>' +
       '<div class="options">' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Rarely &mdash; this is a one-off</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Occasionally &mdash; a few times a month</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Regularly &mdash; most weekends</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">More often than I\'d like to admit</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">I like to be prepared &mdash; I want something ready to go</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">I prefer a complete formula that covers multiple bases</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">I go natural whenever possible</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">I want whatever is most effective</div>' +
       '</div>';
   }
 
@@ -270,12 +270,12 @@
     document.getElementById('quiz-container').innerHTML =
       '<div class="prog"><div class="pd on"></div><div class="pd on"></div><div class="pd on"></div></div>' +
       '<div class="lbl">Question 3 of 3</div>' +
-      '<div class="ph">What matters most when recovering?</div>' +
+      '<div class="ph">How often do you think about your wellness routine?</div>' +
       '<div class="options">' +
-        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Something that works fast &mdash; today</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Recover now AND prevent it next time</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Natural ingredients I can trust</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showResult)">A doctor-guided plan with real clinical support</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Not often &mdash; I just want something ready when needed</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Occasionally &mdash; a few times a month</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Regularly &mdash; I have consistent habits</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">It\'s always on my mind</div>' +
       '</div>';
   }
 
@@ -284,7 +284,7 @@
     document.getElementById('quiz-container').innerHTML =
       '<div style="text-align:center;padding:20px 0">' +
         '<div class="ph">You\'re all set.</div>' +
-        '<div class="sub">Based on your answers, we\'ve matched you with a recovery and reset plan.</div>' +
+        '<div class="sub">Based on your answers, we\'ve matched you with a <span style="white-space:nowrap">personalized wellness plan.</span></div>' +
         '<button class="cta" onclick="seeResults()">See My Results &rarr;</button>' +
       '</div>';
   }

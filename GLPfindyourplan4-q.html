@@ -242,12 +242,12 @@
     document.getElementById('quiz-container').innerHTML =
       '<div class="prog"><div class="pd on"></div><div class="pd"></div><div class="pd"></div></div>' +
       '<div class="lbl">Question 1 of 3</div>' +
-      '<div class="ph">How has your body been feeling since starting your new wellness routine?</div>' +
+      '<div class="ph">What matters most to you right now?</div>' +
       '<div class="options">' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">Better than expected &mdash; staying ahead of it</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">Up and down &mdash; some days are harder than others</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">Struggling more than I expected</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">Hard to predict day to day</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">Something I can take when I need it</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">A daily plan I can build into my new routine</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">A mix of natural and science-backed</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">I want a real expert to weigh in</div>' +
       '</div>';
   }
 
@@ -256,12 +256,12 @@
     document.getElementById('quiz-container').innerHTML =
       '<div class="prog"><div class="pd on"></div><div class="pd on"></div><div class="pd"></div></div>' +
       '<div class="lbl">Question 2 of 3</div>' +
-      '<div class="ph">When do you tend to feel most off?</div>' +
+      '<div class="ph">How has your body been feeling since starting your new wellness routine?</div>' +
       '<div class="options">' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">First thing in the morning</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">After eating or drinking</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Random waves throughout the day</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Evenings or overnight</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Better than expected &mdash; staying ahead of it</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Up and down &mdash; some days are harder than others</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Struggling more than I expected</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Hard to predict day to day</div>' +
       '</div>';
   }
 
@@ -270,12 +270,12 @@
     document.getElementById('quiz-container').innerHTML =
       '<div class="prog"><div class="pd on"></div><div class="pd on"></div><div class="pd on"></div></div>' +
       '<div class="lbl">Question 3 of 3</div>' +
-      '<div class="ph">What kind of support feels right for where you are?</div>' +
+      '<div class="ph">What aspect of your new routine matters most to you?</div>' +
       '<div class="options">' +
-        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Something I can take when I need it</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showResult)">A daily plan to reduce how often it happens</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showResult)">A mix of natural and doctor-guided support</div>' +
-        '<div class="opt" onclick="selectAndAdvance(this, showResult)">I want a real doctor to weigh in</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Morning &mdash; I like to start my day right</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Around meals &mdash; I want support around food</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Throughout the day &mdash; I want consistent coverage</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Evening &mdash; I prefer end of day routines</div>' +
       '</div>';
   }
 
@@ -284,7 +284,7 @@
     document.getElementById('quiz-container').innerHTML =
       '<div style="text-align:center;padding:20px 0">' +
         '<div class="ph">You\'re all set.</div>' +
-        '<div class="sub">Based on your answers, we\'ve matched you with a medication adjustment support plan.</div>' +
+        '<div class="sub">Based on your answers, we\'ve matched you with a <span style="white-space:nowrap">personalized wellness plan.</span></div>' +
         '<button class="cta" onclick="seeResults()">See My Results &rarr;</button>' +
       '</div>';
   }
