@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works — The Gastronomy Project</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/TGP-2.png">
+  <link rel="apple-touch-icon" href="images/TGP-2.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Gastronomy Project">
+  <meta property="og:title" content="How It Works — The Gastronomy Project">
+  <meta property="og:description" content="Three simple steps. Three minutes. Done. A personalized wellness formula delivered to your door.">
+  <meta property="og:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
+  <meta property="og:url" content="https://thegastronomyproject.com/how-it-works">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How It Works — The Gastronomy Project">
+  <meta name="twitter:description" content="Three simple steps. Three minutes. Done. A personalized wellness formula delivered to your door.">
+  <meta name="twitter:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
+
+  <!-- 1. GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBRMQV74FG"></script>
+  <script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());gtag('config','G-JBRMQV74FG');
+  </script>
+
+  <!-- 2. Clarity -->
+  <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "umuegpvdmf");
+  </script>
+
+  <!-- 3. Trustpilot Bootstrap -->
+  <script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+  /* ══════════════════════════════════════════════════════
+     GLOBAL
+     ══════════════════════════════════════════════════════ */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { overflow-x: clip; max-width: 100vw; }
+  body { max-width: 100vw; }
+  img { max-width: 100%; height: auto; display: block; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff5e1;
+    color: #4a4a4a;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     1. DESKTOP NAV
+     ══════════════════════════════════════════════════════ */
+  .nav {
+    height: 64px;
+    padding: 0 60px;
+    background: transparent;
+    border-bottom: none;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  @media (min-width: 1024px) { .nav { display: flex; } }
+  .nav-logo { height: 36px; filter: none; transition: filter 0.3s ease; }
+  @media (min-width: 1024px) { .nav-logo { height: 42px; } }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-link {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4a4a4a;
+    text-decoration: none;
+    letter-spacing: .02em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .nav-link:hover { color: #FFB82E; }
+  .nav-cta {
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 10px 22px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+  }
+  .nav-cta:hover { background: #d88609; color: #fff5e1; }
+  .nav-login {
+    background: transparent;
+    color: #4a4a4a;
+    border: 1px solid rgba(74,74,74,0.3);
+    transition: color 0.3s ease, border-color 0.3s ease;
+    padding: 10px 22px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+  }
+  .nav-login:hover { color: #FFB82E; border-color: #FFB82E; }
+  .nav-actions { display: flex; align-items: center; gap: 10px; }
+
+  /* ══════════════════════════════════════════════════════
+     1b. MOBILE NAV
+     ══════════════════════════════════════════════════════ */
+  .nav-mobile {
+    height: 52px;
+    padding: 0 16px;
+    background: transparent;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  @media (min-width: 1024px) { .nav-mobile { display: none; } }
+  .mobile-nav-right { display: flex; align-items: center; gap: 12px; }
+  .nav-login-mobile {
+    background: transparent;
+    color: #4a4a4a;
+    border: 1px solid rgba(74,74,74,0.3);
+    transition: color 0.3s ease, border-color 0.3s ease;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 36px;
+  }
+  .nav-login-mobile:hover { color: #FFB82E; border-color: #FFB82E; }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    width: 20px;
+    height: 1.5px;
+    background: #4a4a4a;
+    display: block;
+    transition: background 0.3s ease;
+  }
+
+  /* ── Scrolled state ── */
+  .nav-scrolled {
+    background: #2a2a2a !important;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  }
+  .nav-scrolled .nav-link { color: rgba(255,245,225,0.8); }
+  .nav-scrolled .nav-link:hover { color: #FFB82E; }
+  .nav-scrolled .nav-cta { background: #FFB82E; color: #2a2a2a; }
+  .nav-scrolled .nav-logo { filter: brightness(10); }
+  .nav-scrolled .nav-login { color: rgba(255,245,225,0.8); border-color: rgba(255,245,225,0.3); }
+  .nav-scrolled .nav-login:hover { color: #FFB82E; border-color: #FFB82E; }
+  .nav-mobile.nav-scrolled { background: #2a2a2a !important; box-shadow: 0 2px 20px rgba(0,0,0,0.2); }
+  .nav-mobile.nav-scrolled .nav-logo { filter: brightness(10); }
+  .nav-mobile.nav-scrolled .hamburger span { background: #fff5e1; }
+  .nav-mobile.nav-scrolled .nav-login-mobile { color: rgba(255,245,225,0.8); border-color: rgba(255,245,225,0.3); }
+  .nav-mobile.nav-scrolled .nav-login-mobile:hover { color: #FFB82E; border-color: #FFB82E; }
+
+  /* ── Mobile Menu Overlay ── */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #fff5e1;
+    z-index: 200;
+    flex-direction: column;
+    padding: 24px 20px;
+  }
+  .mobile-menu.open { display: flex; }
+  .menu-close {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #4a4a4a;
+    cursor: pointer;
+    margin-bottom: 32px;
+  }
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+  .menu-link {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4a4a4a;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .menu-cta {
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     2. HERO — WHAT IS TGP
+     ══════════════════════════════════════════════════════ */
+  .hiw-hero {
+    background: #feeed5;
+    padding: 60px 20px;
+  }
+  @media (min-width: 1024px) { .hiw-hero { padding: 80px 60px; } }
+  .hiw-hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  @media (min-width: 768px) {
+    .hiw-hero-inner {
+      flex-direction: row;
+      align-items: center;
+      gap: 60px;
+    }
+  }
+  .hiw-hero-left {
+    flex: 1;
+  }
+  .hiw-hero-eyebrow {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: #FFB82E;
+    margin-bottom: 12px;
+  }
+  .hiw-hero-headline {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #4a4a4a;
+    line-height: 1.25;
+    margin-bottom: 24px;
+  }
+  @media (min-width: 1024px) { .hiw-hero-headline { font-size: 36px; } }
+  .hiw-hero-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .hiw-hero-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 13px;
+    color: #4a4a4a;
+    line-height: 1.65;
+  }
+  .hiw-bullet-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: rgba(255,184,46,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  .hiw-bullet-text strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 2px;
+  }
+  .hiw-bullet-text span {
+    font-size: 12px;
+    color: rgba(74,74,74,0.6);
+    line-height: 1.6;
+  }
+
+  /* ── Image Gallery ── */
+  .hiw-hero-right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 12px;
+  }
+  .hiw-gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .hiw-gallery-large {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+  }
+  .hiw-gallery-small {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     3. HOW IT WORKS — 3 STEPS
+     ══════════════════════════════════════════════════════ */
+  .how-it-works {
+    padding: 60px 20px;
+    background: #fff5e1;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .how-it-works { padding: 80px 60px; } }
+  .hiw-eyebrow {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: #FFB82E;
+    margin-bottom: 6px;
+  }
+  .hiw-rule {
+    width: 40px;
+    height: 2px;
+    background: #FFB82E;
+    margin: 0 auto 20px;
+  }
+  .hiw-headline {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 40px;
+    line-height: 1.3;
+  }
+  @media (min-width: 1024px) { .hiw-headline { font-size: 32px; margin-bottom: 48px; } }
+  .hiw-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 480px;
+    margin: 0 auto 40px;
+    text-align: left;
+  }
+  @media (min-width: 1024px) {
+    .hiw-steps {
+      flex-direction: row;
+      max-width: 900px;
+      gap: 40px;
+    }
+  }
+  .hiw-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #feeed5;
+  }
+  @media (min-width: 1024px) {
+    .hiw-step {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      border-bottom: none;
+      flex: 1;
+    }
+  }
+  .hiw-step:last-child { border-bottom: none; }
+  .hiw-num {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFB82E;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .hiw-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 4px;
+  }
+  @media (min-width: 1024px) { .hiw-title { font-size: 15px; } }
+  .hiw-sub {
+    font-size: 11px;
+    color: rgba(74,74,74,0.5);
+    letter-spacing: .02em;
+  }
+  @media (min-width: 1024px) { .hiw-sub { font-size: 12px; } }
+  .hiw-cta {
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 16px 40px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+  }
+  .hiw-cta:hover { background: #d88609; color: #fff5e1; }
+
+  /* ══════════════════════════════════════════════════════
+     4. TRUSTPILOT
+     ══════════════════════════════════════════════════════ */
+  .trustpilot-section {
+    padding: 40px 20px;
+    background: #fff5e1;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .trustpilot-section { padding: 60px 60px; } }
+
+  /* ══════════════════════════════════════════════════════
+     5. BOTTOM CTA
+     ══════════════════════════════════════════════════════ */
+  .proof-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #feeed5;
+    border: 1px solid #feeed5;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-family: 'Poppins', sans-serif;
+  }
+  .proof-bar strong { color: #FFB82E; font-weight: 700; }
+  .bottom-cta-section {
+    padding: 60px 20px;
+    background: #fff5e1;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .bottom-cta-section { padding: 80px 60px; } }
+  .bottom-cta-inner {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .bottom-cta-headline {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 16px;
+  }
+  @media (min-width: 1024px) { .bottom-cta-headline { font-size: 28px; } }
+  .bottom-cta-sub {
+    font-size: 13px;
+    color: rgba(74,74,74,0.6);
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .bottom-cta-primary {
+    width: 100%;
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 0;
+    margin-bottom: 6px;
+  }
+  .bottom-cta-primary:hover { background: #d88609; color: #fff5e1; }
+  .bottom-cta-sub-text {
+    font-size: 10px;
+    color: rgba(74,74,74,0.4);
+    margin-bottom: 12px;
+  }
+  .bottom-cta-secondary {
+    width: 100%;
+    background: transparent;
+    color: #4a4a4a;
+    border: 1px solid rgba(74,74,74,0.2);
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .03em;
+    cursor: pointer;
+    border-radius: 0;
+  }
+  .bottom-cta-secondary:hover { border-color: #FFB82E; color: #FFB82E; }
+
+  /* ══════════════════════════════════════════════════════
+     6. FULL FOOTER
+     ══════════════════════════════════════════════════════ */
+  .footer-full {
+    background: #3a3a3a;
+    padding: 36px 60px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  @media (max-width: 767px) { .footer-full { padding: 28px 20px 20px; } }
+  .footer-logo { height: 40px; width: auto; display: block; object-fit: contain; margin-bottom: 4px; opacity: 0.5; }
+  .footer-nav { display: flex; gap: 20px; flex-wrap: wrap; }
+  .footer-nav .footer-link {
+    font-size: 11px;
+    color: rgba(255,245,225,.45);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .footer-nav .footer-link:hover { color: #FFB82E; }
+  .footer-contact { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .footer-full .footer-address { font-size: 10px; color: rgba(255,245,225,.35); }
+  .footer-full .footer-sep { color: rgba(255,245,225,.2); font-size: 10px; }
+  .footer-full .footer-email {
+    font-size: 10px;
+    color: rgba(255,245,225,.4);
+    text-decoration: none;
+  }
+  .footer-full .footer-email:hover { color: #FFB82E; }
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,245,225,.08);
+  }
+  .footer-full .footer-copy { font-size: 10px; color: rgba(255,245,225,.2); }
+  .footer-legal { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .footer-full .footer-icon-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(255,245,225,.35);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    cursor: pointer;
+    transition: color .15s;
+  }
+  .footer-full .footer-icon-link:hover { color: #FFB82E; }
+  .footer-icon { font-size: 10px; }
+
+  /* ══════════════════════════════════════════════════════
+     FAQ SECTION
+     ══════════════════════════════════════════════════════ */
+  .faq-section {
+    padding: 60px 20px;
+    background: #ffffff;
+  }
+  @media (min-width: 1024px) { .faq-section { padding: 80px 60px; } }
+  .faq-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .faq-eyebrow {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: #FFB82E;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .faq-rule {
+    width: 32px;
+    height: 2px;
+    background: #FFB82E;
+    margin: 0 auto 16px;
+  }
+  .faq-headline {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .faq-headline { font-size: 28px; } }
+  .faq-item {
+    border-bottom: 1px solid rgba(74,74,74,0.08);
+    padding: 18px 0;
+    cursor: pointer;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .faq-q-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a4a4a;
+    line-height: 1.5;
+  }
+  @media (min-width: 1024px) { .faq-q-text { font-size: 14px; } }
+  .faq-toggle {
+    font-size: 18px;
+    color: #FFB82E;
+    flex-shrink: 0;
+    transition: transform .2s;
+    font-weight: 300;
+  }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease, padding .3s ease;
+    padding: 0;
+  }
+  .faq-item.open .faq-a {
+    max-height: 300px;
+    padding-top: 12px;
+  }
+  .faq-a-text {
+    font-size: 12px;
+    color: rgba(74,74,74,0.65);
+    line-height: 1.7;
+  }
+  @media (min-width: 1024px) { .faq-a-text { font-size: 13px; } }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     1. NAVIGATION
+     ═══════════════════════════════════════════════════════ -->
+
+<!-- Desktop Nav -->
+<nav class="nav">
+  <a onclick="window.location.href='/'" style="cursor:pointer">
+    <img src="images/TGP-2.png" class="nav-logo" alt="The Gastronomy Project"
+         onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  </a>
+  <div class="nav-links">
+    <a onclick="window.location.href='/how-it-works'" class="nav-link">How It Works</a>
+    <a onclick="window.location.href='/our-formulas'" class="nav-link">Our Formulas</a>
+    <a onclick="window.location.href='/about'" class="nav-link">About</a>
+    <a onclick="window.location.href='/faq'" class="nav-link">FAQ</a>
+  </div>
+  <div class="nav-actions">
+    <button class="nav-login" onclick="window.location.href='https://my.thegastronomyproject.com/login'">Log In</button>
+    <button class="nav-cta" onclick="window.location.href='/ginger-plus'">Find Your Plan &rarr;</button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<nav class="nav-mobile">
+  <a onclick="window.location.href='/'" style="cursor:pointer">
+    <img src="images/TGP-2.png" class="nav-logo" alt="The Gastronomy Project"
+         onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  </a>
+  <div class="mobile-nav-right">
+    <button class="nav-login-mobile" onclick="window.location.href='https://my.thegastronomyproject.com/login'">Log In</button>
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="menu-close" onclick="toggleMenu()">&times;</button>
+  <div class="menu-links">
+    <a onclick="toggleMenu(); window.location.href='/how-it-works'" class="menu-link">How It Works</a>
+    <a onclick="toggleMenu(); window.location.href='/our-formulas'" class="menu-link">Our Formulas</a>
+    <a onclick="toggleMenu(); window.location.href='/about'" class="menu-link">About</a>
+    <a onclick="toggleMenu(); window.location.href='/faq'" class="menu-link">FAQ</a>
+  </div>
+  <button class="menu-cta" onclick="window.location.href='/ginger-plus'">Find Your Plan &rarr;</button>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     2. HERO — WHAT IS TGP
+     ═══════════════════════════════════════════════════════ -->
+<section class="hiw-hero">
+  <div class="hiw-hero-inner">
+    <div class="hiw-hero-left">
+      <div class="hiw-hero-eyebrow">The Gastronomy Project</div>
+      <h1 class="hiw-hero-headline">Personalized wellness,<br>built around your life.</h1>
+      <ul class="hiw-hero-bullets">
+        <li>
+          <span class="hiw-bullet-icon">&#9672;</span>
+          <div class="hiw-bullet-text">
+            <strong>Science-backed formulas</strong>
+            <span>Thoughtfully designed combinations featuring natural ingredients like ginger and mastic gum, prepared by our licensed fulfillment partner.</span>
+          </div>
+        </li>
+        <li>
+          <span class="hiw-bullet-icon">&#9672;</span>
+          <div class="hiw-bullet-text">
+            <strong>Built for your preferences</strong>
+            <span>Every formula is matched to your lifestyle and personal profile. No generic, one-size-fits-all approach.</span>
+          </div>
+        </li>
+        <li>
+          <span class="hiw-bullet-icon">&#9672;</span>
+          <div class="hiw-bullet-text">
+            <strong>One capsule. Delivered to your door.</strong>
+            <span>No complicated routines. A single, convenient capsule ships directly to you within 1&ndash;2 business days.</span>
+          </div>
+        </li>
+        <li>
+          <span class="hiw-bullet-icon">&#9672;</span>
+          <div class="hiw-bullet-text">
+            <strong>Founded by a physician</strong>
+            <span>Created by Dr. Ryan Natale, an ER physician who saw firsthand the need for a better, more personal approach to everyday wellness.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="hiw-hero-right">
+      <img src="images/Womanholdingpackaging.png" alt="Customer holding TGP packaging" class="hiw-gallery-img hiw-gallery-large" style="object-position: center 70%;">
+      <img src="images/bottlesshadow.png" alt="TGP formula bottles" class="hiw-gallery-img hiw-gallery-small">
+      <img src="images/Bubblemailerbottles.png" alt="TGP bottles in bubble mailer packaging" class="hiw-gallery-img hiw-gallery-small">
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     3. HOW IT WORKS — 3 STEPS
+     ═══════════════════════════════════════════════════════ -->
+<section class="how-it-works">
+  <div class="hiw-eyebrow">How it works</div>
+  <div class="hiw-rule"></div>
+  <h2 class="hiw-headline">Three simple steps. Three minutes. Done.</h2>
+  <div class="hiw-steps">
+    <div class="hiw-step">
+      <div class="hiw-num">01</div>
+      <div class="hiw-content">
+        <div class="hiw-title">Complete Your Profile</div>
+        <div class="hiw-sub">3 minutes</div>
+      </div>
+    </div>
+    <div class="hiw-step">
+      <div class="hiw-num">02</div>
+      <div class="hiw-content">
+        <div class="hiw-title">We Match Your Preferences</div>
+        <div class="hiw-sub">Instantly &middot; Personalized results</div>
+      </div>
+    </div>
+    <div class="hiw-step">
+      <div class="hiw-num">03</div>
+      <div class="hiw-content">
+        <div class="hiw-title">Your custom formula ships to your door</div>
+        <div class="hiw-sub">1&ndash;2 business days</div>
+      </div>
+    </div>
+  </div>
+  <button class="hiw-cta" onclick="window.location.href='/ginger-plus'">Find Your Plan &rarr;</button>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     4. TRUSTPILOT
+     ═══════════════════════════════════════════════════════ -->
+<section class="trustpilot-section">
+  <div class="trustpilot-widget"
+    data-locale="en-US"
+    data-template-id="53aa8807dec7e10d38f59f32"
+    data-businessunit-id="69e0d6a77b94cf5720e80e06"
+    data-style-height="140px"
+    data-style-width="100%"
+    data-theme="light">
+    <div style="text-align:center;padding:10px;font-size:10px;color:#4a4a4a">
+      &#9733;&#9733;&#9733;&#9733;&#9733; &nbsp; Verified reviews on Trustpilot
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     5. FAQ
+     ═══════════════════════════════════════════════════════ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-eyebrow">Common questions</div>
+    <div class="faq-rule"></div>
+    <h2 class="faq-headline">Got questions? We've got answers.</h2>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span class="faq-q-text">Is this legit?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p class="faq-a-text">Yes, absolutely. We're a team of professionals focused on modern wellness. We combine thoughtful formulation with an evidence based approach to support everyday comfort. We're LegitScript-certified, and you can read real customer experiences on Trustpilot.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span class="faq-q-text">How is this different from what I'd buy in person?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p class="faq-a-text">Our approach features combinations including natural ingredients like ginger or mastic gum, prepared by our fulfillment partner and offered through a science backed process. Different from whats typically available elsewhere.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span class="faq-q-text">Who is your fulfillment partner?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p class="faq-a-text">Curexa East: 3007 Ocean Heights Ave, Egg Harbor Township, NJ 08234. They can be contacted at (855) 927-0390. They deliver to all 50 US states.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span class="faq-q-text">How fast does it ship?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p class="faq-a-text">Typically ships within 1–2 business days of provider approval. Most customers receive their formula within a few days of completing their visit.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;padding:16px 20px;background:rgba(74,74,74,0.04);border:1px solid rgba(74,74,74,0.08);">
+      <a href="/faq" style="font-size:15px;font-weight:700;color:#FFB82E;text-decoration:none;font-family:'Poppins',sans-serif;letter-spacing:.02em;">More detailed FAQ section &rarr;</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     6. BOTTOM CTA
+     ═══════════════════════════════════════════════════════ -->
+<section class="bottom-cta-section">
+  <div class="bottom-cta-inner">
+    <h2 class="bottom-cta-headline">Ready to take the first step?</h2>
+    <p class="bottom-cta-sub">A 3-minute visit. A formula built specifically for you. All in one capsule.</p>
+
+    <div class="proof-bar">
+      <span class="proof-text">We just launched, but our team has been doing this for decades. Join the <strong>75+</strong> customers that have already found their plan</span>
+    </div>
+
+    <button class="bottom-cta-primary" onclick="window.location.href='/ginger-plus'">
+      Get Started
+    </button>
+    <div class="bottom-cta-sub-text">Options as low as $30 &mdash; no commitment &mdash; you can decide at the end</div>
+    <button class="bottom-cta-secondary" onclick="window.location.href='/ginger-plus'">
+      Not sure yet? Answer 3 questions &mdash; we'll help you decide
+    </button>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     7. FOOTER
+     ═══════════════════════════════════════════════════════ -->
+<footer class="footer-full">
+  <img src="images/TGP-2.png" class="footer-logo" alt="The Gastronomy Project"
+       onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  <div class="footer-nav">
+    <a onclick="window.location.href='/how-it-works'" class="footer-link">How It Works</a>
+    <a onclick="window.location.href='/our-formulas'" class="footer-link">Our Formulas</a>
+    <a onclick="window.location.href='/about'" class="footer-link">About</a>
+    <a onclick="window.location.href='/faq'" class="footer-link">FAQ</a>
+  </div>
+  <div class="footer-contact">
+    <span class="footer-address">55 SW 9th St, Suite 3708, Miami, FL 33130</span>
+    <span class="footer-sep">&middot;</span>
+    <a href="mailto:general@thegastronomyproject.com" class="footer-email">general@thegastronomyproject.com</a>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; The Gastronomy Project</div>
+    <div class="footer-legal">
+      <a onclick="window.location.href='/hipaa'" class="footer-icon-link">
+        <span class="footer-icon">&#128274;</span> HIPAA
+      </a>
+      <a onclick="window.location.href='/privacy'" class="footer-icon-link">
+        <span class="footer-icon">&#128196;</span> Privacy Policy
+      </a>
+      <a onclick="window.location.href='/terms'" class="footer-icon-link">
+        <span class="footer-icon">&#128203;</span> Terms of Service
+      </a>
+      <a onclick="window.location.href='/cookie-policy'" class="footer-icon-link">
+        <span class="footer-icon">&#127850;</span> Cookie Policy
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+// ── Mobile menu toggle ──
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+
+// ── Sticky nav scroll color change ──
+function updateNav() {
+  var nav = document.querySelector('.nav');
+  var mobileNav = document.querySelector('.nav-mobile');
+  var hero = document.querySelector('.hiw-hero');
+  if (!hero) return;
+  var heroBottom = hero.offsetTop + hero.offsetHeight;
+  if (window.scrollY > heroBottom) {
+    if (nav) nav.classList.add('nav-scrolled');
+    if (mobileNav) mobileNav.classList.add('nav-scrolled');
+  } else {
+    if (nav) nav.classList.remove('nav-scrolled');
+    if (mobileNav) mobileNav.classList.remove('nav-scrolled');
+  }
+}
+
+window.addEventListener('scroll', updateNav);
+window.addEventListener('load', updateNav);
+window.addEventListener('resize', updateNav);
+
+// ── FAQ accordion ──
+function toggleFaq(el) {
+  el.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
