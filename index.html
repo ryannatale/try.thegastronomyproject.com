@@ -275,73 +275,75 @@
      ══════════════════════════════════════════════════════ */
   .hero {
     position: relative;
-    background: transparent;
-    min-height: 520px;
+    min-height: 700px;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 48px 20px;
+    align-items: center;
+    background: #fdfaf4;
   }
-  @media (min-width: 1024px) {
-    .hero {
-      flex-direction: row;
-      align-items: stretch;
-      padding: 0 0 0 60px;
-      min-height: 600px;
-      max-height: 800px;
-      height: calc(100vh - 64px);
-    }
-  }
-  .hero-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 600px;
-  }
-  @media (min-width: 1024px) {
-    .hero-left { flex: 0 0 45%; padding: 60px 40px 60px 0; }
-  }
-  .hero-right {
-    display: none;
-  }
-  @media (min-width: 1024px) {
-    .hero-right {
-      display: block;
-      flex-shrink: 0;
-      width: 480px;
-      align-self: stretch;
-      overflow: hidden;
-    }
-  }
-  .hero-product-img {
-    width: 100%;
-    height: 100%;
+  .hero-desktop-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     object-fit: cover;
     object-position: center;
-    display: block;
+    z-index: 0;
+    opacity: 0.9;
   }
+  .hero::before {
+    display: none;
+  }
+  .hero-left {
+    position: relative;
+    z-index: 2;
+    max-width: 560px;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-right { display: none; }
   .hero-mobile-bg { display: none; }
   @media (max-width: 1023px) {
+    .hero {
+      min-height: 520px;
+      padding: 0;
+      align-items: stretch;
+      flex-direction: column;
+    }
+    .hero-desktop-bg { display: none; }
     .hero-mobile-bg {
       display: block;
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       object-fit: cover;
       object-position: center;
-      opacity: 0.5;
+      opacity: 0.85;
       z-index: 0;
     }
+    .hero::before { display: none; }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(to bottom, rgba(253,250,244,0.75) 0%, rgba(253,250,244,0.5) 100%);
+      z-index: 1;
+    }
     .hero-left {
+      padding: 48px 20px;
+      max-width: 100%;
       position: relative;
       z-index: 2;
+      flex: 1;
+    }
+    .hero-cta {
+      margin-top: auto;
     }
   }
   @media (min-width: 1024px) {
     .hero-mobile-bg { display: none; }
-    .hero-product-img { display: block; }
   }
   .hero-eyebrow {
     font-size: 9px;
@@ -496,63 +498,112 @@
     line-height: 1.25;
   }
   @media (min-width: 1024px) { .wellness-section-headline { font-size: 32px; padding: 0 60px; } }
+  .wellness-header-row {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  @media (min-width: 1024px) {
+    .wellness-header-row { padding: 0 60px; }
+  }
+  .shop-all-link {
+    display: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFB82E;
+    text-decoration: none;
+    cursor: pointer;
+    letter-spacing: .02em;
+    transition: color 0.2s ease;
+  }
+  .shop-all-link:hover { color: #d88609; }
+  @media (min-width: 1024px) {
+    .shop-all-link {
+      display: inline-block;
+      position: absolute;
+      right: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .shop-all-link-mobile {
+    display: none;
+  }
+  @media (max-width: 1023px) {
+    .shop-all-link-mobile {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 0 20px 20px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #FFB82E;
+      text-decoration: none;
+      cursor: pointer;
+      letter-spacing: .02em;
+    }
+    .shop-all-link-mobile:hover { color: #d88609; }
+  }
   .wellness-wrap {
     position: relative;
     padding: 0;
+    background: #f5f0e8;
+    border-radius: 0;
   }
-  .wellness-wrap::after {
-    content: '';
-    position: absolute;
-    top: 0; right: 0;
-    width: 80px; height: 100%;
-    background: linear-gradient(to right, transparent, #ffffff);
-    pointer-events: none;
-    z-index: 2;
-  }
+  .wellness-wrap::after { display: none; }
   .wellness-row {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 0 60px 20px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    padding: 24px 60px 40px;
+    max-width: 1280px;
+    margin: 0 auto;
   }
   .wellness-row::-webkit-scrollbar { display: none; }
   .wellness-card {
     flex-shrink: 0;
-    width: 220px;
-    background: #2a2a2a;
-    border: 1px solid rgba(255,184,46,0.15);
-    border-radius: 12px;
+    width: 100%;
+    background: #fffdf9;
+    border: 1px solid rgba(210,160,60,0.15);
+    border-radius: 16px;
     overflow: hidden;
-    transition: transform 0.2s ease;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
-  .wellness-card:hover { transform: scale(1.03); }
+  .wellness-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  }
   .wellness-card-name {
     font-family: 'Lora', serif;
-    font-style: italic;
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff5e1;
-    background: #2a2a2a;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2a1f0e;
+    background: transparent;
     line-height: 1.3;
-    min-height: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 12px;
+    min-height: unset;
+    height: auto;
+    display: block;
+    text-align: left;
+    padding: 16px 16px 6px;
+    order: 2;
   }
   .card-image-wrap {
     width: 100%;
-    aspect-ratio: 4/3;
+    height: 240px;
     overflow: hidden;
     display: block;
+    background: #f8f6f2;
+    padding: 0;
+    margin: 0;
+    order: 1;
   }
   .card-image-wrap img {
     width: 100%;
@@ -565,49 +616,53 @@
     cursor: pointer;
   }
   .card-divider {
-    height: 1px;
-    background: rgba(255,184,46,0.2);
-    margin: 0;
+    display: none;
   }
   .card-price {
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    font-weight: 400;
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    font-weight: 700;
     color: #FFB82E;
-    text-align: center;
-    padding: 10px 16px 8px;
-    background: #2a2a2a;
-    letter-spacing: .02em;
+    text-align: left;
+    padding: 0 16px 12px;
+    background: transparent;
+    letter-spacing: 0;
     margin: 0;
+    order: 3;
   }
   .wellness-card .card-btn {
     display: block;
-    width: 100%;
-    min-height: 52px;
-    height: 52px;
+    width: calc(100% - 32px);
+    min-height: 40px;
+    height: 40px;
     background: #FFB82E;
-    color: #2a2a2a;
+    color: #2a1f0e;
     border: none;
     font-family: 'Poppins', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .06em;
+    text-transform: none;
+    letter-spacing: .04em;
     cursor: pointer;
-    border-radius: 0;
-    margin-top: auto;
+    border-radius: 24px;
+    margin: 0 16px 16px;
+    order: 4;
+    transition: all 0.2s ease;
   }
   .wellness-card .card-btn:hover { background: #d88609; color: #fff5e1; }
   @media (max-width: 1023px) {
     .wellness-row {
-      display: grid;
       grid-template-columns: 1fr 1fr;
-      overflow-x: unset;
-      padding: 0 20px 20px;
+      padding: 20px 20px 32px;
       gap: 16px;
     }
-    .wellness-card { width: 100%; }
-    .wellness-wrap::after { display: none; }
+    .card-image-wrap { height: 180px; }
+  }
+  @media (max-width: 600px) {
+    .wellness-row {
+      grid-template-columns: 1fr 1fr;
+    }
+    .card-image-wrap { height: 160px; }
   }
 
   /* ══════════════════════════════════════════════════════
@@ -1299,15 +1354,13 @@
      2. HERO
      ═══════════════════════════════════════════════════════ -->
 <section class="hero">
-  <img src="images/hero6.png" class="hero-mobile-bg" alt="">
+  <img src="images/Productsontable5.png" class="hero-desktop-bg" alt="">
+  <img src="images/Productsontable5.png" class="hero-mobile-bg" alt="">
   <div class="hero-left">
     <div class="hero-eyebrow">The Gastronomy Project</div>
     <h1 class="hero-headline">Eat. Drink. Feel well.<br>Welcome to The Gastronomy Project.</h1>
     <p class="hero-sub">Science-backed wellness formulas. Personalized for you. Delivered to your door.</p>
     <button class="hero-cta" onclick="window.location.href='/ginger-plus'">Find Your Plan</button>
-  </div>
-  <div class="hero-right">
-    <img src="images/hero6.png" class="hero-product-img" alt="Ginger+ Wellness Formula">
   </div>
 </section>
 
@@ -1358,14 +1411,17 @@
     <p>We believe wellness should be personalized, and built around your life.</p>
     <p>Our formulas combine science-backed ingredients with nature&rsquo;s best, customized for you.</p>
   </div>
-  <h2 class="wellness-section-headline">Our Wellness Options</h2>
+  <div class="wellness-header-row">
+    <h2 class="wellness-section-headline">Our Wellness Options</h2>
+    <a class="shop-all-link" onclick="window.location.href='/our-formulas'">Shop All &rarr;</a>
+  </div>
   <div class="wellness-wrap">
     <div class="wellness-row">
 
       <div class="wellness-card">
         <div class="wellness-card-name">Built for Right Now Plan</div>
         <!-- TODO: update to real product page URL when built -->
-        <div class="card-image-wrap"><img src="images/Capsules/short-term.png" alt="Built for Right Now Plan" onclick="window.location.href='/find-your-plan-1'"></div>
+        <div class="card-image-wrap"><img src="images/Capsules/right-now.png" alt="Built for Right Now Plan" onclick="window.location.href='/find-your-plan-1'"></div>
         <div class="card-divider"></div>
         <div class="card-price">Starting at $33/mo</div>
         <button class="card-btn" onclick="window.location.href='/results-right-now'">Get Started</button>
@@ -1374,7 +1430,7 @@
       <div class="wellness-card">
         <div class="wellness-card-name">Built for Daily Use Plan</div>
         <!-- TODO: update to real product page URL when built -->
-        <div class="card-image-wrap"><img src="images/Capsules/long-term.png" alt="Built for Daily Use Plan" onclick="window.location.href='/find-your-plan-1'"></div>
+        <div class="card-image-wrap"><img src="images/Capsules/daily-use.png" alt="Built for Daily Use Plan" onclick="window.location.href='/find-your-plan-1'"></div>
         <div class="card-divider"></div>
         <div class="card-price">Starting at $33/mo</div>
         <button class="card-btn" onclick="window.location.href='/results-daily-use'">Get Started</button>
@@ -1383,7 +1439,7 @@
       <div class="wellness-card">
         <div class="wellness-card-name">Real Life Moments Plan</div>
         <!-- TODO: update to real product page URL when built -->
-        <div class="card-image-wrap"><img src="images/Capsules/GI-comfort.png" alt="Real Life Moments Plan" onclick="window.location.href='/find-your-plan-1'"></div>
+        <div class="card-image-wrap"><img src="images/Capsules/real-life-moments.png" alt="Real Life Moments Plan" onclick="window.location.href='/find-your-plan-1'"></div>
         <div class="card-divider"></div>
         <div class="card-price">Starting at $33/mo</div>
         <button class="card-btn" onclick="window.location.href='/results-real-life-moments'">Get Started</button>
@@ -1392,7 +1448,7 @@
       <div class="wellness-card">
         <div class="wellness-card-name">Weekend Formula Plan</div>
         <!-- TODO: update to real product page URL when built -->
-        <div class="card-image-wrap"><img src="images/Capsules/gpack.png" alt="Weekend Formula Plan" onclick="window.location.href='/find-your-plan-1'"></div>
+        <div class="card-image-wrap"><img src="images/Capsules/weekend-formula.png" alt="Weekend Formula Plan" onclick="window.location.href='/find-your-plan-1'"></div>
         <div class="card-divider"></div>
         <div class="card-price">Starting at $30/mo</div>
         <button class="card-btn" onclick="window.location.href='/results-weekend-formula'">Get Started</button>
@@ -1407,6 +1463,7 @@
         <button class="card-btn" onclick="window.location.href='https://go.thegastronomyproject.com/start-online-visit/mastic'">Buy Now</button>
       </div>
 
+      <a class="shop-all-link-mobile" onclick="window.location.href='/our-formulas'">Shop All &rarr;</a>
     </div>
   </div>
 </section>
