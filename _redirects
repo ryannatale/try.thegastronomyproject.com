@@ -13,6 +13,10 @@
 /ginger-plus               /quiz-ginger.html          200
 /ginger-plus/quiz          /quiz-ginger-q.html        200
 /results                   /results.html              200
+/results-right-now         /results-right-now.html    200
+/results-daily-use         /results-daily-use.html    200
+/results-real-life-moments /results-real-life-moments.html 200
+/results-weekend-formula   /results-weekend-formula.html   200
 /join-us                   /join.html                 200
 /thank-you                 /thank-you.html            200
 /how-it-works              /how-it-works.html         200
@@ -22,8 +26,13 @@
 /faq                       /faq.html                  200
 /privacy                   /privacy.html              200
 /terms                     /terms.html                200
-/hipaa                     /hipaa.html                200
 /cookie-policy             /cookie-policy.html        200
+/product-rightnow          /product-rightnow.html     200
+/product-dailyuse          /product-dailyuse.html     200
+/product-reallifemoments   /product-reallifemoments.html 200
+/product-weekendformula    /product-weekendformula.html 200
+/product-mastic            /product-mastic.html        200
+/quiz-index                /quiz-index-q.html          200
 
 # Catch-all — must be LAST line. Shows homepage for any unmatched URL.
 /*                         /index.html                200
