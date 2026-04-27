@@ -557,8 +557,8 @@
           </svg>
         </div>
         <div class="feature-text">
-          <div class="feature-title" id="feat2">Formula Built for You Specifically</div>
-          <div class="feature-desc" id="feat2-desc">Customized Ginger+ formula based on your intake — not one-size-fits-all</div>
+          <div class="feature-title" id="feat2">Claim Your Discount Code</div>
+          <div class="feature-desc" id="feat2-desc">Grab your exclusive launch discount on the next page</div>
         </div>
       </div>
       <div class="feature">
@@ -569,8 +569,8 @@
           </svg>
         </div>
         <div class="feature-text">
-          <div class="feature-title" id="feat3">Zero Risk — Cancel Anytime</div>
-          <div class="feature-desc" id="feat3-desc">Adjust, pause, or cancel whenever you want — no contracts, no hassle</div>
+          <div class="feature-title" id="feat3">Create Your Profile</div>
+          <div class="feature-desc" id="feat3-desc">A quick 3-minute profile so we can personalize your formula</div>
         </div>
       </div>
     </div>
@@ -786,9 +786,8 @@
   // ── CTA handler — ViewContent + 300ms delay → Bask intake ──
   function handleCTA() {
     fbq('track', 'ViewContent');
-    var dest = routes[plan] || '/join-us';
     setTimeout(function() {
-      window.location.href = dest;
+      window.location.href = '/join-us';
     }, 300);
   }
   </script>
