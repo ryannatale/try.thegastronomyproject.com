@@ -1193,6 +1193,52 @@
     font-style: italic;
   }
 
+  /* ── STICKY MOBILE CTA ── */
+  @media (max-width: 1023px) {
+    body { padding-bottom: 80px; }
+    .sticky-mobile-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #fdfaf4;
+      border-top: 1px solid rgba(210,160,60,0.2);
+      padding: 12px 20px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+    }
+    .sticky-mobile-cta-btn {
+      width: 100%;
+      max-width: 420px;
+      height: 48px;
+      background: #FFB82E;
+      color: #2a1f0e;
+      border: none;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+    }
+    .sticky-mobile-cta-note {
+      font-family: 'Poppins', sans-serif;
+      font-size: 10px;
+      color: rgba(74,74,74,0.4);
+      margin-top: 6px;
+      text-align: center;
+    }
+    .sticky-mobile-cta.hidden {
+      display: none;
+    }
+  }
+  @media (min-width: 1024px) {
+    .sticky-mobile-cta { display: none; }
+  }
+
   </style>
 </head>
 <body>
@@ -1779,6 +1825,28 @@ function setPlan(key) {
     document.getElementById('pricing-summary').innerHTML = currentQty + '-Pack &middot; ' + planNames[currentPlan] + ' &middot; <strong>' + price + suffix + '</strong>';
   }
 })();
+</script>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-mobile-cta" id="sticky-mobile-cta">
+  <button class="sticky-mobile-cta-btn" onclick="setPlan('gpack'); window.location.href='/results-weekend-formula'">
+    Get Started
+  </button>
+  <div class="sticky-mobile-cta-note">No payment now · Cancel anytime</div>
+</div>
+
+<script>
+window.addEventListener('scroll', function() {
+  var pricingSection = document.querySelector('.pricing-section');
+  var stickyCta = document.getElementById('sticky-mobile-cta');
+  if (!pricingSection || !stickyCta) return;
+  var pricingBottom = pricingSection.getBoundingClientRect().bottom;
+  if (pricingBottom < 0) {
+    stickyCta.classList.add('hidden');
+  } else {
+    stickyCta.classList.remove('hidden');
+  }
+});
 </script>
 
 </body>
