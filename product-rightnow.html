@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Built for Right Now Plan — The Gastronomy Project</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/TGP-2.png">
+  <link rel="apple-touch-icon" href="images/TGP-2.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Gastronomy Project">
+  <meta property="og:title" content="Built for Right Now Plan — The Gastronomy Project">
+  <meta property="og:description" content="A ginger-forward wellness formula. Personalized for you. Delivered to your door.">
+  <meta property="og:image" content="https://thegastronomyproject.com/images/Bottlewithpillswhite.png">
+  <meta property="og:url" content="https://thegastronomyproject.com/product-rightnow">
+
+  <!-- 1. GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBRMQV74FG"></script>
+  <script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());gtag('config','G-JBRMQV74FG');
+  </script>
+
+  <!-- 3. Clarity -->
+  <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "umuegpvdmf");
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+  /* ══════════════════════════════════════════════════════
+     GLOBAL
+     ══════════════════════════════════════════════════════ */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { overflow-x: hidden; max-width: 100vw; }
+  body { overflow-x: hidden; max-width: 100vw; }
+  img { max-width: 100%; height: auto; display: block; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff5e1;
+    color: #4a4a4a;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     1. DESKTOP NAV
+     ══════════════════════════════════════════════════════ */
+  .nav {
+    height: 64px;
+    padding: 0 60px;
+    background: transparent;
+    border-bottom: none;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  @media (min-width: 1024px) { .nav { display: flex; } }
+  .nav-logo { height: 36px; filter: none; transition: filter 0.3s ease; }
+  @media (min-width: 1024px) { .nav-logo { height: 42px; } }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-link {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4a4a4a;
+    text-decoration: none;
+    letter-spacing: .02em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .nav-link:hover { color: #FFB82E; }
+  .nav-cta {
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 10px 22px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+  }
+  .nav-cta:hover { background: #d88609; color: #fff5e1; }
+  .nav-login {
+    background: transparent;
+    color: #4a4a4a;
+    border: 1px solid rgba(74,74,74,0.3);
+    transition: color 0.3s ease, border-color 0.3s ease;
+    padding: 10px 22px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+  }
+  .nav-login:hover { color: #FFB82E; border-color: #FFB82E; }
+  .nav-actions { display: flex; align-items: center; gap: 10px; }
+
+  /* ══════════════════════════════════════════════════════
+     1b. MOBILE NAV
+     ══════════════════════════════════════════════════════ */
+  .nav-mobile {
+    height: 52px;
+    padding: 0 16px;
+    background: transparent;
+    border-bottom: none;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (min-width: 1024px) { .nav-mobile { display: none; } }
+  .mobile-nav-right { display: flex; align-items: center; gap: 12px; }
+  .nav-login-mobile {
+    background: transparent;
+    color: #4a4a4a;
+    border: 1px solid rgba(74,74,74,0.3);
+    transition: color 0.3s ease, border-color 0.3s ease;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 36px;
+  }
+  .nav-login-mobile:hover { color: #FFB82E; border-color: #FFB82E; }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    width: 20px;
+    height: 1.5px;
+    background: #4a4a4a;
+    display: block;
+    transition: background 0.3s ease;
+  }
+
+  /* ── Scrolled state ── */
+  .nav-scrolled {
+    background: #2a2a2a !important;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .nav-scrolled .nav-link { color: rgba(255,245,225,0.8); }
+  .nav-scrolled .nav-link:hover { color: #FFB82E; }
+  .nav-scrolled .nav-cta { background: #FFB82E; color: #2a2a2a; }
+  .nav-scrolled .nav-logo { filter: brightness(10); }
+  .nav-scrolled .nav-login { color: rgba(255,245,225,0.8); border-color: rgba(255,245,225,0.3); }
+  .nav-scrolled .nav-login:hover { color: #FFB82E; border-color: #FFB82E; }
+  .nav-mobile.nav-scrolled { background: #2a2a2a !important; box-shadow: 0 2px 20px rgba(0,0,0,0.2); }
+  .nav-mobile.nav-scrolled .nav-logo { filter: brightness(10); }
+  .nav-mobile.nav-scrolled .hamburger span { background: #fff5e1; }
+  .nav-mobile.nav-scrolled .nav-login-mobile { color: rgba(255,245,225,0.8); border-color: rgba(255,245,225,0.3); }
+  .nav-mobile.nav-scrolled .nav-login-mobile:hover { color: #FFB82E; border-color: #FFB82E; }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #fff5e1;
+    z-index: 200;
+    flex-direction: column;
+    padding: 24px 20px;
+  }
+  .mobile-menu.open { display: flex; }
+  .menu-close {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #4a4a4a;
+    cursor: pointer;
+    margin-bottom: 32px;
+  }
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+  }
+  .menu-link {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #4a4a4a;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .menu-cta {
+    width: 100%;
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    min-height: 44px;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     HERO — TWO COLUMN
+     ══════════════════════════════════════════════════════ */
+  .pdp-hero {
+    background: #fdfaf4;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 52px;
+  }
+  @media (min-width: 1024px) { .pdp-hero { padding-top: 64px; } }
+  @media (min-width: 1024px) {
+    .pdp-hero {
+      flex-direction: row;
+      min-height: 600px;
+    }
+  }
+
+  /* ── Left: Carousel ── */
+  .pdp-hero-left {
+    width: 100%;
+    padding: 12px 20px 24px;
+  }
+  @media (min-width: 1024px) {
+    .pdp-hero-left {
+      width: 50%;
+      padding: 16px 40px 60px 60px;
+    }
+  }
+  .carousel-wrap {
+    position: relative;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .carousel-main {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f5f0e8;
+  }
+  @media (min-width: 1024px) { .carousel-main { height: 480px; } }
+  .carousel-main img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .carousel-main img.active { opacity: 1; }
+  .carousel-main img.carousel-contain { object-fit: cover; }
+
+  /* ══════════════════════════════════════════════════════
+     TRUSTPILOT CAROUSEL
+     ══════════════════════════════════════════════════════ */
+  .tp-carousel-section {
+    padding: 60px 20px;
+    background: #fff5e1;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .tp-carousel-section { padding: 80px 60px; } }
+  .tp-carousel-section .tp-eyebrow {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: #FFB82E;
+    margin-bottom: 8px;
+  }
+  .tp-carousel-section .tp-rule {
+    width: 32px;
+    height: 2px;
+    background: #FFB82E;
+    margin: 0 auto 16px;
+  }
+  .tp-carousel-section .tp-headline {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 32px;
+  }
+  @media (min-width: 1024px) { .tp-carousel-section .tp-headline { font-size: 30px; } }
+
+  /* ══════════════════════════════════════════════════════
+     INGREDIENTS TRANSPARENCY
+     ══════════════════════════════════════════════════════ */
+  .ingredients-section {
+    padding: 60px 20px;
+    background: #fdfaf4;
+  }
+  @media (min-width: 1024px) { .ingredients-section { padding: 80px 60px; } }
+  .ingredients-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .ingredients-eyebrow {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: #FFB82E;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .ingredients-rule {
+    width: 32px;
+    height: 2px;
+    background: #FFB82E;
+    margin: 0 auto 16px;
+  }
+  .ingredients-headline {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #2a1f0e;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .ingredients-headline { font-size: 30px; } }
+  .ingredients-intro {
+    font-size: 14px;
+    color: rgba(74,74,74,0.65);
+    line-height: 1.7;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  .ingredient-detail-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(210,160,60,0.12);
+    padding: 32px 28px;
+    margin-bottom: 20px;
+  }
+  .ingredient-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .ingredient-detail-name {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2a1f0e;
+  }
+  .ingredient-detail-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: #FFB82E;
+    background: rgba(255,184,46,0.1);
+    padding: 5px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+  .ingredient-detail-desc {
+    font-size: 14px;
+    color: rgba(74,74,74,0.7);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .ingredient-detail-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: rgba(74,74,74,0.4);
+    margin-bottom: 10px;
+  }
+  .ingredient-compounds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .ingredient-compound-tag {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2a1f0e;
+    background: #f5f0e8;
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  .ingredient-detail-why {
+    font-size: 13px;
+    color: rgba(74,74,74,0.65);
+    line-height: 1.7;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(210,160,60,0.1);
+  }
+  .ingredient-detail-why strong {
+    color: #2a1f0e;
+    font-weight: 600;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     COMPARISON TABLE
+     ══════════════════════════════════════════════════════ */
+  .comparison-section {
+    background: #fff5e1;
+    padding: 48px 20px;
+    text-align: center;
+  }
+  @media (min-width: 1024px) {
+    .comparison-section { padding: 80px 60px; }
+  }
+  .comparison-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .comparison-headline {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #2a1f0e;
+    margin-bottom: 40px;
+    line-height: 1.2;
+  }
+  @media (min-width: 1024px) {
+    .comparison-headline { font-size: 36px; }
+  }
+  .comparison-table-wrap {
+    overflow-x: visible;
+    border-radius: 12px;
+    border: 1px solid rgba(210,160,60,0.15);
+  }
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+  }
+  .comparison-table thead th {
+    padding: 14px 12px;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: .02em;
+    background: #fffdf9;
+    color: #2a1f0e;
+    border-bottom: 1px solid rgba(210,160,60,0.15);
+  }
+  @media (min-width: 1024px) { .comparison-table thead th { padding: 16px 20px; font-size: 13px; } }
+  .comparison-table thead th:first-child {
+    text-align: left;
+  }
+  .comparison-table thead th.comparison-highlight {
+    background: #FFB82E;
+    color: #2a1f0e;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .comparison-table tbody td {
+    padding: 12px 10px;
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 12px;
+  }
+  @media (min-width: 1024px) { .comparison-table tbody td { padding: 14px 20px; font-size: 13px; } }
+  .comparison-table tbody td:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: #2a1f0e;
+  }
+  .comparison-table tbody tr:nth-child(odd) {
+    background: #ffffff;
+  }
+  .comparison-table tbody tr:nth-child(even) {
+    background: #fdfaf4;
+  }
+  .comparison-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .comparison-check {
+    color: #FFB82E;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .comparison-x {
+    color: rgba(74,74,74,0.3);
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .comparison-highlight-col {
+    background: rgba(255,184,46,0.06) !important;
+  }
+  .comparison-table tbody tr:nth-child(odd) .comparison-highlight-col {
+    background: rgba(255,184,46,0.08) !important;
+  }
+  .comparison-table tbody tr:nth-child(even) .comparison-highlight-col {
+    background: rgba(255,184,46,0.04) !important;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     FOUNDER QUOTE
+     ══════════════════════════════════════════════════════ */
+  .founder-quote-section {
+    background: #4a4a4a;
+    padding: 36px 20px;
+  }
+  @media (min-width: 1024px) { .founder-quote-section { padding: 48px 60px; } }
+  .founder-quote-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px) {
+    .founder-quote-inner { flex-direction: row; gap: 64px; align-items: center; }
+  }
+  .founder-quote-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  @media (min-width: 1024px) {
+    .founder-quote-left { align-items: flex-start; text-align: left; width: 220px; }
+  }
+  .founder-quote-photo-wrap {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(255,245,225,0.1);
+    border: 2px solid rgba(255,245,225,0.2);
+    margin-bottom: 14px;
+    position: relative;
+  }
+  @media (min-width: 1024px) { .founder-quote-photo-wrap { width: 180px; height: 180px; } }
+  .founder-quote-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  .founder-quote-initials {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff5e1;
+    position: absolute;
+    top: 0;
+  }
+  .founder-quote-name {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff5e1;
+    margin-bottom: 6px;
+  }
+  .founder-quote-title {
+    font-size: 14px;
+    color: rgba(255,245,225,0.5);
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+  }
+  .founder-quote-right { flex: 1; }
+  .founder-quote-mark {
+    font-family: 'Lora', serif;
+    font-size: 64px;
+    color: #FFB82E;
+    opacity: 0.35;
+    line-height: 0.7;
+    margin-bottom: 12px;
+  }
+  .founder-quote-text {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: rgba(255,245,225,0.88);
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 18px;
+    border: none;
+    padding: 0;
+  }
+  @media (min-width: 1024px) { .founder-quote-text { font-size: 18px; } }
+  .founder-quote-sig {
+    font-size: 11px;
+    color: rgba(255,245,225,0.4);
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     FAQ SECTION
+     ══════════════════════════════════════════════════════ */
+  .faq-section {
+    padding: 60px 20px;
+    background: #feeed5;
+  }
+  @media (min-width: 1024px) { .faq-section { padding: 80px 60px; } }
+  .faq-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .faq-eyebrow {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: #FFB82E;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .faq-rule {
+    width: 32px;
+    height: 2px;
+    background: #FFB82E;
+    margin: 0 auto 16px;
+  }
+  .faq-headline {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .faq-headline { font-size: 28px; } }
+  .faq-item {
+    border-bottom: 1px solid rgba(74,74,74,0.08);
+    padding: 18px 0;
+    cursor: pointer;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .faq-q-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a4a4a;
+    line-height: 1.5;
+  }
+  @media (min-width: 1024px) { .faq-q-text { font-size: 14px; } }
+  .faq-toggle {
+    font-size: 18px;
+    color: #FFB82E;
+    flex-shrink: 0;
+    transition: transform .2s;
+    font-weight: 300;
+  }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease, padding .3s ease;
+    padding: 0;
+  }
+  .faq-item.open .faq-a {
+    max-height: 300px;
+    padding-top: 12px;
+  }
+  .faq-a-text {
+    font-size: 12px;
+    color: rgba(74,74,74,0.65);
+    line-height: 1.7;
+  }
+  @media (min-width: 1024px) { .faq-a-text { font-size: 13px; } }
+
+  /* ══════════════════════════════════════════════════════
+     BOTTOM CTA
+     ══════════════════════════════════════════════════════ */
+  .proof-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #feeed5;
+    border: 1px solid #feeed5;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-family: 'Poppins', sans-serif;
+  }
+  .proof-bar strong { color: #FFB82E; font-weight: 700; }
+  .bottom-cta-section {
+    padding: 60px 20px;
+    background: #fff5e1;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .bottom-cta-section { padding: 80px 60px; } }
+  .bottom-cta-inner {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .bottom-cta-headline {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 16px;
+  }
+  @media (min-width: 1024px) { .bottom-cta-headline { font-size: 28px; } }
+  .bottom-cta-sub {
+    font-size: 13px;
+    color: rgba(74,74,74,0.6);
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .bottom-cta-primary {
+    width: 100%;
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 0;
+    margin-bottom: 6px;
+  }
+  .bottom-cta-primary:hover { background: #d88609; color: #fff5e1; }
+  .bottom-cta-sub-text {
+    font-size: 10px;
+    color: rgba(74,74,74,0.4);
+    margin-bottom: 12px;
+  }
+  .bottom-cta-secondary {
+    width: 100%;
+    background: transparent;
+    color: #4a4a4a;
+    border: 1px solid rgba(74,74,74,0.2);
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .03em;
+    cursor: pointer;
+    border-radius: 0;
+  }
+  .bottom-cta-secondary:hover { border-color: #FFB82E; color: #FFB82E; }
+
+  /* ══════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════ */
+  .footer-full {
+    background: #3a3a3a;
+    padding: 36px 60px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  @media (max-width: 767px) { .footer-full { padding: 28px 20px 20px; } }
+  .footer-logo { height: 40px; width: auto; display: block; object-fit: contain; margin-bottom: 4px; opacity: 0.5; }
+  .footer-nav { display: flex; gap: 20px; flex-wrap: wrap; }
+  .footer-nav .footer-link {
+    font-size: 11px;
+    color: rgba(255,245,225,.45);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .footer-nav .footer-link:hover { color: #FFB82E; }
+  .footer-contact { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .footer-full .footer-address { font-size: 10px; color: rgba(255,245,225,.35); }
+  .footer-full .footer-sep { color: rgba(255,245,225,.2); font-size: 10px; }
+  .footer-full .footer-email {
+    font-size: 10px;
+    color: rgba(255,245,225,.4);
+    text-decoration: none;
+  }
+  .footer-full .footer-email:hover { color: #FFB82E; }
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,245,225,.08);
+  }
+  .footer-full .footer-copy { font-size: 10px; color: rgba(255,245,225,.2); }
+  .footer-legal { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .footer-full .footer-icon-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(255,245,225,.35);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    cursor: pointer;
+    transition: color .15s;
+  }
+  .footer-full .footer-icon-link:hover { color: #FFB82E; }
+  .footer-icon { font-size: 10px; }
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,184,46,0.9);
+    color: #2a1f0e;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: background 0.2s;
+  }
+  .carousel-arrow:hover { background: #FFB82E; }
+  .carousel-prev { left: 10px; }
+  .carousel-next { right: 10px; }
+  .carousel-thumbs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 14px;
+  }
+  .carousel-thumb {
+    width: 100px;
+    height: 88px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    background: #f5f0e8;
+  }
+  .carousel-thumb.active { border-color: #FFB82E; }
+  .carousel-thumb img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+
+  /* ── Right: Product Info ── */
+  .pdp-hero-right {
+    width: 100%;
+    padding: 24px 20px 48px;
+  }
+  @media (min-width: 1024px) {
+    .pdp-hero-right {
+      width: 50%;
+      padding: 16px 60px 60px 40px;
+      overflow-y: auto;
+    }
+  }
+  .pdp-eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFB82E;
+    margin-bottom: 10px;
+  }
+  .pdp-title {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #2a1f0e;
+    margin-bottom: 12px;
+    line-height: 1.25;
+  }
+  @media (min-width: 1024px) { .pdp-title { font-size: 36px; } }
+  .pdp-rating {
+    margin-bottom: 16px;
+  }
+  .pdp-desc {
+    font-size: 16px;
+    color: rgba(74,74,74,0.7);
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+
+  /* ── Pricing Selector ── */
+  .pricing-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFB82E;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .pricing-subtext {
+    font-size: 13px;
+    color: rgba(74,74,74,0.65);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .qty-toggle {
+    display: flex;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 2px solid #FFB82E;
+    width: fit-content;
+    margin: 0 auto 24px;
+  }
+  .qty-btn {
+    padding: 10px 28px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: #2a1f0e;
+    transition: all 0.2s ease;
+  }
+  .qty-btn.active { background: #FFB82E; color: #2a1f0e; }
+
+  .plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 1023px) {
+    .plans-grid { grid-template-columns: 1fr; gap: 12px; }
+  }
+  .plan-card {
+    background: #fffdf9;
+    border-radius: 16px;
+    padding: 24px 18px 20px;
+    border: 2px solid rgba(210,160,60,0.15);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+  .plan-card:hover { border-color: rgba(255,184,46,0.5); transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.08); }
+  .plan-card.selected { border-color: #FFB82E; box-shadow: 0 10px 28px rgba(255,184,46,0.18); }
+  .plan-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .badge-popular { background: #FFB82E; color: #2a1f0e; }
+  .badge-best { background: #2a1f0e; color: #FFB82E; }
+  .plan-type {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(74,74,74,0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .plan-name {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2a1f0e;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .plan-price {
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #FFB82E;
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+  .plan-price span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: rgba(74,74,74,0.45);
+    font-weight: 400;
+  }
+  .plan-desc {
+    font-size: 12px;
+    color: rgba(74,74,74,0.6);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex: 1;
+  }
+  .plan-radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(74,74,74,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: all 0.2s;
+  }
+  .plan-card.selected .plan-radio { border-color: #FFB82E; background: #FFB82E; }
+  .plan-card.selected .plan-radio::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .pricing-summary {
+    font-size: 13px;
+    color: rgba(74,74,74,0.6);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  /* ── CTAs ── */
+  .pdp-primary-cta {
+    width: 100%;
+    height: 52px;
+    background: #FFB82E;
+    color: #2a1f0e;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 14px;
+  }
+  .pdp-primary-cta:hover { background: #d88609; color: #fff5e1; }
+
+  .pdp-trust-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    font-size: 12px;
+    color: rgba(74,74,74,0.6);
+    margin-bottom: 10px;
+  }
+  .pdp-trust-strip span::before {
+    content: '✓ ';
+    color: #FFB82E;
+    font-weight: 700;
+  }
+  .pdp-bottom-note {
+    font-size: 11px;
+    color: rgba(74,74,74,0.4);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .pdp-secondary-cta {
+    width: 100%;
+    height: 48px;
+    background: transparent;
+    color: #2a1f0e;
+    border: 2px solid #2a1f0e;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .pdp-secondary-cta:hover { background: #2a1f0e; color: #fdfaf4; }
+
+  /* ── Ingredient Card ── */
+  .pdp-ingredient-desktop { display: none; }
+  .pdp-ingredient-mobile { display: block; }
+  @media (min-width: 1024px) {
+    .pdp-ingredient-desktop { display: block; }
+    .pdp-ingredient-mobile { display: none; }
+  }
+  .pdp-ingredient-card {
+    background: #f5f0e8;
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-top: 28px;
+  }
+  .pdp-ingredient-card-title {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2a1f0e;
+    margin-bottom: 18px;
+  }
+  .ingredient-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(42,31,14,0.08);
+  }
+  .ingredient-row:last-child { border-bottom: none; }
+  .ingredient-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2a1f0e;
+  }
+  .ingredient-note {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(74,74,74,0.55);
+    margin-top: 3px;
+    line-height: 1.4;
+  }
+  .ingredient-dose {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFB82E;
+    white-space: nowrap;
+    margin-left: 16px;
+  }
+
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     DESKTOP NAV
+     ═══════════════════════════════════════════════════════ -->
+<nav class="nav">
+  <a onclick="window.location.href='/'" style="cursor:pointer">
+    <img src="images/TGP-2.png" class="nav-logo" alt="The Gastronomy Project"
+         onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  </a>
+  <div class="nav-links">
+    <a onclick="window.location.href='/how-it-works'" class="nav-link">How It Works</a>
+    <a onclick="window.location.href='/our-formulas'" class="nav-link">Our Formulas</a>
+    <a onclick="window.location.href='/about'" class="nav-link">About</a>
+    <a onclick="window.location.href='/faq'" class="nav-link">FAQ</a>
+  </div>
+  <div class="nav-actions">
+    <button class="nav-login" onclick="window.location.href='https://my.thegastronomyproject.com/login'">Log In</button>
+    <button class="nav-cta" onclick="window.location.href='/ginger-plus'">Find Your Plan &rarr;</button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<nav class="nav-mobile">
+  <a onclick="window.location.href='/'" style="cursor:pointer">
+    <img src="images/TGP-2.png" class="nav-logo" alt="The Gastronomy Project"
+         onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  </a>
+  <div class="mobile-nav-right">
+    <button class="nav-login-mobile" onclick="window.location.href='https://my.thegastronomyproject.com/login'">Log In</button>
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="menu-close" onclick="toggleMenu()">&times;</button>
+  <div class="menu-links">
+    <a onclick="toggleMenu(); window.location.href='/how-it-works'" class="menu-link">How It Works</a>
+    <a onclick="toggleMenu(); window.location.href='/our-formulas'" class="menu-link">Our Formulas</a>
+    <a onclick="toggleMenu(); window.location.href='/about'" class="menu-link">About</a>
+    <a onclick="toggleMenu(); window.location.href='/faq'" class="menu-link">FAQ</a>
+  </div>
+  <button class="menu-cta" onclick="window.location.href='/ginger-plus'">Find Your Plan &rarr;</button>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO — TWO COLUMN
+     ═══════════════════════════════════════════════════════ -->
+<section class="pdp-hero">
+
+  <!-- Left: Image Carousel -->
+  <div class="pdp-hero-left">
+    <div class="carousel-wrap" id="carousel">
+      <div class="carousel-main">
+        <img src="images/capsules/right-now.png" alt="Built for Right Now Plan" class="active">
+        <img src="images/Bubblemailerbottles.png" alt="Built for Right Now — packaging">
+        <img src="images/Bottlewithpillswhite.png" alt="Built for Right Now — bottle" class="carousel-contain">
+        <button class="carousel-arrow carousel-prev" id="carousel-prev">&lsaquo;</button>
+        <button class="carousel-arrow carousel-next" id="carousel-next">&rsaquo;</button>
+      </div>
+      <div class="carousel-thumbs">
+        <div class="carousel-thumb active" onclick="goToSlide(0)">
+          <img src="images/capsules/right-now.png" alt="Thumbnail 1">
+        </div>
+        <div class="carousel-thumb" onclick="goToSlide(1)">
+          <img src="images/Bubblemailerbottles.png" alt="Thumbnail 2">
+        </div>
+        <div class="carousel-thumb" onclick="goToSlide(2)">
+          <img src="images/Bottlewithpillswhite.png" alt="Thumbnail 3">
+        </div>
+      </div>
+    </div>
+
+    <!-- Ingredient Card — Desktop (below carousel) -->
+    <div class="pdp-ingredient-card pdp-ingredient-desktop">
+      <div class="pdp-ingredient-card-title">What's Inside</div>
+      <div class="ingredient-row">
+        <div>
+          <div class="ingredient-name">Ginger Root Extract</div>
+        </div>
+        <div class="ingredient-dose">200mg</div>
+      </div>
+      <div class="ingredient-row">
+        <div>
+          <div class="ingredient-name">Your Personalized Ingredient</div>
+          <div class="ingredient-note">Matched to your preferences during profile completion.</div>
+        </div>
+        <div class="ingredient-dose">25mg</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Right: Product Info + Pricing -->
+  <div class="pdp-hero-right">
+    <h1 class="pdp-title">Built for Right Now Plan</h1>
+
+    <!-- Trustpilot Micro Widget -->
+    <div class="pdp-rating">
+      <div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="69e0d6a77b94cf5720e80e06" data-style-height="24px" data-style-width="100%" data-theme="light" data-min-review-count="0" data-style-alignment="left">
+        <a href="https://www.trustpilot.com/review/thegastronomyproject.com" target="_blank" rel="noopener">Trustpilot</a>
+      </div>
+    </div>
+
+    <!-- Ingredient Card — Mobile (under Trustpilot) -->
+    <div class="pdp-ingredient-card pdp-ingredient-mobile">
+      <div class="pdp-ingredient-card-title">What's Inside</div>
+      <div class="ingredient-row">
+        <div>
+          <div class="ingredient-name">Ginger Root Extract</div>
+        </div>
+        <div class="ingredient-dose">200mg</div>
+      </div>
+      <div class="ingredient-row">
+        <div>
+          <div class="ingredient-name">Your Personalized Ingredient</div>
+          <div class="ingredient-note">Matched to your preferences during profile completion.</div>
+        </div>
+        <div class="ingredient-dose">25mg</div>
+      </div>
+    </div>
+
+    <p class="pdp-desc">A ginger forward wellness formula built for fast-acting daily routines. Custom formulated with Ginger Root Extract and a personalized wellness ingredient selected after your profile completion.</p>
+
+    <!-- ── Pricing Selector ── -->
+    <div class="pricing-eyebrow">Choose Your Plan</div>
+    <p class="pricing-subtext">Preview your options below. You'll make your final selection at the end, after your 3-minute profile.</p>
+
+    <!-- Quantity Toggle -->
+    <div class="qty-toggle">
+      <button class="qty-btn active" id="btn15" onclick="setQty(15)">15 Capsules</button>
+      <button class="qty-btn" id="btn30" onclick="setQty(30)">30 Capsules</button>
+    </div>
+
+    <!-- Plan Cards -->
+    <div class="plans-grid">
+
+      <!-- Card 1: One-Time -->
+      <div class="plan-card" onclick="selectPlan(this, 'onetime')">
+        <div class="plan-type">One-Time</div>
+        <div class="plan-name">Try It Once</div>
+        <div class="plan-price" id="price-onetime">$45<span> once</span></div>
+        <p class="plan-desc">No commitment. Order once and see how your formula works for you.</p>
+        <div class="plan-radio"></div>
+      </div>
+
+      <!-- Card 2: Monthly -->
+      <div class="plan-card" onclick="selectPlan(this, 'monthly')">
+        <span class="plan-badge badge-popular">Most Popular</span>
+        <div class="plan-type">Monthly</div>
+        <div class="plan-name">Stay Prepared Monthly</div>
+        <div class="plan-price" id="price-monthly">$40<span>/mo</span></div>
+        <p class="plan-desc">Cancel anytime. Delivered fresh every month automatically.</p>
+        <div class="plan-radio"></div>
+      </div>
+
+      <!-- Card 3: 3-Month Supply — Default Selected -->
+      <div class="plan-card selected" onclick="selectPlan(this, 'quarterly')">
+        <span class="plan-badge badge-best">Best Value</span>
+        <div class="plan-type">3-Month Supply</div>
+        <div class="plan-name">Stock Up &amp; Save</div>
+        <div class="plan-price" id="price-quarterly">$33<span>/mo</span></div>
+        <p class="plan-desc">Ships every 3 months. Maximum savings, zero hassle.</p>
+        <div class="plan-radio"></div>
+      </div>
+
+    </div>
+
+    <!-- Live Summary -->
+    <div class="pricing-summary" id="pricing-summary">15 capsules &middot; Stock Up &amp; Save &middot; <strong>$33/mo</strong></div>
+
+    <!-- Primary CTA -->
+    <button class="pdp-primary-cta" onclick="setPlan('short-term'); window.location.href='/results'">
+      Get Started &mdash; Choose Plan After Profile &rarr;
+    </button>
+
+    <!-- Trust Strip -->
+    <div class="pdp-trust-strip">
+      <span>Ships to all 50 states</span>
+      <span>Privacy protected</span>
+      <span>Licensed fulfillment partner</span>
+    </div>
+
+    <!-- Bottom Note -->
+    <div class="pdp-bottom-note">No payment now &middot; You'll confirm your selection after your profile &middot; Cancel anytime</div>
+
+    <!-- Secondary CTA -->
+    <button class="pdp-secondary-cta" onclick="window.location.href='/find-your-plan-1/quiz'">
+      Not sure? Answer 3 quick questions
+    </button>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     TRUSTPILOT CAROUSEL
+     ═══════════════════════════════════════════════════════ -->
+<section class="tp-carousel-section">
+  <div class="tp-eyebrow">Real experiences</div>
+  <div class="tp-rule"></div>
+  <h2 class="tp-headline">What our customers are saying</h2>
+
+  <div class="trustpilot-widget"
+    data-locale="en-US"
+    data-template-id="53aa8807dec7e10d38f59f32"
+    data-businessunit-id="69e0d6a77b94cf5720e80e06"
+    data-style-height="140px"
+    data-style-width="100%"
+    data-theme="light"
+    data-stars="4,5">
+    <a href="https://www.trustpilot.com/review/thegastronomyproject.com" target="_blank" rel="noopener">Trustpilot</a>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     INGREDIENTS TRANSPARENCY
+     ═══════════════════════════════════════════════════════ -->
+<section class="ingredients-section">
+  <div class="ingredients-inner">
+    <div class="ingredients-eyebrow">Ingredient transparency</div>
+    <div class="ingredients-rule"></div>
+    <h2 class="ingredients-headline">What's in your formula — and why</h2>
+    <p class="ingredients-intro">Every ingredient is selected with intention. Here's what goes into your Built for Right Now capsule and the science behind it.</p>
+
+    <!-- Ginger Root Extract -->
+    <div class="ingredient-detail-card">
+      <div class="ingredient-detail-header">
+        <div class="ingredient-detail-name">Ginger Root Extract</div>
+        <span class="ingredient-detail-badge">200mg per capsule</span>
+      </div>
+      <p class="ingredient-detail-desc">Sourced for potency and purity. Ginger has been used for centuries across cultures to support overall wellness. Our extract is standardized to deliver consistent levels of its key natural compounds.</p>
+      <div class="ingredient-detail-label">Naturally contains</div>
+      <div class="ingredient-compounds">
+        <span class="ingredient-compound-tag">Gingerols</span>
+        <span class="ingredient-compound-tag">Shogaols</span>
+        <span class="ingredient-compound-tag">Zingerone</span>
+        <span class="ingredient-compound-tag">Paradols</span>
+      </div>
+      <p class="ingredient-detail-why"><strong>Why ginger?</strong> Ginger root is one of the most well studied natural wellness ingredients in the world. Its bioactive compounds, particularly gingerols and shogaols, are recognized for supporting everyday comfort. We chose concentrated Ginger Root Extract as the foundation of this formula because of its fast-acting profile and long history of safe, effective use.</p>
+    </div>
+
+    <!-- Personalized Ingredient -->
+    <div class="ingredient-detail-card">
+      <div class="ingredient-detail-header">
+        <div class="ingredient-detail-name">Your Personalized Ingredient</div>
+        <span class="ingredient-detail-badge">25mg per capsule</span>
+      </div>
+      <p class="ingredient-detail-desc">A custom-selected wellness ingredient matched to your preferences during your 3-minute profile completion. This personalized addition complements the ginger base and is chosen to align with your specific wellness goals.</p>
+      <p class="ingredient-detail-why"><strong>Why personalization?</strong> Everyone's body is different. Rather than offering a one-size-fits-all formula, we tailor a secondary ingredient to your unique profile. This approach allows your formula to work with your body — not just for it. Your personalized ingredient is selected after your profile and prepared by our licensed fulfillment partner.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     COMPARISON TABLE
+     ═══════════════════════════════════════════════════════ -->
+<section class="comparison-section">
+  <div class="comparison-inner">
+    <h2 class="comparison-headline">TGP vs. Generic Options</h2>
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="comparison-highlight">The Gastronomy Project</th>
+            <th>Generic Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Personalized Formula</td>
+            <td class="comparison-highlight-col"><span class="comparison-check">✓</span></td>
+            <td><span class="comparison-x">✗</span></td>
+          </tr>
+          <tr>
+            <td>Science Backed Ingredients</td>
+            <td class="comparison-highlight-col"><span class="comparison-check">✓</span></td>
+            <td><span class="comparison-x">✗</span></td>
+          </tr>
+          <tr>
+            <td>Profile Completion Included</td>
+            <td class="comparison-highlight-col"><span class="comparison-check">✓</span></td>
+            <td><span class="comparison-x">✗</span></td>
+          </tr>
+          <tr>
+            <td>All-in-One Capsule</td>
+            <td class="comparison-highlight-col"><span class="comparison-check">✓</span></td>
+            <td><span class="comparison-x">✗</span></td>
+          </tr>
+          <tr>
+            <td>Licensed Fulfillment Partner</td>
+            <td class="comparison-highlight-col"><span class="comparison-check">✓</span></td>
+            <td><span class="comparison-x">✗</span></td>
+          </tr>
+          <tr>
+            <td>Ships to All 50 States</td>
+            <td class="comparison-highlight-col"><span class="comparison-check">✓</span></td>
+            <td>Varies</td>
+          </tr>
+          <tr>
+            <td>Cancel Anytime</td>
+            <td class="comparison-highlight-col"><span class="comparison-check">✓</span></td>
+            <td>Varies</td>
+          </tr>
+          <tr>
+            <td>Starting Price</td>
+            <td class="comparison-highlight-col"><strong>From $33/mo</strong></td>
+            <td>Varies</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     FOUNDER QUOTE
+     ═══════════════════════════════════════════════════════ -->
+<section class="founder-quote-section">
+  <div class="founder-quote-inner">
+    <div class="founder-quote-left">
+      <div class="founder-quote-photo-wrap">
+        <img src="images/dr-natale-yellowshirt.jpg"
+             onerror="this.style.display='none'; document.getElementById('founder-initials').style.display='flex'"
+             class="founder-quote-photo" alt="Ryan Natale">
+        <div class="founder-quote-initials" id="founder-initials">RN</div>
+      </div>
+      <div class="founder-quote-name">Ryan Natale</div>
+      <div class="founder-quote-title">Founder, The Gastronomy Project</div>
+    </div>
+    <div class="founder-quote-right">
+      <div class="founder-quote-mark">&ldquo;</div>
+      <blockquote class="founder-quote-text">I created the Right Now Plan because I saw how many people needed fast-acting, personalized formulations they could trust. This combines Ginger Root Extract with a personalized wellness ingredient, matched to your unique profile, so you get exactly what your body needs, when you need it most.</blockquote>
+      <div class="founder-quote-sig">&mdash; Ryan Natale, Founder</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     FAQ
+     ═══════════════════════════════════════════════════════ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-eyebrow">Common questions</div>
+    <div class="faq-rule"></div>
+    <h2 class="faq-headline">Got questions? We've got answers.</h2>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span class="faq-q-text">Is this legit?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p class="faq-a-text">Yes, absolutely. We're a team of professionals focused on modern wellness. We combine thoughtful formulation with an evidence based approach to support everyday comfort. We're LegitScript-certified, and you can read real customer experiences on Trustpilot.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span class="faq-q-text">How is this different from what I'd buy in person?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p class="faq-a-text">Our approach features combinations including natural ingredients like ginger or mastic gum, prepared by our fulfillment partner and offered through a science backed process. Different from whats typically available elsewhere.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span class="faq-q-text">Who is your fulfillment partner?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p class="faq-a-text">Curexa East: 3007 Ocean Heights Ave, Egg Harbor Township, NJ 08234. They can be contacted at (855) 927-0390. They deliver to all 50 US states.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        <span class="faq-q-text">How fast does it ship?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p class="faq-a-text">Typically ships within 1–2 business days of provider approval. Most customers receive their formula within a few days of completing their visit.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;padding:16px 20px;background:rgba(74,74,74,0.04);border:1px solid rgba(74,74,74,0.08);">
+      <a onclick="window.location.href='/faq'" style="font-size:15px;font-weight:700;color:#FFB82E;text-decoration:none;font-family:'Poppins',sans-serif;letter-spacing:.02em;cursor:pointer;">More detailed FAQ section &rarr;</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     BOTTOM CTA
+     ═══════════════════════════════════════════════════════ -->
+<section class="bottom-cta-section">
+  <div class="bottom-cta-inner">
+    <h2 class="bottom-cta-headline">Ready to take the first step?</h2>
+    <p class="bottom-cta-sub">A 3-minute visit. A formula built specifically for you. All in one capsule.</p>
+
+    <div class="proof-bar">
+      <span class="proof-text">We just launched, but our team has been doing this for decades. Join the <strong>75+</strong> customers that have already found their plan</span>
+    </div>
+
+    <button class="bottom-cta-primary" onclick="setPlan('short-term'); window.location.href='/results'">
+      Get Started
+    </button>
+    <div class="bottom-cta-sub-text">Options as low as $30 &mdash; no commitment &mdash; you can decide at the end</div>
+    <button class="bottom-cta-secondary" onclick="window.location.href='/find-your-plan-1/quiz'">
+      Not sure yet? Answer 3 questions &mdash; we'll help you decide
+    </button>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════ -->
+<footer class="footer-full">
+  <a onclick="window.location.href='/'" style="cursor:pointer">
+    <img src="images/TGP-2.png" class="footer-logo" alt="The Gastronomy Project"
+         onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  </a>
+  <div class="footer-nav">
+    <a onclick="window.location.href='/how-it-works'" class="footer-link">How It Works</a>
+    <a onclick="window.location.href='/our-formulas'" class="footer-link">Our Formulas</a>
+    <a onclick="window.location.href='/about'" class="footer-link">About</a>
+    <a onclick="window.location.href='/faq'" class="footer-link">FAQ</a>
+  </div>
+  <div class="footer-contact">
+    <span class="footer-address">55 SW 9th St, Suite 3708, Miami, FL 33130</span>
+    <span class="footer-sep">&middot;</span>
+    <a href="mailto:general@thegastronomyproject.com" class="footer-email">general@thegastronomyproject.com</a>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; The Gastronomy Project</div>
+    <div class="footer-legal">
+      <a onclick="window.open('https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/6969413fb90265c357cedbda_HIPAA%20-%20The%20Gastronomy%20Project.pdf', '_blank')" class="footer-icon-link">
+        <span class="footer-icon">&#128274;</span> HIPAA
+      </a>
+      <a onclick="window.location.href='/privacy'" class="footer-icon-link">
+        <span class="footer-icon">&#128196;</span> Privacy Policy
+      </a>
+      <a onclick="window.location.href='/terms'" class="footer-icon-link">
+        <span class="footer-icon">&#128203;</span> Terms of Service
+      </a>
+      <a onclick="window.location.href='/cookie-policy'" class="footer-icon-link">
+        <span class="footer-icon">&#127850;</span> Cookie Policy
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SCRIPTS
+     ═══════════════════════════════════════════════════════ -->
+<!-- Trustpilot Bootstrap -->
+<script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+
+<script>
+/* ── Nav scroll + mobile menu ── */
+function updateNav() {
+  var nav = document.querySelector('.nav');
+  var mobileNav = document.querySelector('.nav-mobile');
+  var hero = document.querySelector('.pdp-hero');
+  if (!hero) return;
+  var heroBottom = hero.offsetTop + hero.offsetHeight;
+  if (window.scrollY > heroBottom) {
+    if (nav) nav.classList.add('nav-scrolled');
+    if (mobileNav) mobileNav.classList.add('nav-scrolled');
+  } else {
+    if (nav) nav.classList.remove('nav-scrolled');
+    if (mobileNav) mobileNav.classList.remove('nav-scrolled');
+  }
+}
+window.addEventListener('scroll', updateNav);
+window.addEventListener('load', updateNav);
+window.addEventListener('resize', updateNav);
+
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+
+function toggleFaq(el) {
+  el.classList.toggle('open');
+}
+
+function setPlan(key) {
+  try { sessionStorage.setItem('plan', key); } catch(e) {}
+}
+
+/* ── Carousel (IIFE) ── */
+(function() {
+  var current = 0;
+  var total = 3;
+  var autoTimer;
+
+  function showSlide(i) {
+    current = (i + total) % total;
+    var imgs = document.querySelectorAll('.carousel-main img');
+    var thumbs = document.querySelectorAll('.carousel-thumb');
+    for (var j = 0; j < total; j++) {
+      imgs[j].classList.toggle('active', j === current);
+      thumbs[j].classList.toggle('active', j === current);
+    }
+    resetAuto();
+  }
+
+  function nextSlide() { showSlide(current + 1); }
+  function prevSlide() { showSlide(current - 1); }
+
+  function resetAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(function() { nextSlide(); }, 5000);
+  }
+
+  window.goToSlide = function(i) { showSlide(i); };
+
+  window.addEventListener('load', function() {
+    document.getElementById('carousel-prev').addEventListener('click', prevSlide);
+    document.getElementById('carousel-next').addEventListener('click', nextSlide);
+
+    // Touch swipe support
+    var carousel = document.querySelector('.carousel-main');
+    var touchStartX = 0;
+    var touchEndX = 0;
+    carousel.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; });
+    carousel.addEventListener('touchend', function(e) {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 50) nextSlide();
+      if (touchEndX - touchStartX > 50) prevSlide();
+    });
+
+    resetAuto();
+  });
+})();
+
+/* ── Pricing Selector (IIFE) ── */
+(function() {
+  var prices = {
+    15: { onetime: '$45', monthly: '$40', quarterly: '$33' },
+    30: { onetime: '$75', monthly: '$65', quarterly: '$55' }
+  };
+  var suffixes = { onetime: ' once', monthly: '/mo', quarterly: '/mo' };
+  var planNames = { onetime: 'Try It Once', monthly: 'Stay Prepared Monthly', quarterly: 'Stock Up & Save' };
+  var currentQty = 15;
+  var currentPlan = 'quarterly';
+
+  window.setQty = function(qty) {
+    currentQty = qty;
+    document.getElementById('btn15').classList.toggle('active', qty === 15);
+    document.getElementById('btn30').classList.toggle('active', qty === 30);
+    document.getElementById('price-onetime').innerHTML = prices[qty].onetime + '<span> once</span>';
+    document.getElementById('price-monthly').innerHTML = prices[qty].monthly + '<span>/mo</span>';
+    document.getElementById('price-quarterly').innerHTML = prices[qty].quarterly + '<span>/mo</span>';
+    updateSummary();
+  };
+
+  window.selectPlan = function(el, plan) {
+    currentPlan = plan;
+    var cards = document.querySelectorAll('.plan-card');
+    for (var i = 0; i < cards.length; i++) { cards[i].classList.remove('selected'); }
+    el.classList.add('selected');
+    updateSummary();
+  };
+
+  function updateSummary() {
+    var price = prices[currentQty][currentPlan];
+    var suffix = suffixes[currentPlan];
+    document.getElementById('pricing-summary').innerHTML = currentQty + ' capsules &middot; ' + planNames[currentPlan] + ' &middot; <strong>' + price + suffix + '</strong>';
+  }
+})();
+</script>
+
+</body>
+</html>
