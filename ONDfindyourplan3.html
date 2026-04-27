@@ -1110,6 +1110,56 @@
 
     .footer-logo-wrap { text-align: center; margin-bottom: 14px; }
     .footer-logo { height: 36px; margin: 0 auto; opacity: 0.5; }
+
+    /* ── WHAT'S INSIDE — ingredient card ── */
+    .landing-ingredients-section {
+      background: #fdfaf4;
+      padding: 48px 20px;
+    }
+    .landing-ingredients-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #f5f0e8;
+      border-radius: 12px;
+      padding: 32px 36px;
+    }
+    .landing-ingredients-title {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #2a1f0e;
+      margin-bottom: 24px;
+    }
+    .landing-ingredient-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+    }
+    .landing-ingredient-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #2a1f0e;
+    }
+    .landing-ingredient-dose {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #FFB82E;
+    }
+    .landing-ingredient-sub {
+      font-family: 'Poppins', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(74,74,74,0.5);
+      margin-top: 2px;
+    }
+    .landing-ingredient-divider {
+      height: 1px;
+      background: rgba(74,74,74,0.12);
+      margin: 0;
+    }
   </style>
 </head>
 <body>
@@ -1119,7 +1169,7 @@
     <img src="images/TGP-2.png"
          class="header-logo"
          alt="The Gastronomy Project"
-         onclick="window.location.href='/'"
+         onclick="window.location.href='/product-reallifemoments.html'"
          onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
   </header>
 
@@ -1132,7 +1182,7 @@
 
         <!-- Dr. trust row -->
         <div class="dr-row">
-          <img src="images/dr-natale-black.jpg"
+          <img src="images/dr-natale-yellowshirt.jpg"
                class="dr-row-photo"
                alt="Dr. Ryan Natale"
                onerror="this.style.display='none'">
@@ -1141,8 +1191,6 @@
             <div class="dr-row-title">Founder, The Gastronomy Project</div>
           </div>
         </div>
-
-        <div class="hero-eyebrow">Welcome to Ginger+</div>
 
         <!-- Headline -->
         <h1 class="hero-headline">Eat. Drink. Feel well. Designed for real life moments.</h1>
@@ -1212,31 +1260,59 @@
     <a href="https://www.trustpilot.com/review/thegastronomyproject.com" target="_blank" rel="noopener">Trustpilot</a>
   </div>
 
+  <!-- WHAT'S INSIDE -->
+  <div class="landing-ingredients-section">
+    <div class="landing-ingredients-inner">
+      <h3 class="landing-ingredients-title">What's Inside</h3>
+      <div class="landing-ingredient-row">
+        <span class="landing-ingredient-name">Ginger Root Extract</span>
+        <span class="landing-ingredient-dose">200mg</span>
+      </div>
+      <div class="landing-ingredient-sub">A traditional botanical used to support everyday wellness.</div>
+      <div class="landing-ingredient-divider"></div>
+      <div class="landing-ingredient-row" style="flex-direction:column;align-items:flex-start;">
+        <span class="landing-ingredient-name">Ginger + your pairing</span>
+      </div>
+      <div class="landing-ingredient-sub">Customers often choose Mastic Gum or Calcium to pair with their daily ginger.</div>
+      <div class="landing-ingredient-divider" style="margin-top:12px;"></div>
+      <div style="text-align:center; margin-top:16px; font-size:11px; color:rgba(74,74,74,0.45); font-family:'Poppins',sans-serif; letter-spacing:.04em;">
+        Made in the USA. Third-party tested.
+      </div>
+    </div>
+  </div>
+
   <!-- HOW IT WORKS -->
   <section class="how-it-works">
     <div class="hiw-eyebrow">How it works</div>
     <div class="hiw-rule"></div>
-    <h2 class="hiw-headline">Three simple steps. Three minutes. Done.</h2>
+    <h2 class="hiw-headline">Four simple steps. 3 minutes. Done.</h2>
 
     <div class="hiw-steps">
       <div class="hiw-step">
         <div class="hiw-num">01</div>
         <div class="hiw-content">
-          <div class="hiw-title">Complete Your Profile</div>
-          <div class="hiw-sub">3 minutes</div>
+          <div class="hiw-title">Claim Your Launch Discount</div>
+          <div class="hiw-sub">Your 15% off is waiting on the next page</div>
         </div>
       </div>
       <div class="hiw-step">
         <div class="hiw-num">02</div>
+        <div class="hiw-content">
+          <div class="hiw-title">Complete Your Profile</div>
+          <div class="hiw-sub">Enter your email &mdash; takes about 15 seconds</div>
+        </div>
+      </div>
+      <div class="hiw-step">
+        <div class="hiw-num">03</div>
         <div class="hiw-content">
           <div class="hiw-title">We Match Your Preferences</div>
           <div class="hiw-sub">Instantly &middot; Personalized results</div>
         </div>
       </div>
       <div class="hiw-step">
-        <div class="hiw-num">03</div>
+        <div class="hiw-num">04</div>
         <div class="hiw-content">
-          <div class="hiw-title">Your custom formula ships to your door</div>
+          <div class="hiw-title">Your Formula Ships</div>
           <div class="hiw-sub">1&ndash;2 business days</div>
         </div>
       </div>
@@ -1247,42 +1323,11 @@
     </button>
   </section>
 
-  <!-- WHAT'S INSIDE -->
-  <section class="wyg-section" style="background:#fff5e1;">
-    <div class="wyg-eyebrow">What's inside</div>
-    <div class="wyg-rule"></div>
-    <h2 class="wyg-headline">All in one convenient capsule.</h2>
-
-    <div class="wyg-points">
-      <div class="wyg-point">
-        <svg class="wyg-check" viewBox="0 0 20 20" fill="none">
-          <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span class="wyg-text">Featuring carefully selected key ingredients, tailored to your preference after the online visit</span>
-      </div>
-      <div class="wyg-point">
-        <svg class="wyg-check" viewBox="0 0 20 20" fill="none">
-          <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span class="wyg-text">Natural supporting ingredients like ginger extract or mastic gum</span>
-      </div>
-      <div class="wyg-point">
-        <svg class="wyg-check" viewBox="0 0 20 20" fill="none">
-          <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span class="wyg-text">Crafted for your unique needs, with no fillers, no guesswork</span>
-      </div>
-    </div>
-  </section>
-
   <!-- WHAT YOU GET -->
   <section class="wyg-section">
-    <div class="wyg-eyebrow">What you get</div>
+    <div class="wyg-eyebrow">What we do here</div>
     <div class="wyg-rule"></div>
-    <h2 class="wyg-headline">Where modern wellness meets science backed expertise.</h2>
+    <h2 class="wyg-headline">Where modern wellness meets modern science.</h2>
 
     <div class="wyg-img-row">
       <img src="images/Womanholdingpackaging.png" alt="Your formula">
@@ -1302,7 +1347,7 @@
           <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
           <path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <span class="wyg-text">Tailored recommendations following your online visit</span>
+        <span class="wyg-text">Tailored recommendations following your profile review</span>
       </div>
     </div>
 
@@ -1431,7 +1476,7 @@
 
   <!-- STICKY MOBILE CTA -->
   <div class="sticky-cta" id="sticky-cta" style="display:none;">
-    <button onclick="sessionStorage.setItem('plan','GI-comfort'); window.location.href='/results'">
+    <button onclick="sessionStorage.setItem('plan','GI-comfort'); window.location.href='/results-real-life-moments'">
       Get Started
     </button>
   </div>
@@ -1443,7 +1488,7 @@
       <div class="exit-eyebrow">Before you go</div>
       <h2 class="exit-headline">Your plan is ready.</h2>
       <p class="exit-sub">It takes less than 3 minutes. Unlock 15% off.</p>
-      <button class="exit-cta" onclick="closeExit(); sessionStorage.setItem('plan','GI-comfort'); window.location.href='/results'">
+      <button class="exit-cta" onclick="closeExit(); sessionStorage.setItem('plan','GI-comfort'); window.location.href='/results-real-life-moments'">
         Get Started
       </button>
       <button class="exit-dismiss" onclick="closeExit()">No thanks</button>
@@ -1494,7 +1539,7 @@
       }).catch(function(){});
     }
     sessionStorage.setItem('plan', 'GI-comfort');
-    window.location.href = '/results';
+    window.location.href = '/results-real-life-moments';
   }
 
   // ── FAQ accordion ──
