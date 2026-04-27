@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — The Gastronomy Project</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/TGP-2.png">
+  <link rel="apple-touch-icon" href="images/TGP-2.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Gastronomy Project">
+  <meta property="og:title" content="Terms of Service — The Gastronomy Project">
+  <meta property="og:description" content="Terms and conditions governing your use of The Gastronomy Project website and services.">
+  <meta property="og:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
+  <meta property="og:url" content="https://thegastronomyproject.com/terms">
+
+  <!-- 1. GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBRMQV74FG"></script>
+  <script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());gtag('config','G-JBRMQV74FG');
+  </script>
+
+  <!-- 3. Clarity -->
+  <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "umuegpvdmf");
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+  /* ══════════════════════════════════════════════════════
+     GLOBAL
+     ══════════════════════════════════════════════════════ */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { overflow-x: clip; max-width: 100vw; }
+  body { max-width: 100vw; }
+  img { max-width: 100%; height: auto; display: block; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff5e1;
+    color: #4a4a4a;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     1. DESKTOP NAV
+     ══════════════════════════════════════════════════════ */
+  .nav {
+    height: 64px;
+    padding: 0 60px;
+    background: transparent;
+    border-bottom: none;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  @media (min-width: 1024px) { .nav { display: flex; } }
+  .nav-logo { height: 36px; filter: none; transition: filter 0.3s ease; }
+  @media (min-width: 1024px) { .nav-logo { height: 42px; } }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-link {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4a4a4a;
+    text-decoration: none;
+    letter-spacing: .02em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .nav-link:hover { color: #FFB82E; }
+  .nav-cta {
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 10px 22px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+  }
+  .nav-cta:hover { background: #d88609; color: #fff5e1; }
+  .nav-login {
+    background: transparent;
+    color: #4a4a4a;
+    border: 1px solid rgba(74,74,74,0.3);
+    transition: color 0.3s ease, border-color 0.3s ease;
+    padding: 10px 22px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+  }
+  .nav-login:hover { color: #FFB82E; border-color: #FFB82E; }
+  .nav-actions { display: flex; align-items: center; gap: 10px; }
+
+  /* ══════════════════════════════════════════════════════
+     1b. MOBILE NAV
+     ══════════════════════════════════════════════════════ */
+  .nav-mobile {
+    height: 52px;
+    padding: 0 16px;
+    background: transparent;
+    border-bottom: none;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (min-width: 1024px) { .nav-mobile { display: none; } }
+  .mobile-nav-right { display: flex; align-items: center; gap: 12px; }
+  .nav-login-mobile {
+    background: transparent;
+    color: #4a4a4a;
+    border: 1px solid rgba(74,74,74,0.3);
+    transition: color 0.3s ease, border-color 0.3s ease;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 36px;
+  }
+  .nav-login-mobile:hover { color: #FFB82E; border-color: #FFB82E; }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    width: 20px;
+    height: 1.5px;
+    background: #4a4a4a;
+    display: block;
+    transition: background 0.3s ease;
+  }
+
+  /* ── Scrolled state ── */
+  .nav-scrolled {
+    background: #2a2a2a !important;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .nav-scrolled .nav-link { color: rgba(255,245,225,0.8); }
+  .nav-scrolled .nav-link:hover { color: #FFB82E; }
+  .nav-scrolled .nav-cta { background: #FFB82E; color: #2a2a2a; }
+  .nav-scrolled .nav-logo { filter: brightness(10); }
+  .nav-scrolled .nav-login { color: rgba(255,245,225,0.8); border-color: rgba(255,245,225,0.3); }
+  .nav-scrolled .nav-login:hover { color: #FFB82E; border-color: #FFB82E; }
+  .nav-mobile.nav-scrolled { background: #2a2a2a !important; box-shadow: 0 2px 20px rgba(0,0,0,0.2); }
+  .nav-mobile.nav-scrolled .nav-logo { filter: brightness(10); }
+  .nav-mobile.nav-scrolled .hamburger span { background: #fff5e1; }
+  .nav-mobile.nav-scrolled .nav-login-mobile { color: rgba(255,245,225,0.8); border-color: rgba(255,245,225,0.3); }
+  .nav-mobile.nav-scrolled .nav-login-mobile:hover { color: #FFB82E; border-color: #FFB82E; }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #fff5e1;
+    z-index: 200;
+    flex-direction: column;
+    padding: 24px 20px;
+  }
+  .mobile-menu.open { display: flex; }
+  .menu-close {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #4a4a4a;
+    cursor: pointer;
+    margin-bottom: 32px;
+  }
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+  }
+  .menu-link {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #4a4a4a;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .menu-cta {
+    width: 100%;
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    min-height: 44px;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     LEGAL PAGE — SHARED STYLES
+     ══════════════════════════════════════════════════════ */
+  .legal-hero {
+    background: #fdfaf4;
+    padding: 80px 20px 60px;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .legal-hero { padding: 100px 60px 80px; } }
+  .legal-hero-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #FFB82E;
+    margin-bottom: 16px;
+  }
+  .legal-hero-headline {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #2a1f0e;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  @media (min-width: 1024px) { .legal-hero-headline { font-size: 40px; } }
+  .legal-hero-date {
+    font-size: 12px;
+    color: rgba(74,74,74,0.5);
+  }
+
+  .legal-body {
+    background: #fff5e1;
+    padding: 60px 20px;
+  }
+  @media (min-width: 1024px) { .legal-body { padding: 80px 60px; } }
+  .legal-inner {
+    max-width: 740px;
+    margin: 0 auto;
+  }
+  .legal-section-title {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2a1f0e;
+    margin-top: 40px;
+    margin-bottom: 14px;
+  }
+  .legal-section-title:first-child { margin-top: 0; }
+  .legal-text {
+    font-size: 13px;
+    color: rgba(74,74,74,0.75);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  .legal-text:last-child { margin-bottom: 0; }
+  .legal-text a {
+    color: #FFB82E;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .legal-text a:hover { color: #d88609; }
+  .legal-list {
+    font-size: 13px;
+    color: rgba(74,74,74,0.75);
+    line-height: 1.8;
+    margin-bottom: 16px;
+    padding-left: 24px;
+  }
+  .legal-list li { margin-bottom: 6px; }
+  .legal-list li:last-child { margin-bottom: 0; }
+
+  /* ══════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════ */
+  .footer-full {
+    background: #3a3a3a;
+    padding: 36px 60px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  @media (max-width: 767px) { .footer-full { padding: 28px 20px 20px; } }
+  .footer-logo { height: 40px; width: auto; display: block; object-fit: contain; margin-bottom: 4px; opacity: 0.5; }
+  .footer-nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .footer-nav .footer-link {
+    font-size: 11px;
+    color: rgba(255,245,225,.45);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .footer-nav .footer-link:hover { color: #FFB82E; }
+  .footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .footer-full .footer-address { font-size: 10px; color: rgba(255,245,225,.35); }
+  .footer-full .footer-sep { color: rgba(255,245,225,.2); font-size: 10px; }
+  .footer-full .footer-email {
+    font-size: 10px;
+    color: rgba(255,245,225,.4);
+    text-decoration: none;
+  }
+  .footer-full .footer-email:hover { color: #FFB82E; }
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,245,225,.08);
+  }
+  .footer-full .footer-copy { font-size: 10px; color: rgba(255,245,225,.2); }
+  .footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .footer-full .footer-icon-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(255,245,225,.35);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    cursor: pointer;
+    transition: color .15s;
+  }
+  .footer-full .footer-icon-link:hover { color: #FFB82E; }
+  .footer-icon { font-size: 10px; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     DESKTOP NAV
+     ═══════════════════════════════════════════════════════ -->
+<nav class="nav">
+  <a onclick="window.location.href='/'" style="cursor:pointer">
+    <img src="images/TGP-2.png" class="nav-logo" alt="The Gastronomy Project"
+         onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  </a>
+  <div class="nav-links">
+    <a onclick="window.location.href='/how-it-works'" class="nav-link">How It Works</a>
+    <a onclick="window.location.href='/our-formulas'" class="nav-link">Our Formulas</a>
+    <a onclick="window.location.href='/about'" class="nav-link">About</a>
+    <a onclick="window.location.href='/faq'" class="nav-link">FAQ</a>
+  </div>
+  <div class="nav-actions">
+    <button class="nav-login" onclick="window.location.href='https://my.thegastronomyproject.com/login'">Log In</button>
+    <button class="nav-cta" onclick="window.location.href='/ginger-plus'">Find Your Plan &rarr;</button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<nav class="nav-mobile">
+  <a onclick="window.location.href='/'" style="cursor:pointer">
+    <img src="images/TGP-2.png" class="nav-logo" alt="The Gastronomy Project"
+         onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  </a>
+  <div class="mobile-nav-right">
+    <button class="nav-login-mobile" onclick="window.location.href='https://my.thegastronomyproject.com/login'">Log In</button>
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="menu-close" onclick="toggleMenu()">&times;</button>
+  <div class="menu-links">
+    <a onclick="toggleMenu(); window.location.href='/how-it-works'" class="menu-link">How It Works</a>
+    <a onclick="toggleMenu(); window.location.href='/our-formulas'" class="menu-link">Our Formulas</a>
+    <a onclick="toggleMenu(); window.location.href='/about'" class="menu-link">About</a>
+    <a onclick="toggleMenu(); window.location.href='/faq'" class="menu-link">FAQ</a>
+  </div>
+  <button class="menu-cta" onclick="window.location.href='/ginger-plus'">Find Your Plan &rarr;</button>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════════ -->
+<section class="legal-hero">
+  <div class="legal-hero-eyebrow">Legal</div>
+  <h1 class="legal-hero-headline">Terms of Service</h1>
+  <p class="legal-hero-date">Last updated: January 1, 2026</p>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     TERMS BODY
+     ═══════════════════════════════════════════════════════ -->
+<section class="legal-body">
+  <div class="legal-inner">
+
+    <p class="legal-text">Please read this Terms of Service (&ldquo;Terms&rdquo;, &ldquo;Terms of Service&rdquo;) carefully before using the www.thegastronomyproject.com website (the &ldquo;Website&rdquo;) operated by The Gastronomy Project, a Corporation formed in Delaware, United States (&ldquo;us&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;) as this Terms of Service contains important information regarding limitations of our liability. Your access to and use of this Website is conditional upon your acceptance of and compliance with these Terms. These Terms apply to everyone, including but not limited to visitors, users and others, who wish to access and use the Website.</p>
+    <p class="legal-text">By accessing or using the Website, you agree to be bound by these Terms. If you disagree with any part of the Terms, then you do not have our permission to access or use the Website.</p>
+
+    <h2 class="legal-section-title">Our Offers and Pricing</h2>
+    <p class="legal-text">We offer goods on this Website.</p>
+    <p class="legal-text">The price of these goods is customized based on your needs, which means that we will provide you with a quote after we determine your needs. This price includes all applicable taxes and other fees.</p>
+
+    <h2 class="legal-section-title">Cancellation Policy</h2>
+    <p class="legal-text">We offer cancellations on purchases made of the goods offered on our Website. We offer cancellations only prior to shipment and prior to performance of the service. You may cancel your order by contacting us. If you cancel your purchase, you will be charged a cancellation fee. The cancellation fee shall be as follows: cost paid to partner fulfillment provider. We will issue you a partial refund of the purchase price that you paid if you cancel your purchase. We reserve the right to cancel your purchase for any reason, at our sole discretion, including but not limited to fraud, inaccuracies, and unavailability of the items or services purchased. We will let you know immediately if we plan on cancelling your purchase. We will issue you a refund of the full purchase price that you paid if we cancel your purchase.</p>
+
+    <h2 class="legal-section-title">Refund Policy</h2>
+    <p class="legal-text">We offer refunds on purchases made of the goods offered on our Website. To qualify for a refund, you must submit your request to us anytime after your purchase by contacting us. We offer refunds on any purchases of the goods offered on our Website for the following reason(s) only: the wrong product or service was provided. Please note that we do not offer refunds for any other reasons other than those listed above. You are not required to ship your purchased goods back to us to receive a refund.</p>
+
+    <h2 class="legal-section-title">Advance Payments</h2>
+    <p class="legal-text">We may ask you to provide an advance payment on any purchase made of the goods offered on our Website. An advance payment is a partial payment of the total purchase price that will help pay for our actual expenses while providing the goods. We will issue you a refund of the advance payment that you made if we cancel your purchase. We will issue you a refund of the advance payment that you made if you cancel your purchase.</p>
+
+    <h2 class="legal-section-title">No Warranty on Purchases</h2>
+    <p class="legal-text">THE ITEMS OR SERVICES DISPLAYED OR SOLD ON THIS WEBSITE ARE PROVIDED &ldquo;AS IS&rdquo;. NO WARRANTY, EXPRESS OR IMPLIED (INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY, OF SATISFACTORY QUALITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE) SHALL APPLY TO ANY ITEMS OR SERVICES DISPLAYED OR SOLD ON THIS WEBSITE, WHETHER ARISING BY LAW, COURSE OF DEALING, COURSE OF PERFORMANCE, USAGE OF TRADE OR OTHERWISE.</p>
+
+    <h2 class="legal-section-title">Remedies</h2>
+    <p class="legal-text">You agree that the remedy for breach of this Terms of Service as it relates to your purchase shall be replacement. You also agree that the remedy for breach of this Terms of Service as it relates to your purchase shall be to pursue dispute resolution as provided in the &ldquo;Governing Law, Severability, Dispute Resolution, Venue and Class Action Waiver&rdquo; section below. These remedies intended to be your sole and exclusive remedies for any breach of this Terms of Service as it relates to your purchase.</p>
+
+    <h2 class="legal-section-title">Subscriptions</h2>
+    <p class="legal-text">This Website features products or services that are offered via a subscription model. A subscription model requires regular payments to receive a product or service. The initial term of the subscription is 1 month or 3 months.</p>
+    <p class="legal-text">YOU MAY REVOKE YOUR SUBSCRIPTION BY CONTACTING US IMMEDIATELY AFTER MAKING YOUR PURCHASE. IF YOU REVOKE YOUR SUBSCRIPTION, IT WILL NOT AUTOMATICALLY RENEW AND YOU WILL NOT BE CHARGED FOR THE RENEWALS. PLEASE NOTE THAT YOU WILL NO LONGER RECEIVE THE ITEMS OR SERVICES PROVIDED BY THE SUBSCRIPTION ONCE YOU REVOKE.</p>
+    <p class="legal-text">THERE IS NO MINIMUM PURCHASE REQUIRED TO QUALIFY FOR THE SUBSCRIPTION.</p>
+
+    <h2 class="legal-section-title">Automatic Renewals of Subscriptions</h2>
+    <p class="legal-text">WHEN YOU PURCHASE A SUBSCRIPTION ON THE WEBSITE, YOUR SUBSCRIPTION WILL AUTOMATICALLY RENEW EVERY 1 MONTH OR 3 MONTHS. WE WILL AUTOMATICALLY RENEW YOUR SUBSCRIPTION BY USING THE PAYMENT METHOD ON FILE UNTIL YOU CANCEL YOUR SUBSCRIPTION.</p>
+    <p class="legal-text">YOU MAY CANCEL THE AUTOMATIC RENEWALS OF YOUR SUBSCRIPTION VIA EMAIL BY CONTACTING US AT <a href="mailto:general@thegastronomyproject.com">GENERAL@THEGASTRONOMYPROJECT.COM</a>. PLEASE NOTE THAT YOU WILL NO LONGER RECEIVE THE ITEMS OR SERVICES PROVIDED BY THE SUBSCRIPTION ON YOUR CANCELLATION EFFECTIVE DATE.</p>
+    <p class="legal-text">THE CANCELLATION OF THE AUTOMATIC RENEWAL OF YOUR SUBSCRIPTION WILL BECOME EFFECTIVE IMMEDIATELY.</p>
+
+    <h2 class="legal-section-title">Accounts</h2>
+    <p class="legal-text">When you create an account on our Website, you guarantee that you are 18 years of age or older and that the information that you provide us is accurate, complete, and current at all times. Inaccurate, incomplete, or obsolete information may result in the immediate termination of your account on the Website.</p>
+    <p class="legal-text">You are responsible for maintaining the confidentiality of your account and password, including but not limited to the restriction of access to your computer and/or account. You agree to accept responsibility for any and all activities or actions that occur under your account and/or password, whether your password is with our Website or a third party service. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account. We reserve the right to terminate your account anytime at our sole discretion. You can terminate your account by contacting us.</p>
+
+    <h2 class="legal-section-title">Prohibited Uses</h2>
+    <p class="legal-text">You agree that you will use this Website in accordance with all applicable laws, rules, regulations and these Terms at all times. The following is a non-exhaustive list of prohibited uses of this Website. You agree that you will not perform any of the following prohibited uses:</p>
+    <ol class="legal-list">
+      <li>Impersonating or attempting to impersonate The Gastronomy Project or its employees, representatives, subsidiaries or divisions;</li>
+      <li>Misrepresenting your identity or affiliation with any person or entity;</li>
+      <li>Sending or attempting to send any advertising or promotional material, including but not limited to spam, junk mail, chain mail or any similar material;</li>
+      <li>Engaging in any conduct that restricts or inhibits any person&rsquo;s use or enjoyment of the Website, or which, as determined in our sole discretion, may harm us or the users of this Website or expose us or other users to liability;</li>
+      <li>Using the Website in any manner that could disable, overburden, damage or impair the Website or interfere with another party&rsquo;s use of the Website;</li>
+      <li>Using any robot, spider or other similar automatic technology, process or means to access or use the Website for any purpose, including monitoring or copying any of the material on this Website;</li>
+      <li>Using any manual process or means to monitor or copy any of the material on this Website or for any other unauthorized purpose;</li>
+      <li>Using any device, software, means or routine that interferes with the proper working of the Website, including but not limited to viruses, trojan horses, worms, logic bombs or other such materials;</li>
+      <li>Attempting to gain unauthorized access to, interfering with, damaging or disrupting any parts of the Website, the server(s) on which the Website is stored, or any server, computer or database connected to the Website;</li>
+      <li>Attempting to attack or attacking the Website via a denial-of-service attack or a distributed denial-of-service attack;</li>
+      <li>Otherwise attempting to interfere with the proper working of the Website;</li>
+      <li>Using the Website in any way that violates any applicable federal, state or local laws, rules or regulations.</li>
+    </ol>
+
+    <h2 class="legal-section-title">No Warranty on Website</h2>
+    <p class="legal-text">THIS WEBSITE IS PROVIDED &ldquo;AS IS&rdquo;. NO WARRANTY, EXPRESS OR IMPLIED (INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY, OF SATISFACTORY QUALITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE) SHALL APPLY TO THIS WEBSITE, WHETHER ARISING BY LAW, COURSE OF DEALING, COURSE OF PERFORMANCE, USAGE OF TRADE OR OTHERWISE.</p>
+
+    <h2 class="legal-section-title">Availability, Errors and Inaccuracies</h2>
+    <p class="legal-text">We assume no liability for the availability, errors or inaccuracies of the information, products or services provided on this Website. We may experience delays in updating information on this Website and in our advertising on other websites. The information, products and services found on the Website may contain errors or inaccuracies or may not be complete or current. Products or services may be incorrectly priced or unavailable. We expressly reserve the right to correct any pricing errors on our Website. The inclusion or offering of any product or service on this Website does not constitute an endorsement or recommendation of such product or service by us.</p>
+
+    <h2 class="legal-section-title">Damages and Limitation of Liability</h2>
+    <p class="legal-text">IN NO EVENT SHALL THE GASTRONOMY PROJECT BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF, RELATING TO OR IN ANY WAY CONNECTED WITH YOUR ACCESS TO, DISPLAY OF OR USE OF THIS WEBSITE OR WITH THE DELAY OR INABILITY TO ACCESS, DISPLAY OR USE THIS WEBSITE, INCLUDING BUT NOT LIMITED TO YOUR RELIANCE UPON OPINIONS OR INFORMATION APPEARING ON THIS WEBSITE; ANY COMPUTER VIRUSES, INFORMATION, SOFTWARE, LINKED WEBSITES OPERATED BY THIRD PARTIES, PRODUCTS OR SERVICES OBTAINED THROUGH THIS WEBSITE, WHETHER BASED ON A THEORY OF NEGLIGENCE, CONTRACT, TORT, STRICT LIABILITY, CONSUMER PROTECTION STATUTES OR OTHERWISE, EVEN IF THE GASTRONOMY PROJECT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+    <p class="legal-text">THE AGGREGATE LIABILITY OF THE GASTRONOMY PROJECT ARISING OUT OF OR RELATING TO THIS WEBSITE, WHETHER ARISING OUT OF OR RELATED TO BREACH OF CONTRACT, TORT (INCLUDING NEGLIGENCE) OR OTHERWISE SHALL BE LIMITED TO THE AMOUNT OF FEES ACTUALLY RECEIVED BY THE GASTRONOMY PROJECT FROM YOU.</p>
+    <p class="legal-text">THIS LIMITATION OF LIABILITY REFLECTS THE ALLOCATION OF RISK BETWEEN YOU AND US. THE LIMITATIONS SPECIFIED IN THIS SECTION WILL SURVIVE AND APPLY EVEN IF ANY LIMITED REMEDY SPECIFIED IN THESE TERMS OF USE IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE. THE LIMITATIONS OF LIABILITY PROVIDED IN THESE TERMS OF USE INURE TO THE BENEFIT OF THE GASTRONOMY PROJECT.</p>
+    <p class="legal-text">IF, DESPITE THE LIMITATION ABOVE, THE GASTRONOMY PROJECT IS FOUND LIABLE FOR ANY LOSS OR DAMAGE WHICH ARISES OUT OF OR IN ANY WAY CONNECTED WITH ANY OF THE OCCURRENCES DESCRIBED ABOVE, THEN THE LIABILITY OF THE GASTRONOMY PROJECT WILL IN NO EVENT EXCEED THE SERVICE FEES YOU PAID TO THE GASTRONOMY PROJECT IN CONNECTION WITH SUCH TRANSACTION(S) ON THIS WEBSITE.</p>
+
+    <h2 class="legal-section-title">Intellectual Property and DMCA Notice</h2>
+    <p class="legal-text">All contents of this Website are &copy; 2024&ndash;2026 The Gastronomy Project or third parties. All rights reserved. Unless specified otherwise, this Website and all content and other materials on this Website including but not limited to all logos, designs, text, graphics, pictures, information, data, software, sound files and arrangement thereof (collectively, &ldquo;Content&rdquo;) are the proprietary property of The Gastronomy Project and are either registered trademarks, trademarks or otherwise protected intellectual property of The Gastronomy Project or third parties in the United States and/or other countries.</p>
+    <p class="legal-text">If you are aware of a potential infringement of our intellectual property, please contact us at <a href="mailto:general@thegastronomyproject.com">General@thegastronomyproject.com</a>.</p>
+    <p class="legal-text">We respect the intellectual property rights of others. It is our policy to respond to any claim that Content posted on the Website infringes on the copyright, trademark or other intellectual property rights of any person or entity.</p>
+    <p class="legal-text">If you believe in good faith that the Content infringes on your intellectual property rights, you or your agent may send us a written notice of such infringement titled &ldquo;Infringement of Intellectual Property Rights &mdash; DMCA.&rdquo; Your notice to us must include the following information:</p>
+    <ol class="legal-list">
+      <li>An electronic or physical signature of the person authorized to act on behalf of the owner of the intellectual property right&rsquo;s interest;</li>
+      <li>A description of the work that you claim has been infringed, including the URL (i.e., web page address) of the location where the work exists or a copy of the work;</li>
+      <li>Your name, email, address and telephone number; and</li>
+      <li>A statement by you that you have a good faith belief that the disputed use is not authorized by the owner of the work, its agent or the law.</li>
+    </ol>
+    <p class="legal-text">Please note that we will not process your complaint if it is not properly filled out or is incomplete. You may be held accountable for damages, including but not limited to costs and attorneys&rsquo; fees for any misrepresentation or bad faith claims regarding the infringement of your intellectual property rights by the Content on this Website.</p>
+    <p class="legal-text">You may submit your claim to us by contacting us at:</p>
+    <p class="legal-text">The Gastronomy Project<br><a href="mailto:general@thegastronomyproject.com">General@thegastronomyproject.com</a><br>55 SW 9th St, Suite 3708, Miami, FL 33130</p>
+
+    <h2 class="legal-section-title">Governing Law, Severability, Dispute Resolution, Venue and Class Action Waiver</h2>
+    <p class="legal-text">These Terms shall be governed and construed in accordance with the laws of the state of Florida, United States, without regard to its conflict of laws provisions. THESE TERMS SHALL NOT BE GOVERNED BY THE UNITED NATIONS CONVENTION ON CONTRACTS FOR THE SALE OF INTERNATIONAL GOODS, THE UNIFORM COMMERCIAL CODE, NOR INCOTERMS.</p>
+    <p class="legal-text">Our failure to enforce any right or provision of these Terms will not be considered a waiver of that right or provision. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between you and us regarding our Website, and supersede and replace any prior agreements we might have had with you regarding the Website.</p>
+    <p class="legal-text">Any controversy or claim arising out of or relating to these Terms including but not limited to the interpretation or breach thereof shall be resolved in a court of competent jurisdiction in Miami-Dade County, Florida.</p>
+    <p class="legal-text">YOU AND THE GASTRONOMY PROJECT AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY CLASS OR REPRESENTATIVE ACTION.</p>
+
+    <h2 class="legal-section-title">Changes to Terms of Service</h2>
+    <p class="legal-text">We reserve the right to make changes to these Terms of Service at any time. We will notify you immediately of making any changes to these Terms of Service by posting the updated terms of service to this website.</p>
+
+    <h2 class="legal-section-title">Questions</h2>
+    <p class="legal-text">If you have any questions about our Terms of Service, please contact us at <a href="mailto:general@thegastronomyproject.com">General@thegastronomyproject.com</a>.</p>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════ -->
+<footer class="footer-full">
+  <a onclick="window.location.href='/'" style="cursor:pointer">
+    <img src="images/TGP-2.png" class="footer-logo" alt="The Gastronomy Project"
+         onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  </a>
+  <div class="footer-nav">
+    <a onclick="window.location.href='/how-it-works'" class="footer-link">How It Works</a>
+    <a onclick="window.location.href='/our-formulas'" class="footer-link">Our Formulas</a>
+    <a onclick="window.location.href='/about'" class="footer-link">About</a>
+    <a onclick="window.location.href='/faq'" class="footer-link">FAQ</a>
+  </div>
+  <div class="footer-contact">
+    <span class="footer-address">55 SW 9th St, Suite 3708, Miami, FL 33130</span>
+    <span class="footer-sep">&middot;</span>
+    <a href="mailto:general@thegastronomyproject.com" class="footer-email">general@thegastronomyproject.com</a>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; The Gastronomy Project</div>
+    <div class="footer-legal">
+      <a onclick="window.open('https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/6969413fb90265c357cedbda_HIPAA%20-%20The%20Gastronomy%20Project.pdf', '_blank')" class="footer-icon-link">
+        <span class="footer-icon">&#128274;</span> HIPAA
+      </a>
+      <a onclick="window.location.href='/privacy'" class="footer-icon-link">
+        <span class="footer-icon">&#128196;</span> Privacy Policy
+      </a>
+      <a onclick="window.location.href='/terms'" class="footer-icon-link">
+        <span class="footer-icon">&#128203;</span> Terms of Service
+      </a>
+      <a onclick="window.location.href='/cookie-policy'" class="footer-icon-link">
+        <span class="footer-icon">&#127850;</span> Cookie Policy
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SCRIPTS
+     ═══════════════════════════════════════════════════════ -->
+<script>
+function updateNav() {
+  var nav = document.querySelector('.nav');
+  var mobileNav = document.querySelector('.nav-mobile');
+  var hero = document.querySelector('.legal-hero');
+  if (!hero) return;
+  var heroBottom = hero.offsetTop + hero.offsetHeight;
+  if (window.scrollY > heroBottom) {
+    if (nav) nav.classList.add('nav-scrolled');
+    if (mobileNav) mobileNav.classList.add('nav-scrolled');
+  } else {
+    if (nav) nav.classList.remove('nav-scrolled');
+    if (mobileNav) mobileNav.classList.remove('nav-scrolled');
+  }
+}
+
+window.addEventListener('scroll', updateNav);
+window.addEventListener('load', updateNav);
+window.addEventListener('resize', updateNav);
+
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

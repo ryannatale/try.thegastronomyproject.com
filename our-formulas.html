@@ -377,7 +377,7 @@
     .featured-card {
       padding: 48px;
       display: flex;
-      align-items: center;
+      align-items: stretch;
       gap: 48px;
       margin-bottom: 0;
     }
@@ -432,9 +432,7 @@
   .featured-image-wrap {
     background: rgba(255,255,255,0.05);
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
     padding: 0;
     height: 280px;
     margin-bottom: 32px;
@@ -444,14 +442,17 @@
       flex: 0 0 400px;
       min-height: 380px;
       height: auto;
-      padding: 20px;
+      padding: 0;
       margin-bottom: 0;
     }
   }
   .featured-image-wrap img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform: scale(1.05);
   }
   .featured-info {
     flex: 1;
@@ -621,6 +622,539 @@
     padding: 4px 0;
   }
   .product-learn-more:hover { color: #FFB82E; }
+
+  /* ══════════════════════════════════════════════════════
+     5. INGREDIENTS TRANSPARENCY
+     ══════════════════════════════════════════════════════ */
+  .ingredients-section {
+    background: #fdfaf4;
+    padding: 48px 20px;
+    text-align: center;
+  }
+  @media (min-width: 1024px) {
+    .ingredients-section { padding: 80px 60px; }
+  }
+  .ingredients-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .ingredients-eyebrow {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #FFB82E;
+    margin-bottom: 16px;
+  }
+  .ingredients-headline {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #2a1f0e;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  @media (min-width: 1024px) {
+    .ingredients-headline { font-size: 36px; }
+  }
+  .ingredients-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(74,74,74,0.7);
+    line-height: 1.6;
+    max-width: 640px;
+    margin: 0 auto 48px;
+  }
+  .ingredients-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+  @media (min-width: 1024px) {
+    .ingredients-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
+  .ingredients-card {
+    background: #fffdf9;
+    border-radius: 12px;
+    border: 1px solid rgba(210,160,60,0.15);
+    padding: 32px;
+    text-align: center;
+  }
+  .ingredients-card-name {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2a1f0e;
+    margin-bottom: 12px;
+  }
+  .ingredients-card-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(74,74,74,0.7);
+    line-height: 1.6;
+  }
+  .ingredients-note {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(74,74,74,0.5);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     6. WHY CUSTOM-FORMULATED
+     ══════════════════════════════════════════════════════ */
+  .difference-section {
+    background: #2a1f0e;
+    padding: 48px 20px;
+    text-align: center;
+  }
+  @media (min-width: 1024px) {
+    .difference-section { padding: 80px 60px; }
+  }
+  .difference-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .difference-eyebrow {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #FFB82E;
+    margin-bottom: 16px;
+  }
+  .difference-headline {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 48px;
+    line-height: 1.2;
+  }
+  @media (min-width: 1024px) {
+    .difference-headline { font-size: 36px; }
+  }
+  .difference-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  @media (min-width: 1024px) {
+    .difference-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+    }
+  }
+  .difference-col {
+    text-align: center;
+  }
+  .difference-number {
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFB82E;
+    margin-bottom: 16px;
+  }
+  .difference-title {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+  .difference-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255,245,225,0.75);
+    line-height: 1.6;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     7. RYAN NATALE QUOTE
+     ══════════════════════════════════════════════════════ */
+  .founder-quote-section {
+    background: #4a4a4a;
+    padding: 48px 20px;
+  }
+  @media (min-width: 1024px) {
+    .founder-quote-section { padding: 80px 60px; }
+  }
+  .founder-quote-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 960px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+  }
+  @media (min-width: 1024px) {
+    .founder-quote-inner {
+      flex-direction: row;
+      gap: 64px;
+      align-items: center;
+      text-align: left;
+    }
+  }
+  .founder-quote-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  @media (min-width: 1024px) {
+    .founder-quote-left {
+      align-items: flex-start;
+      width: 220px;
+    }
+  }
+  .founder-quote-photo-wrap {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(255,245,225,0.1);
+    border: 2px solid rgba(255,245,225,0.2);
+    margin-bottom: 14px;
+    position: relative;
+  }
+  @media (min-width: 1024px) {
+    .founder-quote-photo-wrap { width: 180px; height: 180px; }
+  }
+  .founder-quote-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  .founder-quote-initials {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff5e1;
+    position: absolute;
+    top: 0;
+  }
+  .founder-quote-name {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff5e1;
+    margin-bottom: 6px;
+  }
+  .founder-quote-title {
+    font-size: 14px;
+    color: rgba(255,245,225,0.5);
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+  }
+  .founder-quote-ig {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #FFB82E;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .02em;
+  }
+  .founder-quote-ig:hover { color: #d88609; }
+  .founder-quote-ig-icon { width: 16px; height: 16px; color: #FFB82E; flex-shrink: 0; }
+  .founder-quote-right {
+    flex: 1;
+  }
+  .founder-quote-mark {
+    font-family: 'Lora', serif;
+    font-size: 64px;
+    color: #FFB82E;
+    opacity: 0.35;
+    line-height: 0.7;
+    margin-bottom: 12px;
+  }
+  .founder-quote-text {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: rgba(255,245,225,0.88);
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 18px;
+  }
+  @media (min-width: 1024px) {
+    .founder-quote-text { font-size: 18px; }
+  }
+  .founder-quote-sig {
+    font-size: 11px;
+    color: rgba(255,245,225,0.4);
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+
+  /* ══════════════════════════════════════════════════════
+     8. COMPARISON TABLE
+     ══════════════════════════════════════════════════════ */
+  .comparison-section {
+    background: #fdfaf4;
+    padding: 48px 20px;
+    text-align: center;
+  }
+  @media (min-width: 1024px) {
+    .comparison-section { padding: 80px 60px; }
+  }
+  .comparison-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .comparison-headline {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #2a1f0e;
+    margin-bottom: 40px;
+    line-height: 1.2;
+  }
+  @media (min-width: 1024px) {
+    .comparison-headline { font-size: 36px; }
+  }
+  .comparison-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+    border: 1px solid rgba(210,160,60,0.15);
+  }
+  .comparison-table {
+    width: 100%;
+    min-width: 580px;
+    border-collapse: collapse;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+  }
+  .comparison-table thead th {
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: .02em;
+    background: #fffdf9;
+    color: #2a1f0e;
+    border-bottom: 1px solid rgba(210,160,60,0.15);
+  }
+  .comparison-table thead th:first-child {
+    text-align: left;
+  }
+  .comparison-table thead th.comparison-highlight {
+    background: #FFB82E;
+    color: #2a1f0e;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .comparison-table tbody td {
+    padding: 14px 20px;
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 13px;
+  }
+  .comparison-table tbody td:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: #2a1f0e;
+  }
+  .comparison-table tbody tr:nth-child(odd) {
+    background: #ffffff;
+  }
+  .comparison-table tbody tr:nth-child(even) {
+    background: #fdfaf4;
+  }
+  .comparison-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .comparison-check {
+    color: #FFB82E;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .comparison-x {
+    color: rgba(74,74,74,0.3);
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .comparison-highlight-col {
+    background: rgba(255,184,46,0.06) !important;
+  }
+  .comparison-table tbody tr:nth-child(odd) .comparison-highlight-col {
+    background: rgba(255,184,46,0.08) !important;
+  }
+  .comparison-table tbody tr:nth-child(even) .comparison-highlight-col {
+    background: rgba(255,184,46,0.04) !important;
+  }
+
+  /* ── Ready to Find Your Plan (bottom CTA) ── */
+  .hp-bottom-cta-section {
+    padding: 60px 20px;
+    background: #fff5e1;
+    text-align: center;
+  }
+  @media (min-width: 1024px) { .hp-bottom-cta-section { padding: 80px 60px; } }
+  .hp-bottom-cta-inner {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .hp-bottom-cta-headline {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 16px;
+  }
+  @media (min-width: 1024px) { .hp-bottom-cta-headline { font-size: 28px; } }
+  .hp-bottom-cta-sub {
+    font-size: 13px;
+    color: rgba(74,74,74,0.6);
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .hp-proof-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #feeed5;
+    border: 1px solid #feeed5;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: #4a4a4a;
+    font-family: 'Poppins', sans-serif;
+  }
+  .hp-proof-bar strong { color: #FFB82E; font-weight: 700; }
+  .hp-bottom-cta-primary {
+    width: 100%;
+    background: #FFB82E;
+    color: #4a4a4a;
+    border: none;
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 0;
+    margin-bottom: 6px;
+    min-height: 44px;
+  }
+  .hp-bottom-cta-primary:hover { background: #d88609; color: #fff5e1; }
+  .hp-bottom-cta-sub-text {
+    font-size: 10px;
+    color: rgba(74,74,74,0.4);
+    margin-bottom: 12px;
+  }
+  .hp-bottom-cta-secondary {
+    width: 100%;
+    background: transparent;
+    color: #4a4a4a;
+    border: 1px solid rgba(74,74,74,0.2);
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .03em;
+    cursor: pointer;
+    border-radius: 0;
+    min-height: 44px;
+  }
+  .hp-bottom-cta-secondary:hover { background: #4a4a4a; color: #fff5e1; }
+
+  /* ── Footer ── */
+  .footer-full {
+    background: #3a3a3a;
+    padding: 36px 60px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  @media (max-width: 767px) { .footer-full { padding: 28px 20px 20px; } }
+  .footer-logo { height: 40px; width: auto; display: block; object-fit: contain; margin-bottom: 4px; opacity: 0.5; }
+  .footer-nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .footer-nav .footer-link {
+    font-size: 11px;
+    color: rgba(255,245,225,.45);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .footer-nav .footer-link:hover { color: #FFB82E; }
+  .footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .footer-full .footer-address { font-size: 10px; color: rgba(255,245,225,.35); }
+  .footer-full .footer-sep { color: rgba(255,245,225,.2); font-size: 10px; }
+  .footer-full .footer-email {
+    font-size: 10px;
+    color: rgba(255,245,225,.4);
+    text-decoration: none;
+  }
+  .footer-full .footer-email:hover { color: #FFB82E; }
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,245,225,.08);
+  }
+  .footer-full .footer-copy { font-size: 10px; color: rgba(255,245,225,.2); }
+  .footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .footer-full .footer-icon-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(255,245,225,.35);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    cursor: pointer;
+    transition: color .15s;
+  }
+  .footer-full .footer-icon-link:hover { color: #FFB82E; }
+  .footer-icon { font-size: 10px; }
   </style>
 </head>
 <body>
@@ -696,7 +1230,7 @@
     <div class="featured-row">
       <div class="featured-card">
         <div class="featured-image-wrap">
-          <img src="images/capsules/real-life-moments.png" alt="Real Life Moments Plan">
+          <img src="images/Bottlewithpillsyellow.png" alt="Real Life Moments Plan">
         </div>
         <div class="featured-info">
           <span class="featured-badge">Most Popular</span>
@@ -779,6 +1313,154 @@
 
 
 <!-- ═══════════════════════════════════════════════════════
+     5. INGREDIENTS TRANSPARENCY
+     ═══════════════════════════════════════════════════════ -->
+<section class="ingredients-section">
+  <div class="ingredients-inner">
+    <div class="ingredients-eyebrow">What&rsquo;s Inside</div>
+    <h2 class="ingredients-headline">Nature-backed. Science-driven.</h2>
+    <p class="ingredients-sub">Every formula starts with pharmaceutical-grade ginger &mdash; then personalized to your profile in 3 minutes.</p>
+
+    <div class="ingredients-grid">
+      <div class="ingredients-card">
+        <h3 class="ingredients-card-name">Pharmaceutical-Grade Ginger</h3>
+        <p class="ingredients-card-desc">Our core ingredient. Standardized ginger extract chosen for potency and bioavailability &mdash; not the kind you find on a grocery shelf.</p>
+      </div>
+      <div class="ingredients-card">
+        <h3 class="ingredients-card-name">Mastic Gum</h3>
+        <p class="ingredients-card-desc">An ancient resin with modern research behind it. Found only in our Ginger+ Mastic formula &mdash; a natural option for daily wellness support.</p>
+      </div>
+      <div class="ingredients-card">
+        <h3 class="ingredients-card-name">Calcium Carbonate</h3>
+        <p class="ingredients-card-desc">A foundational mineral included in select formulas. Simple, clean, and effective as a supporting ingredient.</p>
+      </div>
+    </div>
+
+    <p class="ingredients-note">Your formula is personalized to your preferences after a quick 3-minute profile. Additional details provided during your profile review.</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     6. WHY CUSTOM-FORMULATED
+     ═══════════════════════════════════════════════════════ -->
+<section class="difference-section">
+  <div class="difference-inner">
+    <div class="difference-eyebrow">The TGP Difference</div>
+    <h2 class="difference-headline">Not a supplement. Not a prescription. Something better.</h2>
+
+    <div class="difference-grid">
+      <div class="difference-col">
+        <div class="difference-number">01</div>
+        <h3 class="difference-title">Personalized to You</h3>
+        <p class="difference-desc">Complete a 3-minute profile. Your preferences are reviewed and matched with the right formula for your lifestyle.</p>
+      </div>
+      <div class="difference-col">
+        <div class="difference-number">02</div>
+        <h3 class="difference-title">Custom-Formulated</h3>
+        <p class="difference-desc">Your formula is prepared at a licensed fulfillment partner specifically for you &mdash; not mass-produced for the general public.</p>
+      </div>
+      <div class="difference-col">
+        <div class="difference-number">03</div>
+        <h3 class="difference-title">Delivered to Your Door</h3>
+        <p class="difference-desc">Ships directly from our fulfillment partner to your door. No waiting room. No line. Just your formula.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     7. RYAN NATALE QUOTE
+     ═══════════════════════════════════════════════════════ -->
+<section class="founder-quote-section">
+  <div class="founder-quote-inner">
+    <div class="founder-quote-left">
+      <div class="founder-quote-photo-wrap">
+        <img src="images/dr-natale-yellowshirt.jpg"
+             onerror="this.style.display='none'; document.getElementById('fq-initials').style.display='flex'"
+             class="founder-quote-photo" alt="Ryan Natale">
+        <div class="founder-quote-initials" id="fq-initials">RN</div>
+      </div>
+      <div class="founder-quote-name">Ryan Natale</div>
+      <div class="founder-quote-title">Founder, The Gastronomy Project</div>
+      <a href="https://www.instagram.com/drryannatalemd/?hl=en" class="founder-quote-ig" target="_blank" rel="noopener">
+        <svg class="founder-quote-ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+        </svg>
+        @drryannatalemd
+      </a>
+    </div>
+    <div class="founder-quote-right">
+      <div class="founder-quote-mark">&ldquo;</div>
+      <p class="founder-quote-text">I built The Gastronomy Project because I believe everyone deserves access to personalized wellness &mdash; not a one-size-fits-all approach. Every formula we offer is custom-formulated with care, built around your life, and delivered directly to you.</p>
+      <div class="founder-quote-sig">&mdash; Ryan Natale, Founder</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 4 — COMPARISON TABLE
+     ═══════════════════════════════════════════════════════ -->
+<section class="comparison-section">
+  <div class="comparison-inner">
+    <h2 class="comparison-headline">How We Compare</h2>
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="comparison-highlight">The Gastronomy Project</th>
+            <th>Generic Options</th>
+            <th>Traditional Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Personalized Formula</td>
+            <td class="comparison-highlight"><span class="comparison-check">✓</span></td>
+            <td><span class="comparison-x">✗</span></td>
+            <td><span class="comparison-x">✗</span></td>
+          </tr>
+          <tr>
+            <td>Profile Review Included</td>
+            <td class="comparison-highlight"><span class="comparison-check">✓</span></td>
+            <td><span class="comparison-x">✗</span></td>
+            <td>Required separately</td>
+          </tr>
+          <tr>
+            <td>All-in-One Capsule</td>
+            <td class="comparison-highlight"><span class="comparison-check">✓</span></td>
+            <td><span class="comparison-x">✗</span></td>
+            <td><span class="comparison-x">✗</span></td>
+          </tr>
+          <tr>
+            <td>Ships to Your Door</td>
+            <td class="comparison-highlight"><span class="comparison-check">✓</span></td>
+            <td><span class="comparison-check">✓</span></td>
+            <td><span class="comparison-x">✗</span></td>
+          </tr>
+          <tr>
+            <td>Licensed Fulfillment Partner</td>
+            <td class="comparison-highlight"><span class="comparison-check">✓</span></td>
+            <td><span class="comparison-x">✗</span></td>
+            <td><span class="comparison-check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Starting Price</td>
+            <td class="comparison-highlight"><strong>From $25/mo</strong></td>
+            <td>Varies</td>
+            <td>Varies</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
      SCRIPTS
      ═══════════════════════════════════════════════════════ -->
 <script>
@@ -810,6 +1492,68 @@ function setPlan(key) {
   try { sessionStorage.setItem('plan', key); } catch(e) {}
 }
 </script>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     READY TO FIND YOUR PLAN (Bottom CTA)
+     ═══════════════════════════════════════════════════════ -->
+<section class="hp-bottom-cta-section">
+  <div class="hp-bottom-cta-inner">
+    <h2 class="hp-bottom-cta-headline">Ready to take the first step?</h2>
+    <p class="hp-bottom-cta-sub">A 3-minute visit. A formula built specifically for you. All in one capsule.</p>
+
+    <div class="hp-proof-bar">
+      <span class="hp-proof-text">We just launched, but our team has been doing this for decades. Join the <strong>75+</strong> customers that have already found their plan</span>
+    </div>
+
+    <button class="hp-bottom-cta-primary" onclick="window.location.href='/ginger-plus'">
+      Get Started
+    </button>
+    <div class="hp-bottom-cta-sub-text">Options as low as $30 &mdash; no commitment &mdash; you can decide at the end</div>
+    <button class="hp-bottom-cta-secondary" onclick="window.location.href='/ginger-plus'">
+      Not sure yet? Answer 3 questions &mdash; we'll help you decide
+    </button>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════ -->
+<footer class="footer-full">
+  <a onclick="window.location.href='/'" style="cursor:pointer">
+    <img src="images/TGP-2.png" class="footer-logo" alt="The Gastronomy Project"
+         onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
+  </a>
+  <div class="footer-nav">
+    <a onclick="window.location.href='/how-it-works'" class="footer-link">How It Works</a>
+    <a onclick="window.location.href='/our-formulas'" class="footer-link">Our Formulas</a>
+    <a onclick="window.location.href='/about'" class="footer-link">About</a>
+    <a onclick="window.location.href='/faq'" class="footer-link">FAQ</a>
+  </div>
+  <div class="footer-contact">
+    <span class="footer-address">55 SW 9th St, Suite 3708, Miami, FL 33130</span>
+    <span class="footer-sep">&middot;</span>
+    <a href="mailto:general@thegastronomyproject.com" class="footer-email">general@thegastronomyproject.com</a>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; The Gastronomy Project</div>
+    <div class="footer-legal">
+      <a onclick="window.open('https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/6969413fb90265c357cedbda_HIPAA%20-%20The%20Gastronomy%20Project.pdf', '_blank')" class="footer-icon-link">
+        <span class="footer-icon">&#128274;</span> HIPAA
+      </a>
+      <a onclick="window.location.href='/privacy'" class="footer-icon-link">
+        <span class="footer-icon">&#128196;</span> Privacy Policy
+      </a>
+      <a onclick="window.location.href='/terms'" class="footer-icon-link">
+        <span class="footer-icon">&#128203;</span> Terms of Service
+      </a>
+      <a onclick="window.location.href='/cookie-policy'" class="footer-icon-link">
+        <span class="footer-icon">&#127850;</span> Cookie Policy
+      </a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
