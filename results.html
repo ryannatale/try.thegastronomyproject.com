@@ -13,14 +13,14 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Gastronomy Project">
   <meta property="og:title" content="Your Plan is Ready — The Gastronomy Project">
-  <meta property="og:description" content="Doctor-guided gut health formulas. Physician-reviewed. Delivered to your door. Starting at $20.">
+  <meta property="og:description" content="Personalized wellness formulas. Delivered to your door. Starting at $30.">
   <meta property="og:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
   <meta property="og:url" content="https://thegastronomyproject.com/results">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Your Plan is Ready — The Gastronomy Project">
-  <meta name="twitter:description" content="Doctor-guided gut health formulas. Physician-reviewed. Delivered to your door. Starting at $20.">
+  <meta name="twitter:description" content="Personalized wellness formulas. Delivered to your door. Starting at $30.">
   <meta name="twitter:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
-  <meta name="author" content="Dr. Ryan Natale — @drryannatalemd">
+  <meta name="author" content="Ryan Natale — The Gastronomy Project">
 
   <!-- 1. Meta Pixel — pixel page -->
   <script>
@@ -100,14 +100,14 @@
       padding: 0 16px;
     }
 
-    /* ── DR. TRUST ROW ── */
-    .dr-row {
+    /* ── FOUNDER TRUST ROW ── */
+    .founder-row {
       display: flex;
       align-items: center;
       gap: 10px;
       padding: 20px 0 16px;
     }
-    .dr-avatar {
+    .founder-avatar {
       width: 44px;
       height: 44px;
       border-radius: 50%;
@@ -116,7 +116,7 @@
       border: 2px solid #feeed5;
       flex-shrink: 0;
     }
-    .dr-avatar-fallback {
+    .founder-avatar-fallback {
       width: 44px;
       height: 44px;
       border-radius: 50%;
@@ -130,12 +130,12 @@
       color: #4a4a4a;
       flex-shrink: 0;
     }
-    .dr-info {
+    .founder-info {
       font-size: 10px;
       color: rgba(74,74,74,0.6);
       line-height: 1.5;
     }
-    .dr-info strong {
+    .founder-info strong {
       display: block;
       font-size: 11px;
       font-weight: 600;
@@ -520,14 +520,14 @@
   <!-- MAIN CARD -->
   <div class="main">
 
-    <!-- Dr. Trust Row -->
-    <div class="dr-row">
-      <img src="images/dr-natale-yellowshirt.jpg"
-           class="dr-avatar"
-           alt="Dr. Ryan Natale"
-           onerror="this.style.display='none'; document.getElementById('dr-fallback').style.display='flex'">
-      <div class="dr-avatar-fallback" id="dr-fallback">RN</div>
-      <div class="dr-info">
+    <!-- Founder Trust Row -->
+    <div class="founder-row">
+      <img src="images/founder-natale-yellowshirt.jpg"
+           class="founder-avatar"
+           alt="Ryan Natale"
+           onerror="this.style.display='none'; document.getElementById('founder-fallback').style.display='flex'">
+      <div class="founder-avatar-fallback" id="founder-fallback">RN</div>
+      <div class="founder-info">
         <strong>Ryan Natale</strong>
         Founder, The Gastronomy Project
       </div>
@@ -670,7 +670,7 @@
     </div>
     <div class="footer-minimal-links">
       <a onclick="window.open('https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/6969413fb90265c357cedbda_HIPAA%20-%20The%20Gastronomy%20Project.pdf','_blank')" class="footer-icon-link">
-        <span class="footer-icon">&#128274;</span> HIPAA
+        <span class="footer-icon">&#128274;</span> Privacy Compliance
       </a>
       <a onclick="window.location.href='/privacy'" class="footer-icon-link">
         <span class="footer-icon">&#128196;</span> Privacy Policy
@@ -764,11 +764,11 @@
   if (plan === 'mastic') {
     document.getElementById('price-sub').innerHTML = 'Delivered to your door';
     document.getElementById('feat1').textContent = '100% Natural Formula';
-    document.getElementById('feat1-desc').textContent = 'Ancient mastic gum combined with pharmaceutical-grade ginger';
+    document.getElementById('feat1-desc').textContent = 'Ancient mastic gum combined with ginger root extract';
     document.getElementById('feat2').textContent = 'Ginger + Mastic Gum';
     document.getElementById('feat2-desc').textContent = '3,000 years of gut wisdom in one formula';
-    document.getElementById('feat3').textContent = 'No prescription required';
-    document.getElementById('feat3-desc').textContent = 'Ships directly — no consultation needed';
+    document.getElementById('feat3').textContent = 'Ships directly to you';
+    document.getElementById('feat3-desc').textContent = 'Ships directly to your door';
     document.getElementById('main-cta').textContent = 'Get Ginger+ Mastic';
     document.getElementById('cta-sub').textContent = '';
   }
