@@ -285,14 +285,14 @@
       '<div style="text-align:center;padding:20px 0">' +
         '<div class="ph">You\'re all set.</div>' +
         '<div class="sub">Based on your answers, we\'ve matched you with a <span style="white-space:nowrap">personalized wellness plan.</span></div>' +
-        '<button class="cta" onclick="seeResults()">Get Ginger+ Mastic &rarr;</button>' +
+        '<button class="cta" onclick="seeResults()">See My Results &rarr;</button>' +
       '</div>';
   }
 
   // ── Navigate to Shopify ──
   function seeResults() {
     sessionStorage.setItem('plan', 'mastic');
-    window.location.href = 'https://go.thegastronomyproject.com/start-online-visit/mastic';
+    window.location.href = '/results.html';
   }
 
   // ── Initialize Q1 on page load ──
