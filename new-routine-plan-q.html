@@ -3,20 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find Your Plan — The Gastronomy Project</title>
+  <title>Quick Quiz — The Gastronomy Project</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/TGP-1.png">
   <link rel="apple-touch-icon" href="images/TGP-1.png">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="The Gastronomy Project">
-  <meta property="og:title" content="Find Your Plan — The Gastronomy Project">
-  <meta property="og:description" content="Answer 2 quick questions and find your perfect wellness formula.">
-  <meta property="og:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
-  <meta property="og:url" content="https://thegastronomyproject.com/quiz-index">
-
+  <!-- !! NO META PIXEL — ZERO PIXEL PAGE !! -->
 
   <!-- 1. GA4 only -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBRMQV74FG"></script>
@@ -82,34 +75,20 @@
       width: 100%;
     }
 
-    /* ── PROGRESS INDICATOR ── */
-    .progress-indicator {
-      font-size: 10px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      color: rgba(74,74,74,0.4);
-      margin-bottom: 16px;
-      text-align: center;
+    /* ── PROGRESS DOTS ── */
+    .prog {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      margin-bottom: 20px;
     }
-
-    /* ── HEADER TEXT ── */
-    .quiz-header {
-      font-family: 'Poppins', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      color: #FFB82E;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      text-align: center;
-      margin-bottom: 6px;
+    .pd {
+      width: 28px;
+      height: 3px;
+      background: #feeed5;
+      transition: background .3s;
     }
-    .quiz-header-sub {
-      font-size: 13px;
-      color: rgba(74,74,74,0.6);
-      text-align: center;
-      margin-bottom: 24px;
-    }
+    .pd.on { background: #FFB82E; }
 
     /* ── QUESTION LABEL ── */
     .lbl {
@@ -161,7 +140,7 @@
       border-color: #FFB82E;
     }
 
-    /* ── SUBTEXT ── */
+    /* ── RESULT STATE ── */
     .sub {
       font-size: 13px;
       color: rgba(74,74,74,0.65);
@@ -169,28 +148,20 @@
       text-align: center;
       margin-bottom: 24px;
     }
-
-    /* ── Q1/Q2 TRANSITIONS ── */
-    #question-1, #question-2 {
-      transition: opacity 0.3s ease;
-    }
-    #question-2 {
-      display: none;
-      opacity: 0;
-    }
-
-    /* ── Q2 BACK LINK ── */
-    .q2-back {
-      background: none;
+    .cta {
+      width: 100%;
+      background: #FFB82E;
+      color: #4a4a4a;
       border: none;
-      font-size: 12px;
-      color: rgba(74,74,74,0.6);
-      cursor: pointer;
+      padding: 15px;
+      font-size: 13px;
+      font-weight: 700;
       font-family: 'Poppins', sans-serif;
-      padding: 4px 0;
-      margin-bottom: 16px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 0;
     }
-    .q2-back:hover { color: #FFB82E; }
 
     /* ── MINIMAL FOOTER ── */
     .footer-minimal {
@@ -230,40 +201,14 @@
 </head>
 <body>
 
-  <!-- BACK BUTTON -->
+  <!-- BACK BUTTON — no nav, no logo link -->
   <div class="back-bar">
     <button class="back-btn" onclick="history.back()">&larr; Back</button>
   </div>
 
-  <!-- QUIZ CONTAINER -->
+  <!-- QUIZ CONTAINER — empty on load, injected by JS -->
   <div class="quiz-wrap">
-
-    <!-- Header -->
-    <div class="quiz-header">Thank you for choosing The Gastronomy Project</div>
-    <div class="quiz-header-sub">Let's point you in the right direction.</div>
-
-    <!-- QUESTION 1 -->
-    <div id="question-1">
-      <div class="ph">Do you know which formula you want?</div>
-      <div class="options">
-        <div class="opt" onclick="showQ2()">Not sure yet</div>
-        <div class="opt" onclick="window.location.href='/results-right-now'">Built for Right Now Plan</div>
-        <div class="opt" onclick="window.location.href='/results-daily-use'">Built for Daily Use Plan</div>
-        <div class="opt" onclick="window.location.href='/results-real-life-moments'">Real Life Moments Plan</div>
-        <div class="opt" onclick="window.location.href='/results-weekend-formula'">Weekend Formula Plan</div>
-        <div class="opt" onclick="window.location.href='https://go.thegastronomyproject.com/start-online-visit/mastic'">Ginger+ Mastic</div>
-      </div>
-    </div>
-
-    <!-- QUESTION 2 — hidden on load -->
-    <div id="question-2">
-      <div class="ph">Almost there.</div>
-      <div class="sub">Claim your discount on the next page, create your profile, and we'll help match you with the right formula.</div>
-      <div class="options">
-        <div class="opt" onclick="window.location.href='/join-us'">Claim My Discount &amp; Get Started</div>
-      </div>
-    </div>
-
+    <div id="quiz-container"></div>
   </div>
 
   <!-- FOOTER — minimal -->
@@ -283,39 +228,75 @@
   </footer>
 
   <script>
-  /* ── Q1/Q2 Show/Hide (IIFE) ── */
-  (function() {
-    function showQ2() {
-      var q1 = document.getElementById('question-1');
-      var q2 = document.getElementById('question-2');
-      q1.style.opacity = '0';
-      setTimeout(function() {
-        q1.style.display = 'none';
-        q2.style.display = 'block';
-        setTimeout(function() { q2.style.opacity = '1'; }, 10);
-        updateProgress(2);
-      }, 300);
-    }
-    function showQ1() {
-      var q1 = document.getElementById('question-1');
-      var q2 = document.getElementById('question-2');
-      q2.style.opacity = '0';
-      setTimeout(function() {
-        q2.style.display = 'none';
-        q1.style.display = 'block';
-        setTimeout(function() { q1.style.opacity = '1'; }, 10);
-        updateProgress(1);
-      }, 300);
-    }
-    function updateProgress(step) {
-      var indicator = document.querySelector('.progress-indicator');
-      if (indicator) {
-        indicator.innerText = 'Step ' + step + ' of 2';
-      }
-    }
-    window.showQ2 = showQ2;
-    window.showQ1 = showQ1;
-  })();
+  // ── Select + advance with visual feedback ──
+  function selectAndAdvance(el, nextFn) {
+    document.querySelectorAll('.opt').forEach(function(o) {
+      o.classList.remove('selected');
+    });
+    el.classList.add('selected');
+    setTimeout(nextFn, 380);
+  }
+
+  // ── Q1 — injected on page load ──
+  function showQ1() {
+    document.getElementById('quiz-container').innerHTML =
+      '<div class="prog"><div class="pd on"></div><div class="pd"></div><div class="pd"></div></div>' +
+      '<div class="lbl">Question 1 of 3</div>' +
+      '<div class="ph">What matters most to you right now?</div>' +
+      '<div class="options">' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">Something I can take when I need it</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">A daily plan I can build into my new routine</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">A mix of natural and science-backed</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ2)">I want a real expert to weigh in</div>' +
+      '</div>';
+  }
+
+  // ── Q2 — click-injected ──
+  function showQ2() {
+    document.getElementById('quiz-container').innerHTML =
+      '<div class="prog"><div class="pd on"></div><div class="pd on"></div><div class="pd"></div></div>' +
+      '<div class="lbl">Question 2 of 3</div>' +
+      '<div class="ph">How has your body been feeling since starting your new wellness routine?</div>' +
+      '<div class="options">' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Better than expected &mdash; staying ahead of it</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Up and down &mdash; some days are harder than others</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Struggling more than I expected</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showQ3)">Hard to predict day to day</div>' +
+      '</div>';
+  }
+
+  // ── Q3 — click-injected ──
+  function showQ3() {
+    document.getElementById('quiz-container').innerHTML =
+      '<div class="prog"><div class="pd on"></div><div class="pd on"></div><div class="pd on"></div></div>' +
+      '<div class="lbl">Question 3 of 3</div>' +
+      '<div class="ph">What aspect of your new routine matters most to you?</div>' +
+      '<div class="options">' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Morning &mdash; I like to start my day right</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Around meals &mdash; I want support around food</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Throughout the day &mdash; I want consistent coverage</div>' +
+        '<div class="opt" onclick="selectAndAdvance(this, showResult)">Evening &mdash; I prefer end of day routines</div>' +
+      '</div>';
+  }
+
+  // ── Result state ──
+  function showResult() {
+    document.getElementById('quiz-container').innerHTML =
+      '<div style="text-align:center;padding:20px 0">' +
+        '<div class="ph">You\'re all set.</div>' +
+        '<div class="sub">Based on your answers, we\'ve matched you with a <span style="white-space:nowrap">personalized wellness plan.</span></div>' +
+        '<button class="cta" onclick="seeResults()">See My Results &rarr;</button>' +
+      '</div>';
+  }
+
+  // ── Navigate to results ──
+  function seeResults() {
+    sessionStorage.setItem('plan', 'med-effect');
+    window.location.href = '/results';
+  }
+
+  // ── Initialize Q1 on page load ──
+  window.onload = showQ1;
   </script>
 
 </body>
