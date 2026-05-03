@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ginger+ Mastic — The Gastronomy Project</title>
+  <title>Recovery &amp; Reset Support — The Gastronomy Project</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/TGP-1.png">
@@ -12,12 +12,12 @@
   <!-- Open Graph / Social sharing -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Gastronomy Project">
-  <meta property="og:title" content="Ginger+ Mastic — The Gastronomy Project">
+  <meta property="og:title" content="Recovery &amp; Reset Support — The Gastronomy Project">
   <meta property="og:description" content="Personalized wellness formulas. Delivered to your door. Starting at $30.">
   <meta property="og:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
-  <meta property="og:url" content="https://thegastronomyproject.com/mastic">
+  <meta property="og:url" content="https://thegastronomyproject.com/find-your-plan-5">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ginger+ Mastic — The Gastronomy Project">
+  <meta name="twitter:title" content="Recovery &amp; Reset Support — The Gastronomy Project">
   <meta name="twitter:description" content="Personalized wellness formulas. Delivered to your door. Starting at $30.">
   <meta name="twitter:image" content="https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg">
   <meta name="author" content="Ryan Natale — The Gastronomy Project">
@@ -1110,6 +1110,56 @@
 
     .footer-logo-wrap { text-align: center; margin-bottom: 14px; }
     .footer-logo { height: 36px; margin: 0 auto; opacity: 0.5; }
+
+    /* ── WHAT'S INSIDE — ingredient card ── */
+    .landing-ingredients-section {
+      background: #fdfaf4;
+      padding: 48px 20px;
+    }
+    .landing-ingredients-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #f5f0e8;
+      border-radius: 12px;
+      padding: 32px 36px;
+    }
+    .landing-ingredients-title {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #2a1f0e;
+      margin-bottom: 24px;
+    }
+    .landing-ingredient-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+    }
+    .landing-ingredient-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #2a1f0e;
+    }
+    .landing-ingredient-dose {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #FFB82E;
+    }
+    .landing-ingredient-sub {
+      font-family: 'Poppins', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(74,74,74,0.5);
+      margin-top: 2px;
+    }
+    .landing-ingredient-divider {
+      height: 1px;
+      background: rgba(74,74,74,0.12);
+      margin: 0;
+    }
   </style>
   <!-- Meta Pixel Code -->
   <script>
@@ -1136,14 +1186,14 @@
     <img src="images/TGP-2.png"
          class="header-logo"
          alt="The Gastronomy Project"
-         onclick="window.location.href='/product-mastic.html'"
+         onclick="window.location.href='/product-weekendformula.html'"
          onerror="this.src='https://cdn.prod.website-files.com/6893d0739e02449a840a43d0/689a8a5af5bcb41edea78ce7_navbarlogoaccent.svg'">
   </header>
 
   <!-- STATIC IMAGE HERO -->
   <div class="hero">
-    <img src="images/capsules/mastic.png" class="hero-desktop-bg" alt="">
-    <img src="images/capsules/mastic.png" class="hero-mobile-bg" alt="">
+    <img src="images/capsules/weekend-formula.png" class="hero-desktop-bg" alt="">
+    <img src="images/capsules/weekend-formula.png" class="hero-mobile-bg" alt="">
     <div class="hero-inner">
       <div class="hero-left">
 
@@ -1159,26 +1209,24 @@
           </div>
         </div>
 
-        <div class="hero-eyebrow">Welcome to Ginger+ Mastic</div>
-
         <!-- Headline -->
-        <h1 class="hero-headline">Inspired by centuries of Greek tradition. Thoughtfully developed for today.</h1>
-        <p class="hero-sub">3 all natural ingredients, conveniently in one capsule</p>
+        <h1 class="hero-headline">Eat. Drink. Feel well. The Weekend Formula.</h1>
+        <p class="hero-sub">A customized approach on your terms.</p>
 
         <!-- Primary CTA -->
         <button class="cta-primary" onclick="handlePrimaryCTA()">
-          Get Ginger+ Mastic
+          Get Started
         </button>
         <div class="cta-sub">Options as low as $30 &mdash; no commitment &mdash; you can decide at the end</div>
 
         <!-- Secondary CTA -->
-        <button class="cta-secondary" onclick="window.location.href='/mastic/quiz'">
+        <button class="cta-secondary" onclick="window.location.href='/find-your-plan-5/quiz'">
           Not sure yet? Answer 3 questions &mdash; we'll help you decide
         </button>
 
       </div>
       <div class="hero-right">
-        <img src="images/capsules/mastic.png" class="hero-product-img" alt="Ginger+ Mastic">
+        <img src="images/capsules/weekend-formula.png" class="hero-product-img" alt="Weekend Formula Plan">
       </div>
     </div>
   </div>
@@ -1229,68 +1277,72 @@
     <a href="https://www.trustpilot.com/review/thegastronomyproject.com" target="_blank" rel="noopener">Trustpilot</a>
   </div>
 
+  <!-- WHAT'S INSIDE -->
+  <div class="landing-ingredients-section">
+    <div class="landing-ingredients-inner">
+      <h3 class="landing-ingredients-title">What's Inside</h3>
+      <div class="landing-ingredient-row">
+        <span class="landing-ingredient-name">Ginger Root Extract</span>
+        <span class="landing-ingredient-dose">200mg</span>
+      </div>
+      <div class="landing-ingredient-sub">A traditional botanical used to support everyday wellness.</div>
+      <div class="landing-ingredient-divider"></div>
+      <div class="landing-ingredient-row" style="flex-direction:column;align-items:flex-start;">
+        <span class="landing-ingredient-name">Ginger + your pairing</span>
+      </div>
+      <div class="landing-ingredient-sub">Customers often choose Mastic Gum or Calcium to pair with their daily ginger.</div>
+      <div class="landing-ingredient-divider" style="margin-top:12px;"></div>
+      <div style="text-align:center; margin-top:16px; font-size:11px; color:rgba(74,74,74,0.45); font-family:'Poppins',sans-serif; letter-spacing:.04em;">
+        Made in the USA. Third-party tested.
+      </div>
+    </div>
+  </div>
+
   <!-- HOW IT WORKS -->
   <section class="how-it-works">
     <div class="hiw-eyebrow">How it works</div>
     <div class="hiw-rule"></div>
-    <h2 class="hiw-headline">Three simple steps. Three minutes. Done.</h2>
+    <h2 class="hiw-headline">Four simple steps. 3 minutes. Done.</h2>
 
     <div class="hiw-steps">
       <div class="hiw-step">
         <div class="hiw-num">01</div>
         <div class="hiw-content">
-          <div class="hiw-title">Enter Email</div>
-          <div class="hiw-sub">3 minutes</div>
+          <div class="hiw-title">Claim Your Launch Discount</div>
+          <div class="hiw-sub">Your 15% off is waiting on the next page</div>
         </div>
       </div>
       <div class="hiw-step">
         <div class="hiw-num">02</div>
         <div class="hiw-content">
-          <div class="hiw-title">Choose Your Plan</div>
-          <div class="hiw-sub">Instantly &middot; Personalized results</div>
+          <div class="hiw-title">Complete Your Profile</div>
+          <div class="hiw-sub">Enter your email &mdash; takes about 15 seconds</div>
         </div>
       </div>
       <div class="hiw-step">
         <div class="hiw-num">03</div>
         <div class="hiw-content">
-          <div class="hiw-title">Ships to Your Door</div>
+          <div class="hiw-title">We Match Your Preferences</div>
+          <div class="hiw-sub">Instantly &middot; Personalized results</div>
+        </div>
+      </div>
+      <div class="hiw-step">
+        <div class="hiw-num">04</div>
+        <div class="hiw-content">
+          <div class="hiw-title">Your Formula Ships</div>
           <div class="hiw-sub">1&ndash;2 business days</div>
         </div>
       </div>
     </div>
 
     <button class="hiw-cta" onclick="handlePrimaryCTA()">
-      Get Ginger+ Mastic
+      Get Started
     </button>
-  </section>
-
-  <!-- WHAT'S INSIDE -->
-  <section class="wyg-section" style="background:#fff5e1;">
-    <div class="wyg-eyebrow">What's inside</div>
-    <div class="wyg-rule"></div>
-    <h2 class="wyg-headline">All in one convenient capsule.</h2>
-
-    <div style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:rgba(74,74,74,0.5);margin-bottom:16px;">Per serving:</div>
-
-    <div class="wyg-points" style="margin-bottom:24px;">
-      <div class="wyg-point" style="align-items:center;">
-        <img src="images/MasticGum.png" alt="Mastic Gum" style="width:48px;height:48px;object-fit:cover;border-radius:4px;flex-shrink:0;margin-right:12px;">
-        <span class="wyg-text"><strong>Mastic Gum</strong> &mdash; 800mg</span>
-      </div>
-      <div class="wyg-point" style="align-items:center;">
-        <img src="images/Gingerroot.png" alt="Ginger Root Extract" style="width:48px;height:48px;object-fit:cover;border-radius:4px;flex-shrink:0;margin-right:12px;">
-        <span class="wyg-text"><strong>Ginger Root Extract</strong> &mdash; 100mg</span>
-      </div>
-      <div class="wyg-point" style="align-items:center;">
-        <img src="images/Calciumcarbonate.jpg" alt="Calcium Carbonate" style="width:48px;height:48px;object-fit:cover;border-radius:4px;flex-shrink:0;margin-right:12px;">
-        <span class="wyg-text"><strong>Calcium Carbonate</strong> &mdash; 600mg</span>
-      </div>
-    </div>
   </section>
 
   <!-- WHAT YOU GET -->
   <section class="wyg-section">
-    <div class="wyg-eyebrow">What you get</div>
+    <div class="wyg-eyebrow">What we do here</div>
     <div class="wyg-rule"></div>
     <h2 class="wyg-headline">Where modern wellness meets modern science.</h2>
 
@@ -1306,6 +1358,13 @@
           <path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <span class="wyg-text">Our approach features thoughtfully selected ingredients like ginger root and mastic gum, delivered in a simplified, user-friendly experience</span>
+      </div>
+      <div class="wyg-point">
+        <svg class="wyg-check" viewBox="0 0 20 20" fill="none">
+          <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="wyg-text">Tailored recommendations following your profile review</span>
       </div>
     </div>
 
@@ -1325,7 +1384,7 @@
       </a>
       <div class="founder-name">Ryan Natale</div>
       <div class="founder-title">Founder, The Gastronomy Project</div>
-      <a href="/about-our-founder" style="display:inline-block;margin-top:16px;font-size:14px;font-weight:600;color:#FFB82E;text-decoration:none;font-family:'Poppins',sans-serif;letter-spacing:.02em;">Click here to learn more &rarr;</a>
+      <a href="/about.html" style="display:inline-block;margin-top:16px;font-size:14px;font-weight:600;color:#FFB82E;text-decoration:none;font-family:'Poppins',sans-serif;letter-spacing:.02em;">Click here to learn more &rarr;</a>
     </div>
 
     <!-- Social proof — moved from hero -->
@@ -1416,17 +1475,17 @@
   <section class="bottom-cta-section">
     <div class="bottom-cta-inner">
       <h2 class="bottom-cta-headline">Ready to take the first step?</h2>
-      <p class="bottom-cta-sub">A formula built specifically for you. All in one convenient capsule.</p>
+      <p class="bottom-cta-sub">A 3-minute questionnaire. A formula built specifically for you. All in one capsule.</p>
 
       <div class="proof-bar">
         <span class="proof-text">We just launched, but our team has been doing this for decades. Join the <strong>75+</strong> customers that have already found their plan</span>
       </div>
 
       <button class="bottom-cta-primary" onclick="handlePrimaryCTA()">
-        Get Ginger+ Mastic
+        Get Started
       </button>
       <div class="bottom-cta-sub-text">Options as low as $30 &mdash; no commitment &mdash; you can decide at the end</div>
-      <button class="bottom-cta-secondary" onclick="window.location.href='/mastic/quiz'">
+      <button class="bottom-cta-secondary" onclick="window.location.href='/find-your-plan-5/quiz'">
         Not sure yet? Answer 3 questions &mdash; we'll help you decide
       </button>
     </div>
@@ -1434,8 +1493,8 @@
 
   <!-- STICKY MOBILE CTA -->
   <div class="sticky-cta" id="sticky-cta" style="display:none;">
-    <button onclick="handlePrimaryCTA()">
-      Get Ginger+ Mastic
+    <button onclick="sessionStorage.setItem('plan','gpack'); window.location.href='/results-weekend-formula'">
+      Get Started
     </button>
   </div>
 
@@ -1444,10 +1503,10 @@
     <div class="exit-modal">
       <button class="exit-close" onclick="closeExit()">&#x2715;</button>
       <div class="exit-eyebrow">Before you go</div>
-      <h2 class="exit-headline">Take 15% off with code: TGP15</h2>
-      <p class="exit-sub">Copy and paste at checkout</p>
-      <button class="exit-cta" onclick="closeExit(); handlePrimaryCTA()">
-        Get Ginger+ Mastic
+      <h2 class="exit-headline">Your plan is ready.</h2>
+      <p class="exit-sub">It takes less than 3 minutes. Unlock 15% off.</p>
+      <button class="exit-cta" onclick="closeExit(); sessionStorage.setItem('plan','gpack'); window.location.href='/results-weekend-formula'">
+        Get Started
       </button>
       <button class="exit-dismiss" onclick="closeExit()">No thanks</button>
     </div>
@@ -1490,14 +1549,14 @@
             attributes: {
               list_id: 'RZ8BUh',
               email: email.value,
-              properties: { funnel_angle: 'mastic', source: 'landing_page_email' }
+              properties: { funnel_angle: 'gpack', source: 'landing_page_email' }
             }
           }
         })
       }).catch(function(){});
     }
-    sessionStorage.setItem('plan', 'mastic');
-    setTimeout(function(){ window.location.href = 'https://go.thegastronomyproject.com/start-online-visit/mastic'; }, 300);
+    sessionStorage.setItem('plan', 'gpack');
+    window.location.href = '/results-weekend-formula';
   }
 
   // ── FAQ accordion ──
