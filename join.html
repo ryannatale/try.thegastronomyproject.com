@@ -294,17 +294,22 @@
 
   // ── Proceed to Bask intake ──
   function proceedToIntake() {
-    var routes = {
-      'short-term': 'https://go.thegastronomyproject.com/start-online-visit/gingerfamotidine',
-      'long-term':  'https://go.thegastronomyproject.com/start-online-visit/gingeromeprazole',
-      'GI-comfort': 'https://go.thegastronomyproject.com/start-online-visit/gingerondansetron',
-      'med-effect': 'https://go.thegastronomyproject.com/start-online-visit/gingerondansetron',
-      'gpack':      'https://go.thegastronomyproject.com/start-online-visit/gpkg-pack',
-      'mastic':     'https://go.thegastronomyproject.com/start-online-visit/mastic',
-      'ginger':     'https://go.thegastronomyproject.com/start-online-visit/main'
+    const routes = {
+      'short-term':  'https://try.thegastronomyproject.com/start-online-visit/gs3',
+      'long-term':   'https://try.thegastronomyproject.com/start-online-visit/gs1',
+      'plan-3':  'https://try.thegastronomyproject.com/start-online-visit/gs4',
+      'med-effect':  'https://try.thegastronomyproject.com/start-online-visit/gs4',
+      'gpack':       'https://try.thegastronomyproject.com/start-online-visit/gpk',
+      'mastic':      'https://go.thegastronomyproject.com/start-online-visit/mastic',
+      'ginger':      'https://try.thegastronomyproject.com/start-online-visit/main',
+      'right-now':   'https://try.thegastronomyproject.com/start-online-visit/gs3',
+      'daily-use':   'https://try.thegastronomyproject.com/start-online-visit/gs1',
+      'real-life':   'https://try.thegastronomyproject.com/start-online-visit/gs4',
+      'weekend':     'https://try.thegastronomyproject.com/start-online-visit/gpk',
+      default:       'https://try.thegastronomyproject.com/start-online-visit/main'
     };
     var plan = getPlan();
-    window.location.href = routes[plan] || 'https://go.thegastronomyproject.com/start-online-visit/main';
+    window.location.href = routes[plan] || 'https://try.thegastronomyproject.com/start-online-visit/main';
   }
   </script>
 
